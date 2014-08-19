@@ -1,0 +1,97 @@
+h1, h2 {
+	color: #196999;
+}
+
+.main-nav {
+	padding: 5px 0;
+}
+.main-nav a.home {
+	padding: 0;
+	margin-right: 20px;
+}
+.main-nav .home .logo {
+	height: 40px;
+}
+.nav-divide {
+	margin: 0;
+	border-top: 5px solid gray;
+}
+
+.banner {
+	background: darkgray;
+	color: #fff;
+	padding: 30px 0;
+	margin-bottom: 0;
+	border: 5px solid gray;
+	border-left: 0;
+	border-right: 0;
+}
+.banner .logo {
+	float: left;
+	padding: 6px;
+	background: #fff;
+	border-radius: 20px;
+	margin-right: 25px;
+}
+.banner .logo img {
+	height: 100px;
+}
+.banner-text {
+	color: #003099;
+	font-size: 25px;
+}
+.banner-text a {
+	color: #003099;
+	text-decoration: underline;
+}
+.banner-text .sub {
+	font-size: 20px;
+	list-style-position: inside;
+}
+
+.components .library {
+	width: 15%;
+}
+.components .source {
+	width: 10%;
+}
+.components .status {
+	width: 30%;
+}
+
+.powered-by {
+	margin-top: 10px;
+	padding-bottom: 20px;
+	background: #eee;
+	border-radius: 20px;
+}
+.powered-by h3 {
+	font-size: 18px;
+	font-style: italic;
+}
+.powered-by .project {
+	text-align: center;
+}
+.powered-by .project img {
+	height: 80px;
+	margin: 10px;
+}
+
+.features .feature {
+	border: 1px solid #3291cc;
+	font-size: 18px;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px 10px 10px 0;
+}
+.features .feature .feature-icon {
+	float: left;
+	width: 20px;
+	height: 70px;
+	margin: 5px 10px;
+	color: #000;
+}
+.features .feature .feature-text {
+	width: 100%;
+	color: #333;
+}
