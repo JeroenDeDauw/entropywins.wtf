@@ -27,8 +27,8 @@
         <li {% if page == 'wikidata' %}class="active"{% endif %}>
         <a href="{{ app.request.basepath }}/wikidata">Wikidata</a>
         </li>
-        <li>
-            <a href="http://www.bn2vs.com/blog/">Blog</a>
+        <li {% if page == 'blog-embedded' %}class="active"{% endif %}>
+        <a href="{{ app.request.basepath }}/blog-embedded">Blog</a>
         </li>
     </nav>
 </div>
