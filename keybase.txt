@@ -1,0 +1,71 @@
+==================================================================
+https://keybase.io/jeroendedauw
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://bn2vs.com
+  * I am jeroendedauw (https://keybase.io/jeroendedauw) on keybase.
+  * I have a public key with fingerprint AB95 CECD B3C2 6869 E485  CD1C EEAA 431E 2E91 371F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "ab95cecdb3c26869e485cd1ceeaa431e2e91371f",
+            "host": "keybase.io",
+            "key_id": "eeaa431e2e91371f",
+            "uid": "b534b83d83d7c9a8548c0f26623e7900",
+            "username": "jeroendedauw"
+        },
+        "service": {
+            "hostname": "bn2vs.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1413500838,
+    "expire_in": 157680000,
+    "prev": "446dade255644b0cc90395582084cd7f1772c834d9640bf12aba992e8aa68572",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.1.3
+Comment: https://keybase.io/crypto
+
+yML/AnicO8LLzMDF+G6Vs5zeRHN5xtMHPpUyhDj4L6tWSspPqVSyqlbKTgVTaZl5
+6alFBUWZeSVKVkqJSZamyanJKUnGyUZmFmaWqSYWpskphsmpqYmJJsaGqUaplobG
+5oZpSjpKGfnFIB1AY5ISi1P1MvOBYkBOfGYKUBSL+lKwRJKpsUmShXEKEJknWyZa
+mJpYJBukGZmZGRmnmlsaGIAUFqcW5SXmpgJVZ6UW5afmpaSmJJaWK9XqKAFlyjKT
+U0HuBlkPVZWUZ1RWrJecnwvUXFCUX5KfnJ8DFM4oKSmwAukqqSwAKStPTYqHGhCf
+lJmXAvQ4UENZalFxZn6ekpUhUGVySSbIREMTQ2NTAwMLYwsdpdSKgsyi1PhMkApT
+czMLAyAAWZNaBjTSxMQsJTEl1cjU1MzEJMkgOdnSwNjS1NTCyMDCJDnFPM3Q3Nwo
+2cLYJMXSzMQgKc3QKDEp0dLSKNUiMdHMwtTcSAnkpcK8fCUrM6AzE9OBRhZnpucl
+lpQWpSrVHjoYw8LAyMXAxsoEijoGLk4BWIROsuT/7/7zYpNzk/uDMI0N4dce3N1+
+gyf13Mwu/QCdWcf/XNyuv8qM7cHtDqYlEmk+sWUOGziWfZ9fMb/T7WXyWg1Zodan
+io84/r2d/cHq363Oya8tNyZ+2Zorsn/y0cqNHzbz251l2W1Y1GxuIJijsexwyOtn
+YrGP1Pk4tN2X3H9Y07Zf5JCrXe0u67vWvwxTtx/3n6rSsKAhmPHwDJ0QLjXpzOKt
+G2Sd7txonMPw98Vbnv1Hc6fs/ng12+ThJvvbKt/fNit+3/5Y2uDU7eqw6epJvj8i
+O1hfbovLb1zEdk1w3buna3jn+Xrn2TNdu/Niw+Y65kOtXaEmReqPGyd4a/Rlc4e4
+Hwvksvm5aaOVfm/dn7lb8i8/knnX+CDJcPbKe282TdteIRFdlL3w0IxL/0JEKlf7
+RC4Ueymecq2p9s2r60cfvZ45ed0TTSGhNVy8qxy0N+TcPLJuu4hB1dQdrNy1FXkn
+o+5ftPcMWnnJ0snA0kXW7KXc3/3Hbi5ZW/yi8b91yqIH/Xu1V767VcJzyGqJmXVK
+Et8uWa847YiUYxUec79evv+8X77TsclG49cklkVHa/wtb6aeF4h6t0Qndwn70RNX
+lnx/v22irY7Jk3c7P0RvSq731HvxUEukinuH+62+mNjj6v2vmVfoHd+c/7rpZG95
+x+mr+80atOZFFKgtNLj2skbs6uTOjfMXzzdhivK9sXt+VEiyTtK66z5n/7oBAI/w
+mnM=
+=8j7G
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jeroendedauw
+
+==================================================================

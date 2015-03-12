@@ -2,6 +2,3 @@ composer.lock
 vendor/
 /var/
 www/components/
-w/
-blog/
-keybase.txt
