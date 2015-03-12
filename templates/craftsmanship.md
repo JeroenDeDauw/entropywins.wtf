@@ -24,6 +24,7 @@ industry.
 **Recommended reading**
 
 * [The Clean Coder: A Code of Conduct for Professional Programmers](https://www.goodreads.com/book/show/10284614-the-clean-coder), Robert C. Martin, 2011
+* [The Software Craftsman: Professionalism, Pragmatism, Pride](https://www.goodreads.com/book/show/23215733-the-software-craftsman), Sandro Mancuso, 2014
 * [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.goodreads.com/book/show/3735293-clean-code), Robert C. Martin, 2007
 * [Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman](https://www.goodreads.com/book/show/5608045-apprenticeship-patterns),  Dave Hoover and Adewale Oshineye , 2009
 * [Refactoring: Improving the Design of Existing Code,  Martin Fowler](https://www.goodreads.com/book/show/44936.Refactoring), Kent Beck and Don Robert, 1999
