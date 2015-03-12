@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% block title %}Wikidata{% endblock %}
+
 {% block content %}
 {% markdown %}
 

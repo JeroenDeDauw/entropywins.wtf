@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% block title %}Software Craftsmanship{% endblock %}
+
 {% block content %}
 
 {% markdown %}

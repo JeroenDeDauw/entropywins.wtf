@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% block title %}Semantic MediaWiki{% endblock %}
+
 {% block content %}
 {% markdown %}
 
