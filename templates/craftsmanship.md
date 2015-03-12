@@ -18,7 +18,7 @@ Interoperability Group](http://www.php-fig.org/) to promote good standards in th
 In building enterprise applications it is paramount to follow professional development techniques
 and methodologies. Creating something that is badly designed and barely functions might work at
 first, though is not sustainable in big projects. The knowledge of how to design software well and
-avoid common pitfalls, is while well understood, not spread far enough into the software development
+avoid common pitfalls, is while well understood, not widespread enough into the software development
 industry.
 
 **Recommended reading**
