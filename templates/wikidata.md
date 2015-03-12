@@ -14,10 +14,10 @@ of the [MediaWiki platform](https://www.mediawiki.org/).
 
 **My current involvement**
 
-I am working on the [Wikibase software](https://www.mediawiki.org/wiki/Wikibase) as software
-architect for [Wikimedia Deutchland](https://www.wikimedia.de/).
+I am working on the [Wikibase software](https://www.mediawiki.org/wiki/Wikibase) as developer
+for [Wikimedia Deutchland](https://www.wikimedia.de/).
 
-You can find me in the [contributors list on Ohloh](https://www.ohloh.net/p/wikidata).
+You can find me in the [contributors list on Ohloh](https://www.ohloh.net/p/wikidata/contributors).
 
 {% endmarkdown %}
 {% endblock %}
