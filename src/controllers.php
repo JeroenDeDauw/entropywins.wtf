@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 $app['twig']->addExtension(new MarkdownExtension(new MichelfMarkdownEngine()));
 
 $app->get('/', function () use ($app) {
+	// TODO: learn how to access page name more sanely if possible
 	return $app['twig']->render('index.html', ['page' => 'home']);
 });
 
@@ -36,7 +37,7 @@ $app->get('/wikidata', function () use ($app) {
 
 $app->get('/blog-embedded', function () use ($app) {
 	// The derp is strong in this one
-	// Should learn how to use twig properly :)
+	// TODO: Should learn how to use twig properly :)
 	$html = '';
 
 	$rssReader = new SimplePie();
