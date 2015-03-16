@@ -35,6 +35,10 @@ $app->get('/wikidata', function () use ($app) {
 	return $app['twig']->render('wikidata.md', ['page' => 'wikidata']);
 });
 
+$app->get('/slides', function () use ($app) {
+	return $app['twig']->render('slides.html', ['page' => 'slides']);
+});
+
 $app->get('/blog-embedded', function () use ($app) {
 	// The derp is strong in this one
 	// TODO: Should learn how to use twig properly :)
