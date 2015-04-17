@@ -36,7 +36,7 @@ $app->get('/wikidata', function () use ($app) {
 });
 
 $app->get('/slides', function () use ($app) {
-	return $app['twig']->render('slides.html', ['page' => 'slides']);
+	return $app['twig']->render('slides.md', ['page' => 'slides']);
 });
 
 $app->get('/blog-embedded', function () use ($app) {

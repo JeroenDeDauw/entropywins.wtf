@@ -30,6 +30,9 @@
         <li {% if page == 'libraries' %}class="active"{% endif %}>
         <a href="{{ app.request.basepath }}/libraries">Libraries</a>
         </li>
+        {% if page == 'slides' %}<li class="active">
+        <a href="{{ app.request.basepath }}/slides">Slides</a>
+        </li>{% endif %}
         <li {% if page == 'blog-embedded' %}class="active"{% endif %}>
         <a href="{{ app.request.basepath }}/blog-embedded">Blog</a>
         </li>

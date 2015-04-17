@@ -4,9 +4,14 @@
 
 {% block content %}
 
-<br />
+{% markdown %}
+
+
+
+{% endmarkdown %}
 
 <style>
+    /* http://www.mademyday.de/css-height-equals-width-with-pure-css.html? */
     .box{
         position: relative;
         width: 100%;
