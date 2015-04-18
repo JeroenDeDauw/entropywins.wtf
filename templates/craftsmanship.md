@@ -39,6 +39,11 @@ industry.
 * [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](https://www.goodreads.com/book/show/8686650-continuous-delivery), David Farley and Jez Humble, 2010
 <br /><br />
 
+#### Podcast with me on Software Craftsmanship:  
+
+* [Software Craftsmanship: Values, Practices and Community](https://sourcecode.berlin/2015/04/17/software-craftsmanship/), [sourcecode.berlin](https://sourcecode.berlin)
+<br /><br />
+
 #### Presentations by me on technical topics:  
 
 Note that these slides are not designed for standalone usage.
@@ -73,10 +78,6 @@ A simple principle that aids in avoiding common inheritance related pitfalls
 
 * View [the slides](http://bit.ly/solid-lsp)
 <br /><br />
-
-#### Podcast with me on Software Craftsmanship:  
-
-* [Software Craftsmanship: Values, Practices and Community](https://sourcecode.berlin/2015/04/17/software-craftsmanship/), [sourcecode.berlin](https://sourcecode.berlin)
 
 {% endmarkdown %}
 
