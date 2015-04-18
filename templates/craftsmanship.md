@@ -72,10 +72,15 @@ Why static code is generally harmful and should be rarely used
 A simple principle that aids in avoiding common inheritance related pitfalls
 
 * View [the slides](http://bit.ly/solid-lsp)
+<br /><br />
+
+#### Podcast with me on Software Craftsmanship:  
+
+* [Software Craftsmanship: Values, Practices and Community](https://sourcecode.berlin/2015/04/17/software-craftsmanship/), [sourcecode.berlin](https://sourcecode.berlin)
 
 {% endmarkdown %}
 
-<br /><br />
+
 
 {% endblock %}
 
