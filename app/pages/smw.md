@@ -38,9 +38,22 @@ Note that these presentations are not designed for after-talk usage.
 However, they are useful when watching the recording of a talk.
 <br /><br />
 
+#### SMWCon Fall 2015, Barcelona
+
+You can view the [SMWCon Fall 2015 website](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2015).
+
+**Current Status and Next Steps for Semantic MediaWiki**
+
+This year again brought a lot of exciting new features and improvements to Semantic MediaWiki.
+This short presentation will give you an overview of the changes since last SMWCon Europe.
+Things currently in the pipeline, plans and possibilities will also be covered.
+
+* [Wiki page](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2015/Current_Status_and_Next_Steps_for_Semantic_MediaWiki)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2015fall/yearly/)
+
 #### SMWCon Fall 2014, Vienna
 
-https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014
+You can view the [SMWCon Fall 2014 website](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2014).
 
 **Current status and next steps for SMW**
 
@@ -53,7 +66,7 @@ The yearly "what happened and what are we working on now" talk.
 
 #### SMWCon Fall 2013, Berlin
 
-https://semantic-mediawiki.org/wiki/SMWCon_Fall_2013
+You can view the [SMWCon Fall 2013 website](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2013).
 
 **Current status and next steps for SMW**
 
@@ -81,7 +94,7 @@ development, and at those who want to improve their skills.
 
 #### SMWCon Spring 2013, New York City
 
-https://semantic-mediawiki.org/wiki/SMWCon_Spring_2013
+You can view the [SMWCon Spring 2013 website](https://www.semantic-mediawiki.org/wiki/SMWCon_Spring_2013).
 
 **Current status and next steps for SMW**
 
@@ -92,7 +105,7 @@ The yearly "what happened and what are we working on now" talk.
 
 **New features in Maps and Semantic Maps**
 
-Provides an overview of the imporvements made to Maps and Semantic Maps over the past year.
+Provides an overview of the improvements made to Maps and Semantic Maps over the past year.
 
 * [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Spring_2013/New_features_in_Maps_and_Semantic_Maps)
 * [Slides](http://jeroendedauw.github.io/slides/smwcon/2013spring/maps/#maps-is-awesome.html)
@@ -100,7 +113,7 @@ Provides an overview of the imporvements made to Maps and Semantic Maps over the
 
 #### SMWCon Fall 2012, Cologne
 
-https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012
+You can view the [SMWCon Fall 2012 website](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012).
 
 **Developing SMW (extensions)**
 
@@ -120,7 +133,10 @@ The yearly "what happened and what are we working on now" talk.
 
 **New features in Maps and Semantic Maps**
 
-An overview of all the cool new stuff in Maps and Semantic Maps as well as a peek to what's on the horizon.
+An overview of all the cool new stuff in
+[Maps](https://www.mediawiki.org/wiki/Extension:Maps)
+and [Semantic Maps](https://www.mediawiki.org/wiki/Extension:Semantic_Maps)
+as well as a peek to what's on the horizon.
 
 * [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Maps_and_Semantic_Maps)
 * [Slides](http://jeroendedauw.github.com/slides/smwcon/2012fall/maps/#maps-is-awesome.html)
@@ -128,52 +144,62 @@ An overview of all the cool new stuff in Maps and Semantic Maps as well as a pee
 
 **New features in Semantic Result Formats**
 
-An overview of all the awesome new features in Semantic Result Formats 1.8.
+An overview of all the awesome new features in
+[Semantic Result Formats](https://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats) 1.8.
 
 * [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats)
 * [Slides](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2012/New_features_in_Semantic_Result_Formats/Presentation)
 * [Video recording](http://www.youtube.com/watch?v=iCo6up6Kftc)
 <br /><br />
 
-#### SMWCon spring 2012, Carlsbad
+#### SMWCon Spring 2012, Carlsbad
+
+You can view the [SMWCon Spring 2012 website](https://www.semantic-mediawiki.org/wiki/SMWCon_Spring_2012).
 
 **Result formats**
 
 A talk going over the important changes that happened in the last year affecting
-SMWs result formats, the work being done right now and what the future might look like. 
+SMWs result formats, the work being done right now and what the future might look like.
 
 Presented by Jeroen De Dauw at SMWCon Spring 2012, April 2012, Carlsbad, CA.
 
-View at: http://ext.bn2vs.com/smwcon/srf/
+* [Slides](http://ext.bn2vs.com/smwcon/srf/)
 <br /><br />
 
-#### SMWCon fall 2011, Berlin
+#### FOSDEM 2012, Brussels
+
+You can view the [FOSDEM 2012 website](https://archive.fosdem.org/2012/).
+
+**Semantic MediaWiki**
+
+* [Web page](https://archive.fosdem.org/2012/schedule/event/smw.html)
+* [Slides](https://archive.fosdem.org/2012/schedule/event/493/40_2011_12_14_FOSDEM2012_SMW.odp)
+* [Video](https://www.youtube.com/watch?v=bQ8rab_J9OI)
+
+#### SMWCon Fall 2011, Berlin
+
+You can view the [SMWCon Fall 2011 website](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2011).
 
 **Watching structured data**
 
-A short (15 min talk) introduction to the Semantic Watchlist extension.
+A short (15 min talk) introduction to the
+[Semantic Watchlist](https://www.mediawiki.org/wiki/Extension:Semantic_Watchlist) extension.
 
-Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
-
-View at: http://jeroendedauw.github.com/slides/smwcon/2011fall/swl/
+* [Slides](http://jeroendedauw.github.com/slides/smwcon/2011fall/swl/)
 
 **The future of SMW visualizations**
 
 Some ideas on how the semantic result formats can be improved,
-and what tools can be utilized for this. (5 min lightning talk)  
+and what tools can be utilized for this. (5 min lightning talk)
 
-Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
-
-View at: http://jeroendedauw.github.com/slides/smwcon/2011fall/spark/
+* [Slides](http://jeroendedauw.github.com/slides/smwcon/2011fall/spark/)
 
 **Semantic Maps**
 
 A short overview of what's new and upcoming in Maps and Semantic Maps.
 (5 min lightning talk)
 
-Presented by Jeroen De Dauw at SMWCon Fall 2011, September 2011, Berlin.
-
-View at: http://jeroendedauw.github.com/slides/smwcon/2011fall/maps/
+* [Slides](http://jeroendedauw.github.com/slides/smwcon/2011fall/maps/)
 
 {% endmarkdown %}
 {% endblock %}
