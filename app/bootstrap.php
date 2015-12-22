@@ -41,4 +41,6 @@ $app->error(function (\Exception $e, $code) use ($app) {
     return new Response($app['twig']->resolveTemplate($templates)->render(['code' => $code]), $code);
 });
 
+require __DIR__ . '/routes.php';
+
 return $app;
