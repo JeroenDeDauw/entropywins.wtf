@@ -36,7 +36,7 @@ $app->get('/blog-embedded', function () use ($app) {
 	$html = '';
 
 	$rssReader = new SimplePie();
-	$rssReader->set_feed_url( 'http://www.bn2vs.com/blog/feed/' );
+	$rssReader->set_feed_url( 'http://www.entropywins.wtf/blog/feed/' );
 	$rssReader->init();
 	$rssReader->handle_content_type();
 
@@ -69,7 +69,7 @@ $app->get('/', function () use ($app) {
 	$html = '';
 
 	$rssReader = new SimplePie();
-	$rssReader->set_feed_url( 'http://www.bn2vs.com/blog/feed/' );
+	$rssReader->set_feed_url( 'http://www.entropywins.wtf/blog/feed/' );
 	$rssReader->init();
 	$rssReader->handle_content_type();
 

@@ -8,20 +8,12 @@ class SmokeTest extends WebTestCase {
 		return require __DIR__ . '/../app/bootstrap.php';
 	}
 
-	public function testRootIsTwoHundred() {
+	public function testSmwPageIsTwoHundred() {
 		$client = $this->createClient();
 
-		$client->request( 'GET', '/' );
+		$client->request( 'GET', '/smw' );
 
 		$this->assertSame( 200, $client->getResponse()->getStatusCode() );
-	}
-
-	public function testRootHasUnderConstruction() {
-		$client = $this->createClient();
-
-		$client->request( 'GET', '/' );
-
-		$this->assertContains( 'Under construction', $client->getResponse()->getContent() );
 	}
 
 	public function testSmwPageHasSemanticMediaWiki() {
