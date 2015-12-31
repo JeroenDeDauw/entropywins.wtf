@@ -4,18 +4,6 @@
 
 {% block content %}
 
-<div class="row">
-    <div class="col-md-12">
-        <h2>Under construction</h2>
-        <marquee>Hard at work to make this website geocities compliant! Apparently the blink tag no longer works... meh</marquee>
-        <p>
-            <img src="{{ app.request.basepath }}/images/underconstruction.gif" />
-            <br />
-            <span style="margin-left: 80px">&#8598; That is me configuring Apache.</span>
-        </p>
-    </div>
-</div>
-
 <div class="row" style="margin-top: 30px">
     <div class="col-md-12">
         <p>
@@ -24,19 +12,37 @@
             and <a href="{{ app.request.basepath }}/smw">SMW</a>
             and maintains <a href="{{ app.request.basepath }}/libraries">some libraries</a>.
         </p>
+    </div>
+</div>
 
+<div class="row" style="margin-top: 30px">
+    <div class="col-md-7">
+        <b>Latest blog posts</b>
+        {{ blogposts | raw }}
+    </div>
+    <div class="col-md-5">
         <b>You can find me on</b>
         <ul>
             <li><a href="https://github.com/JeroenDeDauw">GitHub</a></li>
             <li><a href="https://twitter.com/JeroenDeDauw">Twitter</a></li>
-            <li><a href="https://www.ohloh.net/accounts/jeroendedauw">Ohloh</a></li>
-            <li><a href="https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw">MediaWiki.org</a></li>
-            <li><a href="https://packagist.org/users/Jeroen%20De%20Dauw/">Packagist</a></li>
             <li><a href="https://keybase.io/jeroendedauw">Keybase</a></li>
+            <li><a href="https://packagist.org/users/Jeroen%20De%20Dauw/">Packagist</a></li>
+            <li><a href="https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw">MediaWiki.org</a></li>
+            <li><a href="https://www.ohloh.net/accounts/jeroendedauw">Ohloh</a></li>
+            <li><a href="http://www.twitch.tv/entropygames/profile/highlights">Twitch</a></li>
         </ul>
+    </div>
+</div>
 
-        <b>Latest blog posts</b>
-        {{ blogposts | raw }}
+<div class="row" style="margin-top: 30px">
+    <div class="col-md-7">
+        <b>Under construction</b>
+        <marquee>Hard at work to make this website geocities compliant! Apparently the blink tag no longer works... meh</marquee>
+        <p>
+            <img src="{{ app.request.basepath }}/images/underconstruction.gif" />
+            <br />
+            <span style="margin-left: 80px">&#8598; That is me configuring Apache.</span>
+        </p>
     </div>
 </div>
 
