@@ -11,45 +11,63 @@
 
     <link rel="shortcut icon" href="{{ app.request.basepath }}/favicon.ico" type="image/x-icon">
     <link rel="icon" href="{{ app.request.basepath }}/favicon.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="Entropy Wins &raquo; Feed" href="{{ app.request.basepath }}/blog/feed/" />
+
+    <link rel='stylesheet' id='swell-style-mobile-css'  href='https://www.entropywins.wtf/blog/wp-content/themes/swell-lite/css/style-mobile.css?ver=1.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css'  href='https://www.entropywins.wtf/blog/wp-content/themes/swell-lite/css/font-awesome.css?ver=1.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='swell-fonts-css'  href='//fonts.googleapis.com/css?family=Raleway%3A400%2C200%2C300%2C800%2C700%2C500%2C600%2C900%2C100%7CRoboto%3A400%2C100italic%2C100%2C300%2C300italic%2C400italic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic%7COpen+Sans%3A400%2C300%2C600%2C700%2C800%2C800italic%2C700italic%2C600italic%2C400italic%2C300italic%7CMontserrat%3A400%2C700%7CDroid+Serif%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+
+    <!--<script type='text/javascript' src='https://www.entropywins.wtf/blog/wp-content/themes/swell-lite/js/navigation.js?ver=20130729'></script>-->
 </head>
 <body>
-<div class="container">
-    <nav class="nav nav-pills main-nav">
-        <li {% if page == 'home' %}class="active"{% endif %}>
-        <a href="{{ app.request.basepath }}/">Home</a>
-        </li>
-        <li {% if page == 'craftsmanship' %}class="active"{% endif %}>
-        <a href="{{ app.request.basepath }}/craftsmanship">Craftsmanship</a>
-        </li>
-        <li {% if page == 'smw' %}class="active"{% endif %}>
-        <a href="{{ app.request.basepath }}/smw">SMW</a>
-        </li>
-        <li {% if page == 'wikidata' %}class="active"{% endif %}>
-        <a href="{{ app.request.basepath }}/wikidata">Wikidata</a>
-        </li>
-        <li {% if page == 'libraries' %}class="active"{% endif %}>
-        <a href="{{ app.request.basepath }}/libraries">Libraries</a>
-        </li>
-        {% if page == 'slides' %}<li class="active">
-        <a href="{{ app.request.basepath }}/slides">Slides</a>
-        </li>{% endif %}
-        <li {% if page == 'blog-embedded' %}class="active"{% endif %}>
-        <a href="{{ app.request.basepath }}/blog-embedded">Blog</a>
-        </li>
-    </nav>
-</div>
-<div class="jumbotron banner">
-    <div class="banner-text container">
-        <picture class="logo">
-            <img src="{{ app.request.basepath }}/images/logo.jpg">
-        </picture>
-        Site of Jeroen De Dauw
-        <p class="sub">Also see <a href="{{ app.request.basepath }}/blog/">my blog</a></p>
+
+<div id="header">
+    <div id="custom-header"  style="background-image: url({{ app.request.basepath }}/blog/wp-content/uploads/2015/12/XeeleeRing.png);">
+        <div id="masthead" class="vertical-center text-center">
+            <h1 class="site-title" style="border: none">
+                <a href="{{ app.request.basepath }}" rel="home">Entropy Wins</a>
+            </h1>
+
+            <h2 class="site-description">Site of Jeroen De Dauw</h2>
+        </div>
+
+        <img class="hide-img" src="https://www.entropywins.wtf/blog/wp-content/uploads/2015/12/XeeleeRing.png" height="296" width="1806" alt="Entropy Wins" />
     </div>
 </div>
-<div class="container">
+
+<nav id="navigation" class="navigation-main clearfix" role="navigation">
+
+    <span class="menu-toggle"><i class="fa fa-bars"></i></span>
+
+    <div class="menu-main-menu-container">
+        <ul id="menu-main-menu" class="menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'home' %}current-menu-item current_page_item{% endif %}">
+                <a href="{{ app.request.basepath }}/">Home</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'craftsmanship' %}current-menu-item current_page_item{% endif %}">
+                <a href="{{ app.request.basepath }}/craftsmanship">Craftsmanship</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'smw' %}current-menu-item current_page_item{% endif %}">
+                <a href="{{ app.request.basepath }}/smw">SMW</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'wikidata' %}current-menu-item current_page_item{% endif %}">
+                <a href="{{ app.request.basepath }}/wikidata">Wikidata</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'libraries' %}current-menu-item current_page_item{% endif %}">
+                <a href="{{ app.request.basepath }}/libraries">Libraries</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                <a href="{{ app.request.basepath }}/blog">Blog</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" style="background-color: #ffffff; margin-top: 30px; margin-bottom: 30px;">
     {% block content %}{% endblock %}
 </div>
+
 
 <a href="https://github.com/JeroenDeDauw/bn2vs.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="{{ app.request.basepath }}/images/gh.png"></a>
 </body>
