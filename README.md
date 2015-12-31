@@ -1,8 +1,8 @@
 # bn2vs.com website
 
-[![Build Status](https://travis-ci.org/JeroenDeDauw/bn2vs.com.svg)](https://travis-ci.org/JeroenDeDauw/bn2vs.com)
+[![Build Status](https://travis-ci.org/JeroenDeDauw/entropywins.wtf.svg)](https://travis-ci.org/JeroenDeDauw/entropywins.wtf)
 
-This repo contains the resources of the [bn2vs.com website](http://bn2vs.com).
+This repo contains the resources of the [entropywins.wtf website](https://entropywins.wtf).
 
 The website uses the [Silex](silex.sensiolabs.org/) PHP micro-framework.
 
