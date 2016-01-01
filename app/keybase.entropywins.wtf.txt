@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/jeroendedauw
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://entropywins.wtf
+  * I am jeroendedauw (https://keybase.io/jeroendedauw) on keybase.
+  * I have a public key with fingerprint AB95 CECD B3C2 6869 E485  CD1C EEAA 431E 2E91 371F
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101f5c7de0161250fbc3dcfb3b6741918ce194e6e9081cf7248b7e8cef14fa242680a",
+            "fingerprint": "ab95cecdb3c26869e485cd1ceeaa431e2e91371f",
+            "host": "keybase.io",
+            "key_id": "eeaa431e2e91371f",
+            "kid": "0101f5c7de0161250fbc3dcfb3b6741918ce194e6e9081cf7248b7e8cef14fa242680a",
+            "uid": "b534b83d83d7c9a8548c0f26623e7900",
+            "username": "jeroendedauw"
+        },
+        "service": {
+            "hostname": "entropywins.wtf",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1451634627,
+    "expire_in": 157680000,
+    "prev": "886bc67d8e300f1138ed591a70a6cae1815b35f4e61ae2df66eedfee16e51351",
+    "seqno": 28,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.49
+Comment: https://keybase.io/crypto
+
+yMNLAnicrZJ/TFVlGMcv+AO4ID9sDYIt89haJeB57/l5IWyURkXktOQaV3Y5P94D
+B7jnXM693MsdoxHxI5agt1UQzN1ABSEHOIOgYAgI09Ju0EZUoklDUwMk3RQw7Rxm
+//Vn797t3fs8n+f7fp9n75kNa3R6v/n2l5+M91Cb/L4b8hbq0iu3jRQjrMy7kYRi
+JA+uHjCfh3aHJU/kkQQEBSgQCI7iIQpIYCBQgeUwnhNYjCUpHBgBzUFgxCEJjSgN
+OIEy4DRLQTUqAFxgDLiBpFEGiUUEUcqGik0RJYcqy7BGgoMcz2KcCpBGiNMExwMO
+QobBMQAN0AgwCghqYY5s1ypUcyxjh/GirMbUi2XV3n/w/7PvwlU5lsBwlsZ4dVOc
+kaEJnOZQwUCSBgxSRhTVQDtUJMYKVToXKjKUeMgzhS6kJBZRM06Rg9pwtW4eUVBy
+KLLN7RIle7zLoVm3KbJD5uR8NZnjcNjsCVqxw23TaBdkLY90LKwo8eo41QonVOyi
+LCEJQCU5h6gJA5wAJIaTBioWgUU2UYEWUSMISm1JXdo70KlK0jTJciTF0xBDUQEA
+jIY8YQQMhTIkx0BAA4LFCEEdEmCggRdIEkJegBCQkAAYARCtswJJRhIMtOqTyVY1
+7WK2xDgKFYiUDA/tX6vz0+vWr/PX/plOHxT+7+8rXxe2stb7a9BwmOnY82U9pQvk
+5J27LRlKdRP/5Upi/jf3nWF1ll8q9rbj6bqMNo7wRjdHPrhrqh78/MDe3ErTx1/U
+1D7xyUdVN85u7d/Tm/aXfuP70cciHgT+FlUVc8l5pNlzYvBDU6Sn+0JIudl/NmQy
+ONON8dJ4kjj0dofn275dMfd/CH3r4JXswd6moDT+uax32pk/vLYBh7V49tMoPL2p
+3nfnonnD7MQ5n28oIG/f6ExmJdrCFfdsvsyXTUTEzBcelgO8Az95IztGyqrtO7c8
+49nfHnhyLnR3zPdZxUffvJB+73TbuTO1p5vDzYsvxT1tckfMjFUsb/wqdGlP8uLr
+RJ+4VKe0NIym/D0+3bOlZLG+ZsYwutJweXPW1MWbh6xX68auBSam0vO9uexweNdO
+u6VLL/lM7oKbL3QEmqx5yTutx0OsQnJcaRLs/zO6ZDS6Ze6zWaW15mG6Z27afyyr
+L7NqIM41XXRe+H0q4PFG/ej5F9uevR5V33Dv9o6fUzqXtl4pHTnblDgXSrcit1KX
+53fl/NhzCgZnlNe0e08wk5m3K3IKbpWE73v4anB04EHJuuD31BuXPji0xrw9uKtz
+xJjiGyeFLPmxV+LebfU1NtpP9i9s794xZUY6j7Skrkc70r52dl+bOIXVvsa6kt1H
+D79HJe0eClg2Zx/fVmTsRq7O1m66cT2z8R+3/crs
+=X7y7
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jeroendedauw
+
+==================================================================
