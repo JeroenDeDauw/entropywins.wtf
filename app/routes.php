@@ -4,33 +4,64 @@
  * @var Silex\Application $app
  */
 
-// TODO: learn how to access page name more sanely if possible
+/**
+ * These variables need to be in scope when this file is included:
+ *
+ * @var \Silex\Application $app
+ */
 
-$app->get('/home', function () use ($app) {
-	return $app['twig']->render('index.html', ['page' => 'home']);
-});
+function getPageHandler( $pageName, array $arguments = [] ) {
+	return function () use ( $pageName, $arguments ) {
+		return $GLOBALS['app']['twig']->render(
+			'pages/' . $pageName . '.html',
+			array_merge( [
+				'page' => $pageName,
+			], $arguments )
+		);
+	};
+}
 
-$app->get('/libraries', function () use ($app) {
-	return $app['twig']->render('libraries.html', ['page' => 'libraries']);
-});
+$app->get(
+	'/',
+	getPageHandler( 'home', [ 'blogposts' => getBlogLinks() ] )
+);
 
-$app->get('/craftsmanship', function () use ($app) {
-	return $app['twig']->render('craftsmanship.md', ['page' => 'craftsmanship']);
-});
+$app->get(
+	'/home',
+	getPageHandler( 'home', [ 'blogposts' => getBlogLinks() ] )
+);
 
-$app->get('/smw', function () use ($app) {
-	return $app['twig']->render('smw.md', ['page' => 'smw']);
-});
+$app->get(
+	'/craftsmanship',
+	getPageHandler( 'craftsmanship' )
+);
 
-$app->get('/wikidata', function () use ($app) {
-	return $app['twig']->render('wikidata.md', ['page' => 'wikidata']);
-});
+$app->get(
+	'/smw',
+	getPageHandler( 'smw' )
+);
 
-$app->get('/slides', function () use ($app) {
-	return $app['twig']->render('slides.md', ['page' => 'slides']);
-});
+$app->get(
+	'/wikidata',
+	getPageHandler( 'wikidata' )
+);
 
-$app->get('/blog-embedded', function () use ($app) {
+$app->get(
+	'/libraries',
+	getPageHandler( 'libraries' )
+);
+
+$app->get(
+	'/blog-embedded',
+	getPageHandler( 'blog-embedded', [ 'blogposts' => getBlogPosts() ] )
+);
+
+$app->get(
+	'/slides',
+	getPageHandler( 'slides' )
+);
+
+function getBlogPosts() {
 	// The derp is strong in this one
 	// TODO: Should learn how to use twig properly :)
 	$html = '';
@@ -59,11 +90,11 @@ EOL;
 
 	}
 
-	return $app['twig']->render('blog.html', ['page' => 'blog-embedded', 'blogposts' => $html]);
-});
+	return $html;
+}
 
 
-$app->get('/', function () use ($app) {
+function getBlogLinks() {
 	// The derp is strong in this one
 	// TODO: Should learn how to use twig properly :)
 	$html = '';
@@ -87,7 +118,5 @@ EOL;
 
 	}
 
-	$html = '<ul>' . $html . '</ul>';
-
-	return $app['twig']->render('index.html', ['page' => 'home', 'blogposts' => $html]);
-});
+	return '<ul>' . $html . '</ul>';
+}

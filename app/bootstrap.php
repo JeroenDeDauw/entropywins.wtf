@@ -15,7 +15,7 @@ $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 
-$app['twig.path'] = array(__DIR__.'/pages');
+$app['twig.path'] = array(__DIR__.'/templates');
 
 $app['twig'] = $app->share($app->extend('twig', function ($twig, $app) {
     // add custom globals, filters, tags, ...
