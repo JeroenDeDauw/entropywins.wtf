@@ -3,7 +3,6 @@
 /**
  * @var Silex\Application $app
  */
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * These variables need to be in scope when this file is included:
@@ -55,9 +54,8 @@ $app->get(
 
 $app->get(
 	'/keybase.txt',
-	function( Request $request ) {
-		$file = substr( $request->getHost(), -3 ) === 'wtf' ? 'entropywins.wtf' : 'bn2vs.com';
-		return file_get_contents( __DIR__ .  '/keybase.' . $file . '.txt' );
+	function() {
+		return file_get_contents( __DIR__ .  '/keybase.entropywins.wtf.txt' );
 	}
 );
 
