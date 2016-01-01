@@ -33,17 +33,17 @@ $app->get(
 
 $app->get(
 	'/craftsmanship',
-	getPageHandler( 'craftsmanship' )
+	getPageHandler( 'craftsmanship', [ 'blogposts' => getBlogTopicLinks( 'software-craftsmanship' ) ] )
 );
 
 $app->get(
 	'/smw',
-	getPageHandler( 'smw' )
+	getPageHandler( 'smw', [ 'blogposts' => getBlogTopicLinks( 'smw' ) ] )
 );
 
 $app->get(
 	'/wikidata',
-	getPageHandler( 'wikidata' )
+	getPageHandler( 'wikidata', [ 'blogposts' => getBlogTopicLinks( 'wikidata' ) ] )
 );
 
 $app->get(
@@ -61,26 +61,58 @@ $app->get(
 	getPageHandler( 'slides' )
 );
 
-function getBlogPosts() {
-	// The derp is strong in this one
-	// TODO: Should learn how to use twig properly :)
-	$html = '';
+function getBlogPostsFromUrlFunction( $url, $max = 0 ) {
+	return function() use ( $url, $max ) {
+		$rssReader = new SimplePie();
 
-	$rssReader = new SimplePie();
-	$rssReader->set_feed_url( 'http://www.entropywins.wtf/blog/feed/' );
-	$rssReader->init();
-	$rssReader->handle_content_type();
+		$rssReader->set_feed_url( $url );
+		$rssReader->init();
+		$rssReader->handle_content_type();
 
-	/**
-	 * @var SimplePie_Item $item
-	 */
-	foreach ( $rssReader->get_items() as $item ) {
-		$pl = $item->get_permalink();
-		$title = $item->get_title();
-		$content = $item->get_content();
-		$date = $item->get_date('j F Y | H:i');
+		return $rssReader->get_items( 0, $max );
+	};
+}
 
-		$html .= <<<EOL
+function blogPostsToHtmlListFunction( callable $getBlogPosts ) {
+	return function() use ( $getBlogPosts ) {
+		// The derp is strong in this one
+		// TODO: Should learn how to use twig properly :)
+		$html = '';
+
+		/**
+		 * @var SimplePie_Item $item
+		 */
+		foreach ( $getBlogPosts() as $item ) {
+			$pl = $item->get_permalink();
+			$title = $item->get_title();
+			$date = $item->get_date('j F Y | H:i');
+
+			$html .= <<<EOL
+		<li><a href="$pl">$title</a> <small>($date)</small></li>
+EOL;
+
+		}
+
+		return '<ul>' . $html . '</ul>';
+	};
+}
+
+function blogPostsToHtmlFunction( callable $getBlogPosts ) {
+	return function() use ( $getBlogPosts ) {
+		// The derp is strong in this one
+		// TODO: Should learn how to use twig properly :)
+		$html = '';
+
+		/**
+		 * @var SimplePie_Item $item
+		 */
+		foreach ( $getBlogPosts() as $item ) {
+			$pl = $item->get_permalink();
+			$title = $item->get_title();
+			$content = $item->get_content();
+			$date = $item->get_date('j F Y | H:i');
+
+			$html .= <<<EOL
 		<div class="item">
 			<h2><a href="$pl">$title</a></h2>
 			<p><small>Posted on $date</small></p>
@@ -88,35 +120,25 @@ function getBlogPosts() {
 		</div>
 EOL;
 
-	}
+		}
 
-	return $html;
+		return $html;
+	};
 }
 
 
 function getBlogLinks() {
-	// The derp is strong in this one
-	// TODO: Should learn how to use twig properly :)
-	$html = '';
-
-	$rssReader = new SimplePie();
-	$rssReader->set_feed_url( 'http://www.entropywins.wtf/blog/feed/' );
-	$rssReader->init();
-	$rssReader->handle_content_type();
-
-	/**
-	 * @var SimplePie_Item $item
-	 */
-	foreach ( $rssReader->get_items() as $item ) {
-		$pl = $item->get_permalink();
-		$title = $item->get_title();
-		$date = $item->get_date('j F Y | H:i');
-
-		$html .= <<<EOL
-		<li><a href="$pl">$title</a> <small>($date)</small></li>
-EOL;
-
-	}
-
-	return '<ul>' . $html . '</ul>';
+	$function = blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/feed/' ) );
+	return $function();
 }
+
+function getBlogPosts() {
+	$function = blogPostsToHtmlFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/feed/' ) );
+	return $function();
+}
+
+function getBlogTopicLinks( $topic ) {
+	$function = blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/tag/' . $topic . '/feed/', 5 ) );
+	return $function();
+}
+
