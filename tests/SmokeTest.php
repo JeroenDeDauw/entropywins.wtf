@@ -5,32 +5,47 @@ use Silex\WebTestCase;
 class SmokeTest extends WebTestCase {
 
 	public function createApplication() {
-		return require __DIR__ . '/../app/bootstrap.php';
+		$app = require __DIR__ . '/../app/bootstrap.php';
+		$app['debug'] = true;
+		return $app;
 	}
 
-	public function testSmwPageIsTwoHundred() {
+	public function testLibrariesPageIsTwoHundred() {
 		$client = $this->createClient();
 
-		$client->request( 'GET', '/smw' );
+		$client->request( 'GET', '/libraries' );
 
 		$this->assertSame( 200, $client->getResponse()->getStatusCode() );
 	}
 
-	public function testSmwPageHasSemanticMediaWiki() {
+	public function testLibrariesPageHasBatchingIterator() {
 		$client = $this->createClient();
 
-		$client->request( 'GET', '/smw' );
+		$client->request( 'GET', '/libraries' );
 
-		$this->assertContains( 'Semantic MediaWiki', $client->getResponse()->getContent() );
+		$this->assertContains( 'Batching Iterator', $client->getResponse()->getContent() );
 	}
 
-	public function testSmwPageHasRenderedMarkdown() {
+	public function testHirePageHasRenderedMarkdown() {
+		$this->markTestSkipped( 'Page not enabled' );
 		$client = $this->createClient();
 
-		$client->request( 'GET', '/smw' );
+		$client->request( 'GET', '/hire' );
 
 		$this->assertContains(
-			'<a href="https://www.ohloh.net/p/smw/contributors">contributors list on Ohloh</a>',
+			'<h2>Professional approach</h2>',
+			$client->getResponse()->getContent()
+		);
+	}
+
+	public function testPageNotFound() {
+		$this->app = require __DIR__ . '/../app/bootstrap.php';
+		$client = $this->createClient();
+
+		$client->request( 'GET', '/kittens' );
+
+		$this->assertContains(
+			'images/errors/404.jpg',
 			$client->getResponse()->getContent()
 		);
 	}

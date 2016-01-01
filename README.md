@@ -1,4 +1,4 @@
-# bn2vs.com website
+# entropywins.wtf website
 
 [![Build Status](https://travis-ci.org/JeroenDeDauw/entropywins.wtf.svg)](https://travis-ci.org/JeroenDeDauw/entropywins.wtf)
 
