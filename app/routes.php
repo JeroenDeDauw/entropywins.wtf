@@ -39,7 +39,12 @@ $app->get(
 
 $app->get(
 	'/libraries',
-	getPageHandler( $app, 'libraries' )
+	getPageHandler( $app, 'projects' )
+);
+
+$app->get(
+	'/projects',
+	getPageHandler( $app, 'projects' )
 );
 
 $app->get(
