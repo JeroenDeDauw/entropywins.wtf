@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block title %}Software Craftsmanship{% endblock %}
+
+{% block content %}
+
+{% markdown %}
+
+Skynet is an arterial intelligence hobby project I created in 2010. It solves the Travelling Salesman
+Problem (TSP) using Genetic Algorithms (GA). It is written in C#, has a Windows Presentation Foundation
+UI and is build upon my GALib genetic algorithm library. It's completely open source and available
+under the GNU General Public License.
+
+## Download
+
+* [Skynet0.1.7 setup.zip](https://sourceforge.net/projects/csgalib-tsp/files/Skynet%200.1.7/Skynet0.1.7setup.zip/download) (includes installer and automatic updates)
+* [Executables tarball](https://sourceforge.net/projects/csgalib-tsp/files/Skynet%200.1.7/Skynet0.1.7setup.zip/download) (latest version of the application executables)
+* [Source code tarball](http://csgalib-tsp.svn.sourceforge.net/viewvc/csgalib-tsp.tar.gz?view=tar) (latest version of the source code)
+
+You can also download the project code directly via SVN from the SourceForge source code repository,
+at https://csgalib-tsp.svn.sourceforge.net/svnroot/csgalib-tsp. From a command line, you can call the following:
+
+    svn checkout https://csgalib-tsp.svn.sourceforge.net/svnroot/csgalib-tsp
+
+## Background
+
+The idea for creating this application came to me after reading the first part of
+[Bio-Inspired Artificial Intelligence](http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=11657)
+by Dario Floreano and Claudio Mattiussi. I figured I needed to do an implementation of what I've read
+to test myself. I split up the general GA code from the application itself and created GALib, a small
+C# Library that provides the scaffolding for Genetic Algorithm based functionality. All work was done
+in my free time.
+
+## Using the application
+
+The application consists of 3 big regions; a canvas on which the graphics are drawn, a datagrid giving
+you a a more clean view of the data, and an menu on the right containing controls and statistics.
+
+### 1. Adding cities
+
+You can add cities by clicking any place on the canvas, which is the open space in the top left of the
+application, above the datagrid. A city is represented by a small red circle, and will also be added
+to the datagrid, where you can see it's coordinates. By selecting the city in the datagrid, the
+circle on the canvas will get highlighted.
+
+If you don't want to bother putting a bunch of cities on the canvas, you can just click 'Add cities
+circle' in the control panel on the right. Doing so will add 42 cities arranged in a circle to the
+canvas and datagrid. By default, the application will already do this at startup.
+
+To remove the current cities, click 'Clear all cities' in the control panel.
+
+### 2. Configuring the settings
+
+All configuration is located in the 'Algorithm settings' box at the top right of the application.
+All are pretty self explanatory, except maybe generation delay, which allows you to delay every
+generation a certain amount of time. This is useful for debugging, and studying the first few steps
+in detail.
+
+### 3. Running the algorithm
+
+You can run the application by hitting 'Find the shortest route' in the control panel on the right.
+You can also do this via the menu, by clicking Algorithm -> Start. To pause or resume the evolution,
+click their corresponding menu items in the Algorithm menu. To cancel the evolution, either click 'Stop'
+in the control panel, or again the menu item in the Algorithm menu. The algorithm will stop on itself
+when either the maximum amount of generations or the stagnation limit is reached.
+
+Once the evolution is complete, you'll be shown a brief report in the form of a report window. The
+datagrid will also show the travel number of each city. By sorting on this number, you can easily
+highlight the cities in the route one by one, in the correct order.
+
+### 4. Statistics
+
+You can view the current generation number and the length of the best route in it, as well as the
+length of the overall best route and last improvement in the 'Progress statistics' panel in the bottom
+right corner of the application. Two progress bars show the progress of the evolution (how many
+generations of the maximum amount have been evolved), and stagnation time-out (how many generations
+have gone without any improvement of the allowed amount).
+
+## How it works
+
+This section explains how Skynet works as an implementation of GALib. If you are not familiar with how
+genetic algorithms work, you are advised to first have a good look at [this Wikipedia article]
+(https://en.wikipedia.org/wiki/Genetic_algorithm) and related pages. This section will introduce you
+to how GA logic specific to the TSP works in a bottom-up fashion. For more information on the actual
+evolution, see GALib.
+
+### Dependency diagram
+
+For a full dependency diagram of both Skynet and GALib, see [this image](http://wiki.bn2vs.com/File:GALib-and-Skynet-dependency-graph.gif).
+
+![Skynet dependencies](http://wiki.bn2vs.com/smw/images/f/f3/Skynet-dependency-graph.gif)
+
+### Location class
+
+The Location class is a simple holder for locations, such as cities in the TSP. New instances are
+created by providing a Point. The class exposes the following properties: Latitude (Double), Longitude
+(Double), Id (Int32) and TravelNr (Int32). TravelNr is used to store a location's position in a Route.
+
+### Connection class
+
+The Connection class consists out of 2 public fields of type Location, and is meant to represent the
+shortest connection between these two locations on a flat surface. You can get it's length via the
+read-only Length property.
+
+### Route class
+
+The Route class, which contains the definition for the individuals that are getting evolved and is
+the core of the TSP implementation, inherits from Individual&lt;Connection&gt;. The genotype consists of a
+List&lt;Connection&gt;, which can be accessed via the public Connections property.
+
+## Points of Interest
+
+Since my main motivation for creating this application was exercise, I learned a lot from building it.
+It's my first decent C# application, as well as the first time I've created one using WPF and the first
+time I've done any GA programming (or AI in general). It also gave me the chance to familiarize myself
+with some of the new things of .Net 4.0, some profiling tools, and have some fun with navigation based
+windows. The biggest challenge in the application itself (so not counting GALib), was definitely
+creating the crossover algorithm for the Route individual type. At first I simply took half of the
+connections of one parent, and then the other half from the other parent, but I rewrote this to take
+all common connections. Although the crossover algorithm works fine now, it's pretty heavy on the cpu,
+and limiting the maximum speed of the application severely. If anyone finds a way to speed it up, be
+sure to let me know :)
+
+
+
+{% endmarkdown %}
+
+
+
+{% endblock %}
+

@@ -58,6 +58,11 @@ $app->get(
 );
 
 $app->get(
+	'/projects/skynet',
+	getPageHandler( $app, 'projects/skynet' )
+);
+
+$app->get(
 	'/keybase.txt',
 	function() {
 		return file_get_contents( __DIR__ .  '/keybase.entropywins.wtf.txt' );

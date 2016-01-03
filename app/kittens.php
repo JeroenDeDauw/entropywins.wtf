@@ -12,6 +12,7 @@ function getPageHandler( $app, $pageName, array $arguments = [] ) {
 			'pages/' . $pageName . '.html',
 			array_merge( [
 				'page' => $pageName,
+				'top_page' => explode( '/', $pageName )[0]
 			], $arguments )
 		);
 	};

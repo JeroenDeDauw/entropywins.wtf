@@ -42,19 +42,19 @@
 
     <div class="menu-main-menu-container">
         <ul id="menu-main-menu" class="menu">
-            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'home' %}current-menu-item current_page_item{% endif %}">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if top_page == 'home' %}current-menu-item current_page_item{% endif %}">
                 <a href="{{ app.request.basepath }}/">Home</a>
             </li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'craftsmanship' %}current-menu-item current_page_item{% endif %}">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if top_page == 'craftsmanship' %}current-menu-item current_page_item{% endif %}">
                 <a href="{{ app.request.basepath }}/craftsmanship">Craftsmanship</a>
             </li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'smw' %}current-menu-item current_page_item{% endif %}">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if top_page == 'smw' %}current-menu-item current_page_item{% endif %}">
                 <a href="{{ app.request.basepath }}/smw">SMW</a>
             </li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'wikidata' %}current-menu-item current_page_item{% endif %}">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if top_page == 'wikidata' %}current-menu-item current_page_item{% endif %}">
                 <a href="{{ app.request.basepath }}/wikidata">Wikidata</a>
             </li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if page == 'projects' %}current-menu-item current_page_item{% endif %}">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {% if top_page == 'projects' %}current-menu-item current_page_item{% endif %}">
                 <a href="{{ app.request.basepath }}/projects">Projects</a>
             </li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom">
