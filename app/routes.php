@@ -63,6 +63,11 @@ $app->get(
 );
 
 $app->get(
+	'/projects/galib',
+	getPageHandler( $app, 'projects/galib' )
+);
+
+$app->get(
 	'/keybase.txt',
 	function() {
 		return file_get_contents( __DIR__ .  '/keybase.entropywins.wtf.txt' );

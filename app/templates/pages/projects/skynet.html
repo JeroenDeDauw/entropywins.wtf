@@ -1,15 +1,17 @@
 {% extends "layout.html" %}
 
-{% block title %}Software Craftsmanship{% endblock %}
+{% block title %}Skynet, a genetic algorithm solution to the TSP{% endblock %}
 
 {% block content %}
 
 {% markdown %}
 
+# Skynet
+
 Skynet is an arterial intelligence hobby project I created in 2010. It solves the Travelling Salesman
 Problem (TSP) using Genetic Algorithms (GA). It is written in C#, has a Windows Presentation Foundation
-UI and is build upon my GALib genetic algorithm library. It's completely open source and available
-under the GNU General Public License.
+UI and is build upon my [GALib genetic algorithm library]({{ app.request.basepath }}/projects/galib).
+It's completely open source and available under the GNU General Public License.
 
 ## Download
 
@@ -27,9 +29,13 @@ at https://csgalib-tsp.svn.sourceforge.net/svnroot/csgalib-tsp. From a command l
 The idea for creating this application came to me after reading the first part of
 [Bio-Inspired Artificial Intelligence](http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=11657)
 by Dario Floreano and Claudio Mattiussi. I figured I needed to do an implementation of what I've read
-to test myself. I split up the general GA code from the application itself and created GALib, a small
-C# Library that provides the scaffolding for Genetic Algorithm based functionality. All work was done
-in my free time.
+to test myself. I split up the general GA code from the application itself and created
+[GALib]({{ app.request.basepath }}/projects/galib), a small C# Library that provides the scaffolding
+for Genetic Algorithm based functionality. All work was done in my free time.
+
+![Screenshot](http://wiki.bn2vs.com/smw/images/4/4d/Skynet_application_interface.gif)
+
+See [this page](http://wiki.bn2vs.com/smw/images/4/4d/Skynet_application_interface.gif) for more screenshots.
 
 ## Using the application
 
@@ -50,7 +56,7 @@ canvas and datagrid. By default, the application will already do this at startup
 To remove the current cities, click 'Clear all cities' in the control panel.
 
 ### 2. Configuring the settings
-
+<img style="float: right;" src="http://wiki.bn2vs.com/smw/images/1/19/Skynet_settings.gif" />
 All configuration is located in the 'Algorithm settings' box at the top right of the application.
 All are pretty self explanatory, except maybe generation delay, which allows you to delay every
 generation a certain amount of time. This is useful for debugging, and studying the first few steps
@@ -68,8 +74,12 @@ Once the evolution is complete, you'll be shown a brief report in the form of a 
 datagrid will also show the travel number of each city. By sorting on this number, you can easily
 highlight the cities in the route one by one, in the correct order.
 
-### 4. Statistics
+![](http://wiki.bn2vs.com/smw/images/thumb/c/c1/Skynet_route.gif/600px-Skynet_route.gif)
 
+![A report window showing the shortest obtained distance](http://wiki.bn2vs.com/smw/images/e/ea/Skynet_report.gif)
+
+### 4. Statistics
+<img style="float: right;" src="http://wiki.bn2vs.com/smw/images/0/01/Skynet_stats.gif" />
 You can view the current generation number and the length of the best route in it, as well as the
 length of the overall best route and last improvement in the 'Progress statistics' panel in the bottom
 right corner of the application. Two progress bars show the progress of the evolution (how many
@@ -120,7 +130,6 @@ connections of one parent, and then the other half from the other parent, but I 
 all common connections. Although the crossover algorithm works fine now, it's pretty heavy on the cpu,
 and limiting the maximum speed of the application severely. If anyone finds a way to speed it up, be
 sure to let me know :)
-
 
 
 {% endmarkdown %}
