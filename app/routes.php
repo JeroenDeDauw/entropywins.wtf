@@ -68,6 +68,11 @@ $app->get(
 );
 
 $app->get(
+	'/projects/bn-converter-pro',
+	getPageHandler( $app, 'projects/bn-converter' )
+);
+
+$app->get(
 	'/keybase.txt',
 	function() {
 		return file_get_contents( __DIR__ .  '/keybase.entropywins.wtf.txt' );
