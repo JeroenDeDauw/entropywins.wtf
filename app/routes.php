@@ -73,6 +73,21 @@ $app->get(
 );
 
 $app->get(
+	'/projects/bn-library',
+	getPageHandler( $app, 'projects/bn-library' )
+);
+
+$app->get(
+	'/projects/bn-brute-force-hash-attacker',
+	getPageHandler( $app, 'projects/bn-bfha' )
+);
+
+$app->get(
+	'/projects/art-of-defence-se4',
+	getPageHandler( $app, 'projects/aod-se4' )
+);
+
+$app->get(
 	'/keybase.txt',
 	function() {
 		return file_get_contents( __DIR__ .  '/keybase.entropywins.wtf.txt' );

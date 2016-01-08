@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+
+{% block title %}BN+ Brute Force Hash Attacker, the script kiddie magnet{% endblock %}
+
+{% block content %}
+
+{% markdown %}
+
+# BN+ Brute Force Hash Attacker
+
+This page is about a tool I wrote during my highschool years, between 2008 and 2010.
+Both the contents of this page and the tool it describes have not been updated since.
+
+BN+ Brute Force Hash Attacker is a tool for the recovery of passwords stored in hash formats,
+using [brute force](https://en.wikipedia.org/wiki/Brute_force_attack) methods. It's completely
+open source and available under the GNU General Public License. This application uses BN+ Library,
+an open source .Net utilities library.
+
+## Downloads
+
+* [Setup file (zip, windows installer, includes update platform)](https://sourceforge.net/projects/bfha/files/BN%2B%20Brute%20Force%20Hash%20Attacker%201.2.0.zip/download)
+* [Executables tarball (latest version of the executables)](http://bfha.svn.sourceforge.net/viewvc/bfha/bin/Debug.tar.gz?view=tar)
+* [SVN repostory](http://bfha.svn.sourceforge.net/viewvc/bfha/)
+
+![BN+ Brute Force Hash Attacker](http://wiki.bn2vs.com/smw/images/e/e5/Bnbfha.gif)
+
+## Links
+
+* [Project home](https://sourceforge.net/projects/bfha/)
+* [Blog: BN+ Brute Force Hash Attacker 1.2.0 released](https://www.entropywins.wtf/blog/2010/02/15/bn-brute-force-hash-attacker-1-2-0-released/)
+
+## Usage
+
+NOTICE: these docs are for version 1.0.5, and might not be accurate for the current version.
+
+### Installation, start-up
+
+You can choose to download the direct run files, or the fully integrated setup. When downloading
+the direct run files, just un-archive it (with WinRar), and run the .exe file. The application
+will start without any further user interaction needed. You can put the direct run files on your
+usb, and run the application anywhere you like, without needing administration privileges. Note
+that all files need to be placed in the same folder for the application to work. If you download
+the fully integrated setup, you should un-archive it (with WinRar), and run the setup file. The
+setup will show you several dialogues, including one where you can choose the installation location.
+When finishing the setup, a short cut to the application will be placed on your desktop, and in
+your start menu, from which you can run it.
+
+### Use of the interface
+
+The interface can be divided into 4 regions: charset configuration, password configuration,
+control panel and statistics. Sections 3, 4, 5 and 6 describe the functions of these regions in greater detail.
+
+### Charset configuration (Brute force charset)
+
+Only combinations with symbols that are in the charset will be created during the attack.
+Passwords with characters that are not part of the charset will therefore not be found. It
+is however important that you keep the charset as small as possible, as it's seize has a
+drastic result on the amount of possible passwords. The check boxes provide some basic
+combinations, but custom charsets can also be used by entering them into the custom
+character set field.
+
+### Password configuration (Password configuration)
+
+This section enables you to set the minimum and maximum length of the password, the hash format
+used, and a known format. When setting the length, keep in mind that covering a large range,
+especially big numbers, will increase the amount of possible passwords exponentially, and
+consequently also the time it will take to complete the attack. The format can be used in cases
+where characters at the start and/or end of the password are known. The more characters known,
+the smaller the amount of passwords will become. Note that using this functionality decreases
+the attack speed notably, in some cases up to 70% or more.
+
+### Control panel (Attack control panel)
+
+The control panel contains a field where you have to enter the hash you want to attack, and buttons
+to start, pauze, resume, stop and restart the attack. Note that the start button will only be
+enabled when the attack can start. This means that the amount of possible passwords needs to
+be greater then 0, and the entered hash needs to be valid.
+
+### Statistics (Attack statistics)
+
+This section does not contain any control elements, but provides you with data on the progress of
+the current attack. Note that the 'time remaining' is only an estimation based on the passed time
+and the percentage of attack completion, and can vary depending on the use of system resources by
+other applications.
+
+### Performance
+
+The speed of the attack depends on many factors, including the clock rate of your cpu, the amount
+of available memory, the amount of resources required by other applications, and the nature of the
+attack itself. Basic attacks (password amounts to 9223372036854775807) have a better performance
+then larger attacks, which will run up to 40% slower. As described in section 4, the use of the
+password format option will also have a negative effect on the attack speed.
+
+## Performance
+
+This is an overview of the performance of the application during various attacks. This data was tested
+on a 2.1Ghz single core laptop.
+
+![Performance](http://wiki.bn2vs.com/smw/images/thumb/e/e3/Bfhaperformance.gif/500px-Bfhaperformance.gif)
+
+## Change log
+
+### Version 1.2.0 - 2010-02-15
+
+* Replaced custom BigInteger class by native .Net 4.0 class.
+* Replaced update platform with native ClickOnce deployment updater.
+* Refactored code structure and reduced required assemblies to BN+ Framework core.
+* Improved Help menu links.
+* Fixed Import/Export issue.
+* Redesigned about screen.
+
+### Version 1.1.0 - 2009-03-21
+
+* Added multi hash attack capabilities
+* Added update platform
+* Added bug submit tool
+* Added text based hash import and export functionality
+* Added statusbar flashing (occurs when an attack is completed and the form isn't focused)
+* Made the layout dynamical
+* Fixed validation issue in the load and new settings functionality
+
+### Version 1.0.8 - 2009-02-16
+
+* Added a menu to the interface
+* Added MD4 hash
+* Added 'start from' option that will auto fill when an attack is aborted
+* Added attack rate statistic
+* Added options dialog
+* Added save and load functionality
+* Added current password statistic (and removed current password length statistic)
+* Moved the displaying of the percentage inside the progressbar
+* Use of internal hashing functions (except md4) for higher attacking rates
+* Improved readability of numbers by formatting them and displaying them in scientific notation when very large
+* Improved the display of remaining time (now long periods will be displayed as days or years)
+* Fixed bug in time elapsed occurring when pausing the attack
+
+### Version 1.0.5 - 2008-12-16
+
+* Use of BigInteger class in the complete attack algorithm.
+* Implemented automated selection of optimized algorithm for both small and large amounts, and attacks using the replace option.
+* Fixed bug that caused wrong char set build up when using large char sets.
+* Fixed bug that caused crash when unchecking all char set check boxes.
+* Use of a slightly improved oop structure.
+* Small add of chars to the special chars option.
+
+### Version 1.0.3 - 2008-10-29
+
+* Added RIPEMD160 hash
+* Fixed bugs in 'passwords contains' feature
+
+### Version 1.0.0 - September 2008
+
+* Development start
+
+{% endmarkdown %}
+{% endblock %}

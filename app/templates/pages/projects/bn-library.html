@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block title %}BN+ Library{% endblock %}
+
+{% block content %}
+
+{% markdown %}
+
+# BN+ Library
+This page is about a library I wrote during my highschool years, between 2008 and 2010.
+Both the contents of this page and the library it describes have not been updated since.
+
+BN+ Library is a .Net library containing multiple classes, controls and dialogues that
+can enrich your application in various ways. It's written in vb.net, using .Net framework
+4, is designed for WinForms applications and is completely open source and available
+under the GNU General Public License.
+
+## Downloads
+
+* [SVN snapshot](http://bnlib.svn.sourceforge.net/viewvc/bnlib.tar.gz?view=tar)
+* [SVN repository](http://bncpro.svn.sourceforge.net/viewvc/bncpro/)
+
+## Links
+
+* [Project home](https://sourceforge.net/projects/bnlib/)
+* [Blog: BN+ Framework 2.0.3 released](https://www.entropywins.wtf/blog/2009/05/21/bn-framework-2-0-3-released/)
+* [Blog: BN+ Converter Pro 1.1.0 released](https://www.entropywins.wtf/blog/2010/05/01/bn-converter-pro-1-1-0-released/)
+
+## Applications using BN+ Library
+
+* [BN+ Converter Pro]({{ app.request.basepath }}/projects/bn-converter-pro)
+* [BN+ Brute Force Hash Attacker]({{ app.request.basepath }}/projects/bn-brute-force-hash-attacker)
+
+## Change log
+
+### 3.0.1 - 2010-03-05
+
+* Removed dead code.
+* Added change log file to the project.
+
+### 3.0.0 - 2010-02-15
+
+* Major overhaul of the namespace structure.
+* Use of .Net framework 4.0, instead of 2.0.
+* Removed a few less decent classes.
+* Removed several utility functions, and added some to get assembly information.
+* Moved out cryptographic classes and modules (they are now part of the applications needing them).
+* Updated the ProgressbarWithPercentage class to the latest available version.
+* Minor improvements all over the codebase.
+* Made the project publicly available under the GPL on SourceForge.
+
+### 2.0.3 - 2009-05-21
+
+* Added BugSubmitter: A dialogue that enables user to submit various types of bugs with build in validation. Sends it's info to a webservice.
+* Added PasswordDialog: Password editing dialogue with optional authentication and live validation .
+* Added SimpleLoginDialog: A simple login dialogue that prompts for a password.
+* Added FileDownloader: A class for downloading files in the background that supports info about their progress, the total progress, cancellation, pausing, and resuming. The downloads will run on a separate thread so you don't have to worry about multihreading yourself.
+* Refactored CryptoProvider: Now allows you to pass more advanced settings for AES and offers easier to use methods for RSA, DES and TrippleDES.
+* Refactored CryptoStr: Has been rewritten to work with the new CryptoProvider and is now easier to use.
+* Refactored Updater: A bug in the version compare algorithm has been fixed.
+* Refactored BruteForceAttacker: New version included.
+* Various bug fixes and other improvements.
+
+### 2.0.2 - 2009-02-26
+
+* A variety of bug fixed and new features, including an alpha of BruteForceHashAttacker.
+
+### 2.0.1 - 2008-11-30
+
+* Revised the assembly structure (The FW is now a lot more modular, and there is no need to include everything in your application).
+* Added Classes.Cryptography namespace in Bn.Core assembly with powerful CryptoStr and CyrptoProvider classes.
+* Revised MathConverter class.
+* Small bug fixes in Time and Clock classes.
+
+### 2.0.0 - 2008-10-29
+
+* Tons of new functionality.
+* Refactoring: Improved naming conventions.
+* Refactoring: Increased efficiency of several algorithms.
+
+### 1.2.0 - 2008-09-19
+
+* Restructured the namespaces (the components can now be found in Bn.Components).
+* Added Control ControlPanel to the FW.
+* Fixed some bugs concerning the accessors in the declarations of events in a few of the older classes.
+
+### 1.1.0 - 2008-09-16
+
+* Upgraded several classes, including DynStr and MathConverter.
+* Added classes Time and Clock.
+* Included the XML documentation file.
+
+### 1.0.0 - 2008-08-30
+
+* Initial public release.
+
+{% endmarkdown %}
+{% endblock %}
