@@ -38,6 +38,11 @@ $app->get(
 );
 
 $app->get(
+	'/gaming',
+	getPageHandler( $app, 'gaming', [ 'blogposts' => getBlogCategoryLinks( 'gaming' ) ] )
+);
+
+$app->get(
 	'/libraries',
 	getPageHandler( $app, 'projects' )
 );

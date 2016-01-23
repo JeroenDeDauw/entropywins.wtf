@@ -95,3 +95,7 @@ function getBlogTopicLinks( $topic ) {
 	return blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/tag/' . $topic . '/feed/', 5 ) );
 }
 
+function getBlogCategoryLinks( $topic ) {
+	return blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/category/' . $topic . '/feed/', 10 ) );
+}
+

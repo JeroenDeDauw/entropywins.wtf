@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}EntropyWins! Gaming - Site of Jeroen De Dauw{% endblock %}
+
+{% block content %}
+{% markdown %}
+
+### Blog posts
+
+{% endmarkdown %}{{ blogposts | raw }}{% markdown %}
+
+View [all Semantic MediaWiki blog posts](https://www.entropywins.wtf/blog/category/gaming/).
+
+{% endmarkdown %}
+{% endblock %}
