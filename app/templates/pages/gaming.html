@@ -6,8 +6,24 @@
 {% markdown %}
 
 ### Blog posts
-
-{% endmarkdown %}{{ blogposts | raw }}{% markdown %}
+{% endmarkdown %}
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            {% for post in blogposts|slice(0, 5) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul>
+            {% for post in blogposts|slice(5, 10) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% markdown %}
 
 View [all gaming blog posts](https://www.entropywins.wtf/blog/category/gaming/).
 

@@ -18,8 +18,24 @@ I am working on the [Wikibase software](https://www.mediawiki.org/wiki/Wikibase)
 for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [contributors list on Ohloh](https://www.ohloh.net/p/wikidata/contributors).
 
 ### Blog posts
-
-{% endmarkdown %}{{ blogposts | raw }}{% markdown %}
+{% endmarkdown %}
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            {% for post in blogposts|slice(0, 5) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul>
+            {% for post in blogposts|slice(5, 10) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% markdown %}
 
 View [all Wikidata blog posts](https://www.entropywins.wtf/blog/tag/wikidata/).
 

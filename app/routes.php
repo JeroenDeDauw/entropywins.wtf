@@ -25,24 +25,29 @@ $app->get(
 $app->get(
 	'/craftsmanship',
 	getPageHandler( $app, 'craftsmanship', [
-		'blogposts' => getBlogTopicLinks( 'software-craftsmanship', 5, 0 ),
-		'moreposts' => getBlogTopicLinks( 'software-craftsmanship', 5, 5 ),
+		'blogposts' => getBlogTagResponseModel( 'software-craftsmanship', 10 )
 	] )
 );
 
 $app->get(
 	'/smw',
-	getPageHandler( $app, 'smw', [ 'blogposts' => getBlogTopicLinks( 'smw' ) ] )
+	getPageHandler( $app, 'smw', [
+		'blogposts' => getBlogTagResponseModel( 'smw', 10 )
+	] )
 );
 
 $app->get(
 	'/wikidata',
-	getPageHandler( $app, 'wikidata', [ 'blogposts' => getBlogTopicLinks( 'wikidata' ) ] )
+	getPageHandler( $app, 'wikidata', [
+		'blogposts' => getBlogTagResponseModel( 'wikidata', 10 )
+	] )
 );
 
 $app->get(
 	'/gaming',
-	getPageHandler( $app, 'gaming', [ 'blogposts' => getBlogCategoryLinks( 'gaming' ) ] )
+	getPageHandler( $app, 'gaming', [
+		'blogposts' => getBlogCategoryResponseModel( 'gaming', 10 )
+	] )
 );
 
 $app->get(

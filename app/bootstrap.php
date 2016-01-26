@@ -18,7 +18,7 @@ $app->register(new TwigServiceProvider());
 $app['twig.path'] = array(__DIR__.'/templates');
 
 $app['twig'] = $app->share($app->extend('twig', function ($twig, $app) {
-    // add custom globals, filters, tags, ...
+    $twig->getExtension('core')->setDateFormat('jS \\o\\f F, Y');
 
     return $twig;
 }));

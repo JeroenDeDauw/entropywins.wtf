@@ -24,13 +24,20 @@ industry.
 
 ### Blog posts
 {% endmarkdown %}
-<b>Latest blog posts</b>
 <div class="row">
     <div class="col-md-6">
-        {{ blogposts | raw }}
+        <ul>
+        {% for post in blogposts|slice(0, 5) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+        {% endfor %}
+        </ul>
     </div>
     <div class="col-md-6">
-        {{ moreposts | raw }}
+        <ul>
+            {% for post in blogposts|slice(5, 10) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 {% markdown %}

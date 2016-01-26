@@ -31,8 +31,24 @@ the project, I took over the maintenance torch.
 You can find me in the [contributors list on Ohloh](https://www.ohloh.net/p/smw/contributors).
 
 ### Blog posts
-
-{% endmarkdown %}{{ blogposts | raw }}{% markdown %}
+{% endmarkdown %}
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            {% for post in blogposts|slice(0, 5) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul>
+            {% for post in blogposts|slice(5, 10) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% markdown %}
 
 View [all Semantic MediaWiki blog posts](https://www.entropywins.wtf/blog/tag/smw/).
 

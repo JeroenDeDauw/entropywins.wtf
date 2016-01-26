@@ -54,6 +54,25 @@ EOL;
 	};
 }
 
+function blogPostsToResponseModelFunction( callable $getBlogPosts ) {
+	return function() use ( $getBlogPosts ) {
+		$responseModel = [];
+
+		/**
+		 * @var SimplePie_Item $item
+		 */
+		foreach ( $getBlogPosts() as $item ) {
+			$responseModel[] = [
+				'title' => $item->get_title(),
+				'link' => $item->get_permalink(),
+				'date' => $item->get_date()
+			];
+		}
+
+		return $responseModel;
+	};
+}
+
 function blogPostsToHtmlFunction( callable $getBlogPosts ) {
 	return function() use ( $getBlogPosts ) {
 		// The derp is strong in this one
@@ -91,11 +110,11 @@ function getBlogPosts() {
 	return blogPostsToHtmlFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/feed/' ) );
 }
 
-function getBlogTopicLinks( $topic, $limit = 5, $offset = 0 ) {
-	return blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/tag/' . $topic . '/feed/', $limit, $offset ) );
+function getBlogTagResponseModel( $topic, $limit ) {
+	return blogPostsToResponseModelFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/tag/' . $topic . '/feed/', $limit ) );
 }
 
-function getBlogCategoryLinks( $topic ) {
-	return blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/category/' . $topic . '/feed/', 10 ) );
+function getBlogCategoryResponseModel( $topic, $limit ) {
+	return blogPostsToResponseModelFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/category/' . $topic . '/feed/', $limit ) );
 }
 
