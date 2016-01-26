@@ -72,6 +72,7 @@ function getHighlightsFunction() {
 		return array_map(
 			function( SimplePie_Item $item ) {
 				return [
+					'id' => explode( 'v=', $item->get_link( 0 ) )[1],
 					'url' => str_replace( 'http://', 'https://', $item->get_link( 0 ) )
 				];
 			},

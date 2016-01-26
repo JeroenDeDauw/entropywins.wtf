@@ -42,8 +42,8 @@ View [all gaming blog posts](https://www.entropywins.wtf/blog/category/gaming/).
 
 <iframe
         src="https://player.twitch.tv/?channel=entropygames"
-        height="480"
-        width="854"
+        height="720"
+        width="960"
         frameborder="0"
         scrolling="no"
         allowfullscreen>
@@ -52,7 +52,7 @@ View [all gaming blog posts](https://www.entropywins.wtf/blog/category/gaming/).
 ### Latest highlights
 
 {% for video in videos %}
-<iframe width="853" height="480" src="{{ video.url }}?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<iframe width="960" height="720" src="https://www.youtube.com/embed/{{ video.id }}" frameborder="0" allowfullscreen></iframe>
 {% endfor %}
 
 {% endmarkdown %}
