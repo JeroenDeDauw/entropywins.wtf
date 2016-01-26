@@ -72,7 +72,7 @@ function getHighlightsFunction() {
 		return array_map(
 			function( SimplePie_Item $item ) {
 				return [
-					'id' => $item->data['yt:videoId']
+					'url' => $item->get_link( 0 )
 				];
 			},
 			$rssReader->get_items( 0, 3 )
