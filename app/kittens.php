@@ -72,7 +72,7 @@ function getHighlightsFunction() {
 		return array_map(
 			function( SimplePie_Item $item ) {
 				return [
-					'url' => $item->get_link( 0 )
+					'url' => str_replace( 'http://', 'https://', $item->get_link( 0 ) )
 				];
 			},
 			$rssReader->get_items( 0, 3 )
