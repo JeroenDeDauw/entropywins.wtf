@@ -46,7 +46,8 @@ $app->get(
 $app->get(
 	'/gaming',
 	getPageHandler( $app, 'gaming', [
-		'blogposts' => getBlogCategoryResponseModel( 'gaming', 10 )
+		'blogposts' => getBlogCategoryResponseModel( 'gaming', 10 ),
+		'videos' => getHighlightsFunction()
 	] )
 );
 

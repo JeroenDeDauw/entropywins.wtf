@@ -61,3 +61,21 @@ function getBlogCategoryResponseModel( $topic, $limit ) {
 	return blogPostsToResponseModelFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/category/' . $topic . '/feed/', $limit ) );
 }
 
+function getHighlightsFunction() {
+	return function() {
+		$rssReader = new SimplePie();
+
+		$rssReader->set_feed_url( 'https://www.youtube.com/feeds/videos.xml?channel_id=UCEzz-FwJaaHGC4MVdMIzayg' );
+		$rssReader->init();
+		$rssReader->handle_content_type();
+
+		return array_map(
+			function( SimplePie_Item $item ) {
+				return [
+					'id' => $item->data['yt:videoId']
+				];
+			},
+			$rssReader->get_items( 0, 3 )
+		);
+	};
+}

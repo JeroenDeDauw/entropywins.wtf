@@ -24,8 +24,38 @@
     </div>
 </div>
 {% markdown %}
-
 View [all gaming blog posts](https://www.entropywins.wtf/blog/category/gaming/).
 
+### Games
+
+**Actively playing**
+
+* [Supreme Commander: Forged Alliance](http://www.faforever.com/) (the greatest RTS of all time) as EntropyWins
+
+**Sometimes playing**
+
+* [Zero-k](http://zero-k.info/) (A free open source game based on [Total Annihilation](https://en.wikipedia.org/wiki/Total_Annihilation)) as [Entropy](http://zero-k.info/Users/Detail/361253)
+* [Wargame: Red Dragon](https://en.wikipedia.org/wiki/Wargame:_Red_Dragon) as [RTS]BN+VS
+
+### Twitch.tv
 {% endmarkdown %}
+
+<iframe
+        src="http://player.twitch.tv/?channel=entropygames"
+        height="480"
+        width="854"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen>
+</iframe>
+{% markdown %}
+### Latest highlights
+
+{% for video in videos %}
+<iframe width="853" height="480" src="https://www.youtube.com/embed/{{ video.id }}?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+{% endfor %}
+
+{% endmarkdown %}
+<br /><br />
+
 {% endblock %}
