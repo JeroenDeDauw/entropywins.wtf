@@ -23,8 +23,18 @@ industry.
 <br />
 
 ### Blog posts
-
-{% endmarkdown %}{{ blogposts | raw }}{% markdown %}
+{% endmarkdown %}
+<b>Latest blog posts</b>
+<div class="row">
+    <div class="col-md-6">
+        {{ blogposts | raw }}
+    </div>
+    <div class="col-md-6">
+        {{ moreposts | raw }}
+    </div>
+</div>
+{{ blogposts | raw }}
+{% markdown %}
 
 View [all Software Craftsmanship blog posts](https://www.entropywins.wtf/blog/tag/software-craftsmanship/).
 

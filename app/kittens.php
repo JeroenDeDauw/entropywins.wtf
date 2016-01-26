@@ -18,15 +18,15 @@ function getPageHandler( $app, $pageName, array $arguments = [] ) {
 	};
 }
 
-function getBlogPostsFromUrlFunction( $url, $max = 0 ) {
-	return function() use ( $url, $max ) {
+function getBlogPostsFromUrlFunction( $url, $max = 0, $offset = 0 ) {
+	return function() use ( $url, $max, $offset ) {
 		$rssReader = new SimplePie();
 
 		$rssReader->set_feed_url( $url );
 		$rssReader->init();
 		$rssReader->handle_content_type();
 
-		return $rssReader->get_items( 0, $max );
+		return $rssReader->get_items( $offset, $max );
 	};
 }
 
@@ -91,8 +91,8 @@ function getBlogPosts() {
 	return blogPostsToHtmlFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/feed/' ) );
 }
 
-function getBlogTopicLinks( $topic ) {
-	return blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/tag/' . $topic . '/feed/', 5 ) );
+function getBlogTopicLinks( $topic, $limit = 5, $offset = 0 ) {
+	return blogPostsToHtmlListFunction( getBlogPostsFromUrlFunction( 'https://www.entropywins.wtf/blog/tag/' . $topic . '/feed/', $limit, $offset ) );
 }
 
 function getBlogCategoryLinks( $topic ) {

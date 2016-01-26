@@ -24,7 +24,10 @@ $app->get(
 
 $app->get(
 	'/craftsmanship',
-	getPageHandler( $app, 'craftsmanship', [ 'blogposts' => getBlogTopicLinks( 'software-craftsmanship' ) ] )
+	getPageHandler( $app, 'craftsmanship', [
+		'blogposts' => getBlogTopicLinks( 'software-craftsmanship', 5, 0 ),
+		'moreposts' => getBlogTopicLinks( 'software-craftsmanship', 5, 5 ),
+	] )
 );
 
 $app->get(
