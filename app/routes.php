@@ -14,12 +14,12 @@ require_once __DIR__ . '/kittens.php';
 
 $app->get(
 	'/',
-	getPageHandler( $app, 'home', [ 'blogposts' => getBlogLinks() ] )
+	getPageHandler( $app, 'home', [ 'blogposts' => getBlogPosts() ] )
 );
 
 $app->get(
 	'/home',
-	getPageHandler( $app, 'home', [ 'blogposts' => getBlogLinks() ] )
+	getPageHandler( $app, 'home', [ 'blogposts' => getBlogPosts() ] )
 );
 
 $app->get(

@@ -18,7 +18,12 @@
 <div class="row" style="margin-top: 20px">
     <div class="col-md-8">
         <b>Latest blog posts</b>
-        {{ blogposts | raw }}
+
+        <ul>
+            {% for post in blogposts|slice(0, 10) %}
+            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+            {% endfor %}
+        </ul>
     </div>
     <div class="col-md-4">
         <b>You can find me on</b>
