@@ -25,7 +25,8 @@ $app->get(
 $app->get(
 	'/craftsmanship',
 	getPageHandler( $app, 'craftsmanship', [
-		'blogposts' => getBlogTagResponseModel( 'software-craftsmanship', 10 )
+		'postscraftsmanship' => getBlogTagResponseModel( 'software-craftsmanship', 10 ),
+		'postscleancode' => getBlogTagResponseModel( 'clean-code', 10 ),
 	] )
 );
 

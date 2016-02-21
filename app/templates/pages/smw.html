@@ -42,7 +42,7 @@ You can find me in the [contributors list on Ohloh](https://www.ohloh.net/p/smw/
     </div>
     <div class="col-md-6">
         <ul>
-            {% for post in blogposts|slice(5, 10) %}
+            {% for post in blogposts|slice(5, 5) %}
             <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
             {% endfor %}
         </ul>

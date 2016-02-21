@@ -29,7 +29,7 @@ for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [c
     </div>
     <div class="col-md-6">
         <ul>
-            {% for post in blogposts|slice(5, 10) %}
+            {% for post in blogposts|slice(5, 5) %}
             <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
             {% endfor %}
         </ul>
