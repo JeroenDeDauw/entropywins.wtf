@@ -4,51 +4,71 @@
 
 {% block content %}
 
-<div class="row" style="margin-top: 30px">
+<div class="row" style="margin-top: 17px">
     <div class="col-md-12">
         <p>
             I'm a <a href="{{ app.request.basepath }}/craftsmanship">Software Craftsmanship</a> advocate
-            that contributes to <a href="{{ app.request.basepath }}/wikidata">Wikidata</a>
-            and <a href="{{ app.request.basepath }}/smw">SMW</a>
-            and maintains <a href="{{ app.request.basepath }}/libraries">some libraries</a>.
+            best known for my contributions to <a href="{{ app.request.basepath }}/wikidata">Wikidata</a>
+            and <a href="{{ app.request.basepath }}/smw">Semantic MediaWiki</a>,
+            and my maintenance of <a href="{{ app.request.basepath }}/libraries">some libraries</a> and various MediaWiki extensions.
         </p>
     </div>
 </div>
 
-<div class="row" style="margin-top: 20px">
+<div class="row">
     <div class="col-md-8">
-        <b>Latest blog posts</b>
+        <div class="row">
+            <b>Latest blog posts</b>
 
-        <ul>
-            {% for post in blogposts|slice(0, 10) %}
-            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
-            {% endfor %}
-        </ul>
+            <ul>
+                {% for post in blogposts|slice(0, 10) %}
+                <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="row" style="margin-top: 10px">
+            <b>Under construction</b><br />
+            <marquee width="70%">Hard at work to make this website geocities compliant! Apparently the blink tag no longer works... meh   E:[,,_,,]=~</marquee>
+            <p>
+                <img src="{{ app.request.basepath }}/images/underconstruction.gif" />
+                <br />
+                <span style="margin-left: 80px">&#8598; That is me configuring Apache.</span>
+            </p>
+        </div>
     </div>
+
     <div class="col-md-4">
-        <b>You can find me on</b>
-        <ul>
-            <li><a href="https://github.com/JeroenDeDauw">GitHub</a></li>
-            <li><a href="https://twitter.com/JeroenDeDauw">Twitter</a></li>
-            <li><a href="https://keybase.io/jeroendedauw">Keybase</a></li>
-            <li><a href="https://packagist.org/users/Jeroen%20De%20Dauw/">Packagist</a></li>
-            <li><a href="https://www.goodreads.com/user/show/16821921-jeroen-de-dauw">Goodreads</a></li>
-            <li><a href="https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw">MediaWiki.org</a></li>
-            <li><a href="https://www.ohloh.net/accounts/jeroendedauw">Ohloh</a></li>
-            <li><a href="http://www.twitch.tv/entropygames/profile/highlights">Twitch</a></li>
-        </ul>
-    </div>
-</div>
+        <div class="row">
+            <b>You can find me on</b>
+            <ul>
+                <li><a href="https://github.com/JeroenDeDauw">GitHub</a></li>
+                <li><a href="https://twitter.com/JeroenDeDauw">Twitter</a></li>
+                <li><a href="https://keybase.io/jeroendedauw">Keybase</a></li>
+                <li><a href="https://packagist.org/users/Jeroen%20De%20Dauw/">Packagist</a></li>
+                <li><a href="https://www.goodreads.com/user/show/16821921-jeroen-de-dauw">Goodreads</a></li>
+                <li><a href="https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw">MediaWiki.org</a></li>
+                <li><a href="https://www.ohloh.net/accounts/jeroendedauw">Ohloh</a></li>
+                <li><a href="http://www.twitch.tv/entropygames/profile/highlights">Twitch</a></li>
+            </ul>
+        </div>
 
-<div class="row" style="margin-top: 30px">
-    <div class="col-md-8">
-        <b>Under construction</b>
-        <marquee>Hard at work to make this website geocities compliant! Apparently the blink tag no longer works... meh</marquee>
-        <p>
-            <img src="{{ app.request.basepath }}/images/underconstruction.gif" />
-            <br />
-            <span style="margin-left: 80px">&#8598; That is me configuring Apache.</span>
-        </p>
+        <div class="row" style="margin-top: 10px">
+            <b>Contact</b>
+            <ul>
+                <li>Email: MyFullName@gmail.com</li>
+                <li>Freenode: JeroenDeDauw (#wikidata)</li>
+            </ul>
+        </div>
+
+        <div class="row" style="margin-top: 10px">
+            <b>Appreciate</b>
+            <ul>
+                <li>BTC: <span style="font-size: smaller">1HqJSkCQBypQcAJ6hKNHUZnXnWkK4RdoYC</span></li>
+                <li>ETH: <span style="font-size: smaller">0x52297d26CDFe4Fa2ecA48de3dee3112B60254CAD</span></li>
+                <li>LTC: <span style="font-size: smaller">LNCWsZNnRYgx5GfJuaGR6ZSicwzxz39diC</span></li>
+            </ul>
+        </div>
     </div>
 </div>
 
