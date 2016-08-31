@@ -109,3 +109,9 @@ $app->get(
 	}
 );
 
+$app->get(
+	'/slides/{presentation}',
+	function( $presentation ) use ( $app ) {
+		return $app->redirect( "/slides/$presentation/index.html" );
+	}
+);
