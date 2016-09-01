@@ -110,8 +110,19 @@ $app->get(
 );
 
 $app->get(
+	'/slides/fun-architecture/README.md',
+	function() use ( $app ) {
+		// file_get_contents( __DIR__ .  "/../www/slides/{$presentation}/{$whatever}.md" )
+		return new \Symfony\Component\HttpFoundation\Response(
+			file_get_contents( __DIR__ .  "/../www/slides/fun-architecture/README.md" )
+		);
+	}
+);
+
+$app->get(
 	'/slides/{presentation}/',
 	function( $presentation ) use ( $app ) {
 		return $app->redirect( "/slides/$presentation/index.html" );
 	}
 );
+

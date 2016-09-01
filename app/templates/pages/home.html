@@ -21,7 +21,7 @@
             <b>Latest blog posts</b>
 
             <ul>
-                {% for post in blogposts|slice(0, 10) %}
+                {% for post in blogposts|slice(0, 9) %}
                 <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
                 {% endfor %}
             </ul>
@@ -44,11 +44,11 @@
             <ul>
                 <li><a href="https://github.com/JeroenDeDauw">GitHub</a></li>
                 <li><a href="https://twitter.com/JeroenDeDauw">Twitter</a></li>
-                <li><a href="https://keybase.io/jeroendedauw">Keybase</a></li>
                 <li><a href="https://packagist.org/users/Jeroen%20De%20Dauw/">Packagist</a></li>
-                <li><a href="https://www.goodreads.com/user/show/16821921-jeroen-de-dauw">Goodreads</a></li>
+                <li><a href="https://keybase.io/jeroendedauw">Keybase</a></li>
                 <li><a href="https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw">MediaWiki.org</a></li>
                 <li><a href="https://www.ohloh.net/accounts/jeroendedauw">Ohloh</a></li>
+                <li><a href="https://www.goodreads.com/user/show/16821921-jeroen-de-dauw">Goodreads</a></li>
                 <li><a href="http://www.twitch.tv/entropygames/profile/highlights">Twitch</a></li>
             </ul>
         </div>
@@ -64,9 +64,9 @@
         <div class="row" style="margin-top: 10px">
             <b>Appreciate</b>
             <ul>
-                <li>BTC: <span style="font-size: smaller">1HqJSkCQBypQcAJ6hKNHUZnXnWkK4RdoYC</span></li>
-                <li>ETH: <span style="font-size: smaller">0x52297d26CDFe4Fa2ecA48de3dee3112B60254CAD</span></li>
-                <li>LTC: <span style="font-size: smaller">LNCWsZNnRYgx5GfJuaGR6ZSicwzxz39diC</span></li>
+                <li>BTC: <span style="font-size: 10px">1HqJSkCQBypQcAJ6hKNHUZnXnWkK4RdoYC</span></li>
+                <li>ETH: <span style="font-size: 10px">0x52297d26CDFe4Fa2ecA48de3dee3112B60254CAD</span></li>
+                <li>LTC: <span style="font-size: 10px">LNCWsZNnRYgx5GfJuaGR6ZSicwzxz39diC</span></li>
             </ul>
         </div>
     </div>
