@@ -4,109 +4,120 @@
 
 {% block content %}
 
-{% markdown %}
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Software Craftsmanship</h1>
 
-# Software Craftsmanship
+        <p>
+            I am a <a href="http://manifesto.softwarecraftsmanship.org/">Software Craftsmanship</a> advocate
+            and Clean Code practitioner.
+        </p>
 
-I am an advocate of [Software Craftsmanship](http://manifesto.softwarecraftsmanship.org/)
-and the Clean Code movement.
-
-To be a professional in the software industry you have to learn your
-tools and languages and go beyond the merely technical.
-<br />
-
-### Blog posts
-{% endmarkdown %}
+        <p>
+            To be a professional in the software industry you have to learn your
+            tools and languages and go beyond the merely technical.
+        </p>
+    </div>
+</div>
 
 <div class="row">
-    <div class="col-md-6">
-        <strong>Software Craftsmanship</strong>
-        <ul>
-            {% for post in postscraftsmanship|slice(0, 8) %}
-            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
-            {% endfor %}
-        </ul>
-        View <a href="https://www.entropywins.wtf/blog/tag/software-craftsmanship/">all Software Craftsmanship blog posts</a>
-    </div>
-    <div class="col-md-6">
-        <strong>Clean Code</strong>
-        <ul>
-            {% for post in postscleancode|slice(0, 8) %}
-            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
-            {% endfor %}
-        </ul>
-        View <a href="https://www.entropywins.wtf/blog/tag/clean-code/">all Clean Code blog posts</a>
+    <div class="col-lg-12">
+        <h3>Blog posts</h3>
+
+        <div class="row">
+            <div class="col-md-6">
+                <strong>Software Craftsmanship</strong>
+                <ul>
+                    {% for post in postscraftsmanship|slice(0, 8) %}
+                    <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+                    {% endfor %}
+                </ul>
+                View <a href="https://www.entropywins.wtf/blog/tag/software-craftsmanship/">all Software Craftsmanship blog posts</a>
+            </div>
+            <div class="col-md-6">
+                <strong>Clean Code</strong>
+                <ul>
+                    {% for post in postscleancode|slice(0, 8) %}
+                    <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a> <small>({{ post.date|date }})</small></li>
+                    {% endfor %}
+                </ul>
+                View <a href="https://www.entropywins.wtf/blog/tag/clean-code/">all Clean Code blog posts</a>
+            </div>
+        </div>
     </div>
 </div>
 
-{% markdown %}
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Presentations by me on technical topics:</h3>
 
-### Presentations by me on technical topics:
+        <p>Note that these slides are not designed for standalone usage.</p>
 
-Note that these slides are not designed for standalone usage.
-{% endmarkdown %}
-<div class="row" style="margin-bottom: 15px">
-    <div class="col-md-6">
-        <strong>Clean Functions</strong>: how to create truly clean and well designed functions
+        <div class="row" style="margin-bottom: 15px">
+            <div class="col-md-6">
+                <strong>Clean Functions</strong>: how to create truly clean and well designed functions
 
-        <ul>
-            <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/functions/README.md">the abstract</a></li>
-            <li>View <a href="http://bit.ly/clean-functions">the slides</a></li>
-            <li>Read <a href="http://www.entropywins.wtf/blog/2013/09/08/clean-functions/">the blog post</a></li>
-        </ul>
-    </div>
-    <div class="col-md-6">
-        <strong>Component design</strong>: how to create well designed components
-        <ul>
-            <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/components/README.md">the abstract</a></li>
-            <li>View <a href="http://bit.ly/component-design">the slides</a></li>
-            <li>Read <a href="http://www.entropywins.wtf/blog/2014/07/12/component-design/">the blog post</a></li>
-        </ul>
+                <ul>
+                    <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/functions/README.md">the abstract</a></li>
+                    <li>View <a href="http://bit.ly/clean-functions">the slides</a></li>
+                    <li>Read <a href="http://www.entropywins.wtf/blog/2013/09/08/clean-functions/">the blog post</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <strong>Component design</strong>: how to create well designed components
+                <ul>
+                    <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/components/README.md">the abstract</a></li>
+                    <li>View <a href="http://bit.ly/component-design">the slides</a></li>
+                    <li>Read <a href="http://www.entropywins.wtf/blog/2014/07/12/component-design/">the blog post</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-md-6">
+                <strong>The S in STUPID</strong>: why static code is generally harmful and should be rarely used
+                <ul>
+                    <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/static/README.md">the abstract</a></li>
+                    <li>View <a href="http://bit.ly/static-code">the slides</a></li>
+                    <li>Read <a href="http://www.entropywins.wtf/blog/2013/11/15/presentation-the-s-in-stupid/">the blog post</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <strong>The Liskov Substitution Principle</strong>: how to avoid common inheritance related pitfalls
+                <ul>
+                    <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/LSP/README.md">the abstract</a></li>
+                    <li>View <a href="http://bit.ly/solid-lsp">the slides</a></li>
+                    <li>Read <a href="https://www.entropywins.wtf/blog/2016/01/24/the-liskov-substitution-principle/">the blog post</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-md-6">
+                <strong>Writing easy to maintain code</strong>: talk from the 2015 EnthusiastiCon.
+                <ul>
+                    <li>View <a href="http://bit.ly/econ-cleancode">the slides</a></li>
+                    <li>View <a href="https://www.youtube.com/watch?v=vyazVasLpds">the recording</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <strong>Fun architecture</strong>: work in progress.
+                <ul>
+                    <li>View <a href="{{ app.request.basepath }}/slides/fun-architecture/README.md">the abstract</a></li>
+                    <li>View <a href="{{ app.request.basepath }}/slides/fun-architecture">the slides</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row" style="margin-bottom: 10px">
-    <div class="col-md-6">
-        <strong>The S in STUPID</strong>: why static code is generally harmful and should be rarely used
-        <ul>
-            <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/static/README.md">the abstract</a></li>
-            <li>View <a href="http://bit.ly/static-code">the slides</a></li>
-            <li>Read <a href="http://www.entropywins.wtf/blog/2013/11/15/presentation-the-s-in-stupid/">the blog post</a></li>
-        </ul>
-    </div>
-    <div class="col-md-6">
-        <strong>The Liskov Substitution Principle</strong>: how to avoid common inheritance related pitfalls
-        <ul>
-            <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/LSP/README.md">the abstract</a></li>
-            <li>View <a href="http://bit.ly/solid-lsp">the slides</a></li>
-            <li>Read <a href="https://www.entropywins.wtf/blog/2016/01/24/the-liskov-substitution-principle/">the blog post</a></li>
-        </ul>
-    </div>
-</div>
-<div class="row" style="margin-bottom: 10px">
-    <div class="col-md-6">
-        <strong>Writing easy to maintain code</strong>: talk from the 2015 EnthusiastiCon.
-        <ul>
-            <li>View <a href="http://bit.ly/econ-cleancode">the slides</a></li>
-            <li>View <a href="https://www.youtube.com/watch?v=vyazVasLpds">the recording</a></li>
-        </ul>
-    </div>
-    <div class="col-md-6">
-        <strong>Fun architecture</strong>: work in progress.
-        <ul>
-            <li>View <a href="{{ app.request.basepath }}/slides/fun-architecture/README.md">the abstract</a></li>
-            <li>View <a href="{{ app.request.basepath }}/slides/fun-architecture">the slides</a></li>
-        </ul>
-    </div>
-</div>
 
-{% markdown %}
-
+<div class="row">
+    <div class="col-lg-12">
+        {% markdown %}
 ### Recommended reading: Software Craftsmanship
 
 * [The Clean Coder: A Code of Conduct for Professional Programmers](https://www.goodreads.com/book/show/10284614-the-clean-coder), Robert C. Martin, 2011
 * [The Software Craftsman: Professionalism, Pragmatism, Pride](https://www.goodreads.com/book/show/23215733-the-software-craftsman), Sandro Mancuso, 2014
 * [Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman](https://www.goodreads.com/book/show/5608045-apprenticeship-patterns),  Dave Hoover and Adewale Oshineye , 2009
-<br /><br />
+<br />
 
 ### Recommended reading: Technical topics
 
@@ -116,13 +127,15 @@ Note that these slides are not designed for standalone usage.
 * [Refactoring: Improving the Design of Existing Code](https://www.goodreads.com/book/show/44936.Refactoring) Martin Fowler, Kent Beck and Don Robert, 1999
 * [Working Effectively with Legacy Code](https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code), Michael Feathers, 2004
 * [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](https://www.goodreads.com/book/show/8686650-continuous-delivery), David Farley and Jez Humble, 2010
-<br /><br />
+<br />
 
 ### Podcast with me on Software Craftsmanship:
 
 * [Software Craftsmanship: Values, Practices and Community](https://sourcecode.berlin/2015/04/17/software-craftsmanship/), [sourcecode.berlin](https://sourcecode.berlin)
-{% endmarkdown %}
-<br />
+        {% endmarkdown %}
+        <br />
+    </div>
+</div>
 
 {% endblock %}
 
