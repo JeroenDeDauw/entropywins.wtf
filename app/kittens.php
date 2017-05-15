@@ -76,7 +76,7 @@ function getHighlightsFunction() {
 					'url' => str_replace( 'http://', 'https://', $item->get_link( 0 ) )
 				];
 			},
-			$rssReader->get_items( 0, 5 )
+			$rssReader->get_items( 0, 10 )
 		);
 	};
 }
