@@ -116,3 +116,8 @@ $app->get(
 	}
 );
 
+$app->get(
+	'/hire',
+	getPageHandler( $app, 'hire' )
+);
+

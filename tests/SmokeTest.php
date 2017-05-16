@@ -27,7 +27,6 @@ class SmokeTest extends WebTestCase {
 	}
 
 	public function testHirePageHasRenderedMarkdown() {
-		$this->markTestSkipped( 'Page not enabled' );
 		$client = $this->createClient();
 
 		$client->request( 'GET', '/hire' );
