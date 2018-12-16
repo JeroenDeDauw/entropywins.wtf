@@ -6,4 +6,6 @@ simple:
     path: /{page}
     controller: App\Controller\SimplePageController::page
 
-
+project:
+    path: /projects/{project}
+    controller: App\Controller\SimplePageController::project

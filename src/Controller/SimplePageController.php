@@ -22,4 +22,10 @@ class SimplePageController extends AbstractController {
 		);
 	}
 
+	public function project( string $project ) {
+		return $this->render(
+			'pages/projects/' . $project . '.html.twig'
+		);
+	}
+
 }
