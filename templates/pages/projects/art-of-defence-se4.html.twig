@@ -4,6 +4,8 @@
 
 {% block body %}
 
+    {% markdown %}
+
         # Art of Defence SE4
         <img style="float: right;" src="{{ app.request.basepath }}/images/projects/AodSE4.png" title="The map image as seen in the game lobby, displaying a heated game on the map." />
         Art of Defence SE4 is a [Command and Conquer Generals](https://en.wikipedia.org/wiki/Command_%26_Conquer:_Generals)
@@ -85,6 +87,8 @@
         * Added screenshot as map image.
         * Added changelog to the readme file.
         * Changed the general promotion experience levels.
+
+    {% endmarkdown %}
 
 {% endblock %}
 
