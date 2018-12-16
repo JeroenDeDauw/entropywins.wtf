@@ -20,8 +20,7 @@
 		"symfony/lts": "^4@dev",
 		"symfony/twig-bundle": "^4.0",
 		"symfony/yaml": "^4.0",
-		"symfony/translation": "^4.0",
-		"jms/i18n-routing-bundle": "^3.0"
+		"symfony/translation": "^4.0"
 	},
 	"require-dev": {
 		"symfony/profiler-pack": "^1.0",
