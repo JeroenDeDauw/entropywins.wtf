@@ -1,7 +1,9 @@
 index:
     path: /
-    controller: App\Controller\IndexController::index
+    controller: App\Controller\SimplePageController::index
 
-services:
-    path: /services
-    controller: App\Controller\SimplePageController::services
+simple:
+    path: /{page}
+    controller: App\Controller\SimplePageController::page
+
+

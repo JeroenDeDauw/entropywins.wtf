@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="{% block meta_description %}{% endblock %}">
+        <meta name="description" content="{% block meta_description %}Software Craftsman{% endblock %}">
         <meta name="author" content="Jeroen De Dauw">
 
         <title>{% block html_title %}{% endblock %}</title>
@@ -23,13 +23,13 @@
                     <a href="{{ path('index') }}">Overview</a>
                 </li>
                 <li>
-                    <a href="{{ path('services') }}">Services</a>
+                    <a href="{{ path('simple', {'page': 'services'}) }}">Services</a>
                 </li>
                 <li>
-                    <a href="#">Open Source</a>
+                    <a href="{{ path('simple', {'page': 'open-source'}) }}">Open Source</a>
                 </li>
                 <li>
-                    <a href="#">Blog</a>
+                    <a href="{{ path('simple', {'page': 'blog'}) }}">Blog</a>
                 </li>
                 <li>&nbsp;&nbsp;---------------------</li>
                 <li>
