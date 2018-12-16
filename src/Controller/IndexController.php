@@ -5,9 +5,9 @@ declare( strict_types = 1 );
 namespace App\Controller;
 
 // phpcs:ignoreFile
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class IndexController extends Controller {
+class IndexController extends AbstractController {
 
 	public function index() {
 		return $this->render(
