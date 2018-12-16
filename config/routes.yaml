@@ -1,0 +1,31 @@
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+solutions:
+    path: /solutions
+    controller: App\Controller\SimplePageController::solutions
+
+services:
+    path: /services
+    controller: App\Controller\SimplePageController::services
+
+about:
+    path: /about
+    controller: App\Controller\SimplePageController::about
+
+wiki:
+    path: /wiki
+    controller: App\Controller\SimplePageController::wiki
+
+contact:
+    path: /contact
+    controller: App\Controller\SimplePageController::contact
+
+privacy:
+    path: /privacy
+    controller: App\Controller\SimplePageController::privacy
+
+imprint:
+    path: /imprint
+    controller: App\Controller\SimplePageController::imprint

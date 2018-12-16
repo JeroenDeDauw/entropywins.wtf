@@ -1,13 +1,17 @@
 language: php
 
 php:
-  - 7
+  - 7.3
+  - master
 
 sudo: false
 
+services:
+  - docker
+
 install: travis_retry composer install
 
-script: phpunit
+script: make ci
 
 cache:
   directories:
