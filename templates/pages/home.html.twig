@@ -5,27 +5,120 @@
 {% block meta_description %}Software Craftsman{% endblock %}
 
 {% block body %}
-    <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+
+    <div class="row">
+        <div class="col-md-2">
+            <img src="{{ asset('images/logo.jpg') }}" alt="Jeroen De Dauw" class="img-fluid">
+        </div>
+        <div class="col-md-10">
+            <h2 style="margin-top: 25px">
+                <span class="red">Jeroen De Dauw</span>
+                <br />Software Craftsman
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Services</h2>
+        </div>
+    </div>
+
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    {#<div class="row">#}
+        {#<div class="col-md-4">#}
+            {#<div class="card h-100">#}
+                {#<h4 class="card-header">Wiki Creation</h4>#}
+                {#<div class="card-body">#}
+                    {#<p class="card-text">#}
+                        {#We create wikis tailored to our customers needs. Let us take care of setup and configuration,#}
+                        {#creation of structured content like forms and templates and installation of extensions.#}
+                        {#Start quickly with a professionally set up wiki that is optimized to your needs.#}
+                    {#</p>#}
+                {#</div>#}
+                {#<div class="card-footer">#}
+                    {#<a href="{{ path('index') }}" class="btn btn-primary">{% trans %}homepage.learn.more.button{% endtrans %}</a>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="col-md-4">#}
+            {#<div class="card h-100">#}
+                {#<h4 class="card-header">Wiki Creation</h4>#}
+                {#<div class="card-body">#}
+                    {#<p class="card-text">#}
+                        {#We create wikis tailored to our customers needs. Let us take care of setup and configuration,#}
+                        {#creation of structured content like forms and templates and installation of extensions.#}
+                        {#Start quickly with a professionally set up wiki that is optimized to your needs.#}
+                    {#</p>#}
+                {#</div>#}
+                {#<div class="card-footer">#}
+                    {#<a href="{{ path('index') }}" class="btn btn-primary">{% trans %}homepage.learn.more.button{% endtrans %}</a>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="col-md-4">#}
+            {#<div class="card h-100">#}
+                {#<h4 class="card-header">Wiki Creation</h4>#}
+                {#<div class="card-body">#}
+                    {#<p class="card-text">#}
+                        {#We create wikis tailored to our customers needs. Let us take care of setup and configuration,#}
+                        {#creation of structured content like forms and templates and installation of extensions.#}
+                        {#Start quickly with a professionally set up wiki that is optimized to your needs.#}
+                    {#</p>#}
+                {#</div>#}
+                {#<div class="card-footer">#}
+                    {#<a href="{{ path('index') }}" class="btn btn-primary">{% trans %}homepage.learn.more.button{% endtrans %}</a>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
 
     <div class="line"></div>
 
-    <h2>Lorem Ipsum Dolor</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Blog</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <p>Highlights</p>
+            <ul class="list-unstyled">
+                <li><a href="https://www.entropywins.wtf/blog/2017/09/06/the-fallacy-of-dry/">The Fallacy of DRY</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2017/01/02/simple-is-not-easy/">Simple is not easy</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2018/08/14/clean-architecture-bounded-contexts/">Clean Architecture + Bounded Contexts</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2016/11/24/implementing-the-clean-architecture/">Implementing the Clean Architecture</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2018/08/30/base-libraries-should-be-stable/">Base Libraries Should be Stable</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2018/08/01/clean-architecture-usecase-tests/">Clean Architecture: UseCase tests</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2017/02/17/why-every-single-argument-of-dan-north-is-wrong/">Why Every Single Argument of Dan North is Wrong</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2016/05/25/is-pair-programming-really-worth-it/">Is Pair Programming worth it?</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2016/05/24/i-t-a-k-e-2016/">I T.A.K.E. 2016</a></li>
+                <li><a href="https://www.entropywins.wtf/blog/2016/01/30/missing-in-php7/">Missing in PHP7</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <p>Latest posts</p>
+            <ul class="list-unstyled">
+                <li>Foo foo foo foo</li>
+                <li>Bar bar bar bar</li>
+                <li>Baz baz baz baz</li>
+                <li>Foo foo foo foo</li>
+                <li>Bar bar bar bar</li>
+                <li>Baz baz baz baz</li>
+                <li>Foo foo foo foo</li>
+                <li>Bar bar bar bar</li>
+                <li>Baz baz baz baz</li>
+            </ul>
+        </div>
+    </div>
 
     <div class="line"></div>
 
-    <h2>Lorem Ipsum Dolor</h2>
+    <h2>Contact</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <div class="line"></div>
-
-    <h3>Lorem Ipsum Dolor</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <h3>Lorem Ipsum Dolor</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 {% endblock %}
 
 
