@@ -91,6 +91,31 @@ a.article:hover {
 	color: #fff !important;
 }
 
+a img {
+	border: none;
+}
+a, a:link {
+	color: #05ad9c;
+	text-decoration: none;
+}
+a:visited {
+	color: #047d5c;
+	text-decoration: none;
+}
+a:focus, a:hover, a:active {
+	color: #05ad9c;
+	text-decoration: underline;
+}
+
+#sidebar a {
+	color: #b8b7ad;
+}
+
+#sidebar a:hover {
+	color: darkred;
+}
+
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */

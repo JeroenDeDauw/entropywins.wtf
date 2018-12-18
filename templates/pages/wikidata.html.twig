@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+
+{% block html_title %}Jeroen De Dauw{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-12">
+            {% markdown %}
+# Wikidata
+
+[Wikidata](https://www.wikidata.org/) is a free knowledge base that can be read and edited by humans
+and machines alike. It centralizes storage and management of Wikipedias structured data and provides
+access to it in various open formats. It is powered by the Wikibase software, which is build on top
+of the [MediaWiki platform](https://www.mediawiki.org/).
+
+### Current involvement
+
+I am working on the [Wikibase software](https://www.mediawiki.org/wiki/Wikibase) as developer
+for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [contributors list on Ohloh](https://www.ohloh.net/p/wikidata/contributors).
+
+### Blog posts
+            {% endmarkdown %}
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            {% markdown %}
+
+View [all Wikidata blog posts](https://www.entropywins.wtf/blog/tag/wikidata/).
+
+### Presentations:
+
+**Wikibase, the Software behind Wikidata**
+
+Introduction to the Wikibase software, including the data model, high level features and architecture.
+Created for [SMWCon Fall 2014, Vienna](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014).
+
+* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014/Wikibase,_the_Software_behind_Wikidata)
+* [Slides](http://jeroendedauw.github.io/slides/smwcon/2014fall/wikibase/)
+* [Video](https://www.youtube.com/watch?v=H4GGd3UyA5E&list=PLv4ZNIEr6SqWjHJvegO9uLze1d7yy0jpk&index=8)
+
+            {% endmarkdown %}
+        </div>
+    </div>
+{% endblock %}
+
+

@@ -5,32 +5,17 @@
 {% block body %}
 
     <div class="row">
-        <div class="col-md-2">
-            <img src="{{ asset('images/logo.jpg') }}" alt="Jeroen De Dauw" class="img-fluid">
-        </div>
-        <div class="col-md-10">
-            <h2 style="margin-top: 25px">
-                <span class="red">Jeroen De Dauw</span>
-                <br />Software Craftsman
-            </h2>
-        </div>
-    </div>
-
-    <div class="row">
         <div class="col-md-12">
-            <p>Hello and welcome to my little corner of the internets. My name is Jeroen De Dauw. Besides being the
-                software architect at Wikimedia Deutschland, I am
+            <p>
+                My name is Jeroen De Dauw. In my professional life I am a Software Craftsman with a passion for effective value delivery.
+                Besides being the software architect at Wikimedia Deutschland I am an entrepreneur, founder of Professional.Wiki and
+                occasional <a href="{{ app.request.basepath }}/services">consultant</a>. You might know me from my talks and
+                <a href="{{ app.request.basepath }}/craftsmanship">blog posts on software design and clean code</a>, or from my
+                <a href="{{ app.request.basepath }}/projects">involvement in the open source world</a> and with projects such
+                as <a href="{{ app.request.basepath }}/wikidata">Wikidata</a> and <a href="{{ app.request.basepath }}/smw">Semantic MediaWiki</a>.
             </p>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Services</h2>
-        </div>
-    </div>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
     {#<div class="row">#}
         {#<div class="col-md-4">#}
@@ -142,9 +127,9 @@
             <ul class="list-unstyled">
                 <li><strong>Email</strong></li>
                 <li>MyFullName@gmail.com</li>
-                <li><strong>Twitter</strong></li>
+                <li style="margin-top: 7px"><strong>Twitter</strong></li>
                 <li><a href="https://twitter.com/JeroenDeDauw">@JeroenDeDauw</a></li>
-                <li><strong>Freenode</strong></li>
+                <li style="margin-top: 7px"><strong>Freenode</strong></li>
                 <li>JeroenDeDauw (#wikidata)</li>
             </ul>
         </div>
