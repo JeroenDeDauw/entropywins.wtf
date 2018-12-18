@@ -36,6 +36,8 @@ class Kernel extends BaseKernel {
 
 	protected function initializeContainer() {
 		parent::initializeContainer();
+
+//		$this->container->get( 'twig' )->addTokenParser(new MarkdownTokenParser());
 	}
 
 	protected function configureContainer( ContainerBuilder $container, LoaderInterface $loader ) {

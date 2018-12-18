@@ -2,7 +2,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
-    app.locales: de|en
+    app.locales: en
 
 services:
     # default configuration for services in *this* file
@@ -29,3 +29,11 @@ services:
     # please note that last definitions always *replace* previous ones
     App\FactoryWrapper:
         public: true
+
+    Aptoma\Twig\Extension\MarkdownEngineInterface:
+        class: Aptoma\Twig\Extension\MarkdownEngine\MichelfMarkdownEngine
+
+    twig.extension.markdown:
+        class: Aptoma\Twig\Extension\MarkdownExtension
+        tags:
+            - { name: twig.extension }

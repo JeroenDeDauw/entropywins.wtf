@@ -1,0 +1,203 @@
+{% extends 'layout.html.twig' %}
+
+{% block html_title %}BN+ Converter Pro{% endblock %}
+
+{% block body %}
+
+{% markdown %}
+
+# BN+ Converter Pro
+
+This page is about a tool I created during my high school years, from 2007 to 2010. It's the first
+real application I developed and maintained for more than a few weeks.
+
+BN+ Converter Pro, previously known as Binary Converter, is a multi featured converter for Microsoft
+Windows. It has been written By Jeroen De Dauw with Microsoft's .Net framework. It allows easy
+conversion of various kinds of notations, including hashing of text, ASCII based notations in plain
+ASCII, HEX and binary, mathematical conversions from one numeral system to another, block cyphers,
+public-key encryption, obfuscation and codecs. A range of tools to modify text are also available.
+This application uses BN+ Library, an open source .Net utilities library.
+
+## Download
+
+* [1.1.0 installer (zip)](https://sourceforge.net/projects/bncpro/files/1.1.0/BN%2B%20Converter%20Pro.zip/download)
+* [1.1.0 installer (7z)](https://sourceforge.net/projects/bncpro/files/1.1.0/BN%2B%20Converter%20Pro.7z/download)
+* [Executables tarball](http://bncpro.svn.sourceforge.net/viewvc/bncpro/bin/Debug.tar.gz?view=tar)
+
+You can also download the code directly via SVN from the SourceForge source code repository,
+at https://bncpro.svn.sourceforge.net/svnroot/bncpro. From a command line, you can call the following:
+
+svn checkout https://bncpro.svn.sourceforge.net/svnroot/bncpro
+
+## Screenshots
+
+The main screen in default state on English, as seen in version 1.0.6.
+
+![BN+ Converter Pro]({{ app.request.basepath }}/images/projects/Bnc1.0.6.gif)
+
+The about screen, as seen in version 1.1.0.
+
+![BN+ Converter Pro about screen]({{ app.request.basepath }}/images/projects/BncAbout.gif)
+
+## Version history
+
+### 3.1.0 - BN+ Converter Pro 1.1.0 - 2010-03-05
+
+* Use of BN+ Library 3.0.1
+* Use of native components of .Net framework 4.0, enabling removal of BigInteger library
+* Implemented a new update platform
+* Refactored namespaces and moved around a bunch of files
+* Redesigned the about interface
+* Redesigned the help menu
+* Moved documentation to a wiki page
+* Added ROT 5, ROT 13, ROT 18 and ROT 48 codecs
+* Made the source code available under the GPL on SourceForge
+
+### 3.0.6 - BN+ Converter Pro 1.0.6 - 2009-05-20
+
+* Added multilanguage functionality
+* Added Dutch to the languages
+* Added German to the languages
+* Added 31337 (leet) to the languages
+* Added update platform that will automatically report new versions
+* Added bug report tool
+* Added advanced cryptography options (including initialization vectors, keys and salts)
+* Added password protection options
+* Redesigned the menu
+* Fixed auto saving of text issue
+* Fixed hashing of empty string bug
+
+### 3.0.5 - BN+ Converter Pro 1.0.5 - 2009-01-30
+
+* Recoded the math converter and drastically increased the max values
+* Recoded and redesigned the options interface
+* Added option to run application at start-up
+* Added MD4 hash to the hash tool
+* Added option to auto convert the text your typing in the codec tool
+* Added azerty <-> qwerty codec
+* Redesigned process dialogue in the text converter
+* Improved text converter encoding speed
+* Fixed RSA (multi block) decryption bug
+* Fixed various layout issues
+* Removed password protection
+* Use of BN+ Framework version 2.0.2.x
+
+### 3.0.4 - BN+ Converter Pro 1.0.4 - 2008-11-10
+
+* Redesigned crypt tool interface
+* Redesigned math converter interface
+* Added DES and TrippleDES crypts
+* Added RSA crypt and key generation
+* Added base64 crypt
+* Fixed RIPEMD-160 bug
+* Fixed bug in the hash attacker tool
+* Use of BN+ Framework version 2.0.1.x
+
+### 3.0.3 - BN+ Converter Pro 1.0.3 - 2008-10-30
+
+* Added a brute force hash attacker to menu 'Extra'
+* Fixed empty hash bug
+* Fixed some text conversion bugs
+* Use of BN+ Framework version 2.0.0.x
+
+### 3.0.2 - BN+ Converter Pro 1.0.2 - 2008-09-20
+
+* Added SHA-2 family hashing
+* Use of BN+ Framework 1.2.0.0 instead of multiple classes
+* Integrated StatusDisplayer class
+* Bug fix in the hashing algorithms
+* Bug fix in the 'select after conversion' option
+
+### 3.0.1 - BN+ Converter Pro 1.0.1 - 2008-08-10
+
+* Added a setup
+* Increased conversion stability by rewriting the conversion methods
+* Increased modularity of the code by using multiple extra classes
+* Added the option to save the current text
+* Added 2 custom fields to the math converter and rewrote the conversion script
+* Added the option to hide the Tool menu
+* Added a tray icon and with right-click menu and optional tool tips
+* Added a few tools to expand functionality
+* Added a support page
+* Updated BN+ Crypt to version 2
+* Fixed a few layout bugs
+* Corrected some spelling errors
+
+### 3.0.0 - BN+ Converter Pro - 2008-08-03
+
+* Recoded all procedures and functions to maximize speed and memory usage
+* Increased the maximum amount of text that can be translated each conversion
+* Added a hash encryption tool
+* Added a crypt, and improved codec tool
+* Restyling - use of a dynamic, flowing layout
+* Restyling - use of tree views and list boxes to improve user experience
+* Added password protection
+* Added options including direct copy to clipboard after conversion
+* Removed the possibility to save the content to reopen it later
+* Added a change log
+
+### 2.0.4 - Binary Converter (final version) - 2008-06-27
+
+* Fixed a variety of small issues to improve user experience
+
+### 2.x - Binary Converter - 2008-02-28
+
+* Recoded the main translations to work via a separate thread
+* Restyling - usage of tabs and multiple screens
+* Restyling - more user friendly arrangement of buttons
+* Added mathematical conversions
+* Added tools like text reversal and trimming
+* Added basic codec conversions
+* Added the possibility to save the content to reopen it later
+* Recoded the symbol count tool for more functionality
+
+### 1.5.x - Binary Decoder - 2007-12-14
+
+* Added basic symbol count tool
+* Restyling - added dynamic effects to layout
+
+### 1.x - Binary Coder - December 2007
+
+* Development start
+* Created basic functionality: Binary, ASCII and Hex conversions
+
+## Usage
+
+### Installation, start-up
+You can choose to download the direct run file, or the fully integrated setup. When downloading the direct run file, just un-archive it (with WinRar), and run it. The application will start without any further user interaction needed. You can put the direct run file on your usb, and run it anywhere you like, without needing administration privileges.
+If you download the fully integrated setup, you should un-archive it (with WinRar), and run the setup file. The setup will show you several dialogues, including one where you can choose the installation location. When finishing the setup, a short cut to the application will be placed on your desktop, and in your start menu, from which you can run it.
+
+### Use of the interface
+
+The interface is build up out of a menu, a tab container, and a status bar. The Tools menu contains a variety of handy tools that will effect the text of the text field that has focus (see section 8 ). To switch tabs, just click the tab you want to open. Each tab page contains a type of conversion or encryption engine, and the last one contains the application options (see section 8 ).
+
+### Text converter
+
+You can find the text conversion module on the tab page "Text converter". This converter enables you to translate text to or from binary, ascii, or hex. You can change the delimiters in the options tab (see section 8 ). The text entered in the upper field will be encoded/decoded and the result will appear in the lower field. You can switch the fields by clicking 'Toggle fields' in the Tools menu (see section 9), or by using the hot key ctrl + down. When you translate a very large amount of text, then the converter interface will be replaced by a progress dialogue. This dialogue will show you the status of the conversion (in percentage), and enable you to immediately quite the translation.
+
+### Math converter
+
+You can find the math conversion module on the tab page "Math converter". This converter enables you to instantly convert values from any numerical system to the notation of any other. Enter the value you want to convert in the corresponding field, and the corresponding values will appear in the other fields. This version also features a new feature, which is the possibility to convert completely custom numerical systems. To set one of these, click 'set custom 1' or 'set custom 2', and enter the symbols representing each value. The first character will be the zero value, so to convert to the decimal system, you should enter '0123456789', and not something like '1234567890', which is a completely different notation.
+
+### Hash encrypter
+
+You can find the hash encrypter on the tab page "Hash encrypter". This encrypter enables you to hash text. Hit one of the buttons above the text field to translate to the corresponding hash.
+
+### Crypt tool
+
+You can find the crypt tool on the tab page "Crypt tool". The crypt tool enables you to encypt or decrypt messages. The available algorithms can be divided into 3 categories, which are listed below.
+
+### Block ciphers
+
+A block cipher is a symmetric key cipher which operates on fixed-length groups of bits, termed blocks, with an unvarying transformation. When encrypting, a block cipher might take (for example) a 128-bit block of plain text as input, and output a corresponding 128-bit block of ciphertext. The exact transformation is controlled using a second input
+
+## See also
+
+* [Blog posts on BN+ Converter Pro](https://www.entropywins.wtf/blog/tag/binary-converter/)
+* [Project home](https://sourceforge.net/projects/bncpro/)
+* [SVN repository](http://bncpro.svn.sourceforge.net/viewvc/bncpro/)
+{% endmarkdown %}
+
+{% endblock %}
+
+
