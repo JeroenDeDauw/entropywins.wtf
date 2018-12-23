@@ -5,12 +5,12 @@ declare( strict_types = 1 );
 namespace App\Controller;
 
 // phpcs:ignoreFile
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 
-class SimplePageController extends AbstractController {
+class SimplePageController extends BaseController {
 
 	public function index() {
+		$this->getFactory();
+
 		return $this->render(
 			'pages/index.html.twig'
 		);
