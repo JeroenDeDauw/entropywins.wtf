@@ -8,6 +8,7 @@ use App\DataAccess\Blog\BlogRepository;
 use App\DataAccess\Blog\WordpressApiBlogRepository;
 use FileFetcher\FileFetcher;
 use FileFetcher\SimpleFileFetcher;
+use Symfony\Component\Stopwatch\Stopwatch;
 
 /**
  * Framework independent object graph construction
@@ -16,7 +17,8 @@ class TopLevelFactory {
 
 	private $container = [];
 
-	public function __construct() {
+	public function __construct( Stopwatch $stopwatch ) {
+		$this->container[Stopwatch::class] = $stopwatch;
 	}
 
 	/**
@@ -38,13 +40,20 @@ class TopLevelFactory {
 		return $this->getSharedService(
 			FileFetcher::class,
 			function() {
-				return new SimpleFileFetcher();
+				return new StopwatchFileFetcher(
+					new SimpleFileFetcher(),
+					$this->getStopwatch()
+				);
 			}
 		);
 	}
 
 	public function setFileFetcher( FileFetcher $fileFetcher ) {
 		$this->container[FileFetcher::class] = $fileFetcher;
+	}
+
+	private function getStopwatch(): Stopwatch {
+		return $this->container[Stopwatch::class];
 	}
 
 }

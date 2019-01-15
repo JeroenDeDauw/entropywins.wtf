@@ -4,19 +4,26 @@ declare( strict_types = 1 );
 
 namespace App;
 
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Stopwatch\Stopwatch;
 
 class FactoryWrapper {
 
 	private $factory;
 	private $onBuildCallbacks = [];
+	private $stopwatch;
 
-	public function buildFactory( Request $request ) {
+	public function __construct( Stopwatch $stopwatch ) {
+		$this->stopwatch = $stopwatch;
+	}
+
+	public function buildFactory() {
 		if ( $this->factory !== null ) {
 			throw new \RuntimeException( 'Already build' );
 		}
 
-		$this->factory = new TopLevelFactory();
+		$this->factory = new TopLevelFactory(
+			$this->stopwatch
+		);
 
 		$this->runOnBuildCallbacks( $this->factory );
 	}

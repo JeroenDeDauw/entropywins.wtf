@@ -26,7 +26,7 @@ class BaseController extends AbstractController {
 	}
 
 	private function newFactory(): TopLevelFactory {
-		$this->wrapper->buildFactory( $this->container->get( 'request_stack' )->getCurrentRequest() );
+		$this->wrapper->buildFactory();
 		return $this->wrapper->getFactory();
 	}
 
