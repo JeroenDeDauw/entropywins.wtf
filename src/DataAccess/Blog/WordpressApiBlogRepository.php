@@ -9,7 +9,7 @@ use FileFetcher\FileFetchingException;
 
 class WordpressApiBlogRepository implements BlogRepository {
 
-	private const API_URL = 'https://www.entropywins.wtf/blog/wp-json/wp/v2/posts';
+	private const API_URL = 'https://www.entropywins.wtf/blog/wp-json/wp/v2/posts?';
 
 	private $fileFetcher;
 

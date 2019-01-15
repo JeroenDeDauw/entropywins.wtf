@@ -6,13 +6,25 @@ namespace App\Controller;
 
 // phpcs:ignoreFile
 
+use App\DataAccess\Blog\BlogPost;
+
 class SimplePageController extends BaseController {
 
 	public function index() {
-		$this->getFactory();
-
 		return $this->render(
-			'pages/index.html.twig'
+			'pages/index.html.twig',
+			[
+				'posts' => array_map(
+					function( BlogPost $post ) {
+						return [
+							'date' => $post->getDate(),
+							'link' => $post->getLink(),
+							'title' => $post->getTitle()
+						];
+					},
+					$this->getFactory()->newNewsRepository()->getLatestPosts()
+				)
+			]
 		);
 	}
 

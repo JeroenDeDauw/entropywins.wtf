@@ -92,15 +92,10 @@
         <div class="col-md-6">
             <p>Latest posts</p>
             <ul class="list-unstyled">
-                <li>Foo foo foo foo</li>
-                <li>Bar bar bar bar</li>
-                <li>Baz baz baz baz</li>
-                <li>Foo foo foo foo</li>
-                <li>Bar bar bar bar</li>
-                <li>Baz baz baz baz</li>
-                <li>Foo foo foo foo</li>
-                <li>Bar bar bar bar</li>
-                <li>Baz baz baz baz</li>
+                {% for post in posts|slice(0, 10) %}
+                    <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
+                    {#<small>({{ post.date|date }})</small>#}
+                {% endfor %}
             </ul>
         </div>
     </div>
