@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb68416ed0b7f23c818f4b794414c752",
+    "content-hash": "abcd682180bdc8b50d65248845b5b8fb",
     "packages": [
         {
             "name": "aptoma/twig-markdown",
@@ -65,35 +65,37 @@
         },
         {
             "name": "jeroen/file-fetcher",
-            "version": "4.4.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeroenDeDauw/FileFetcher.git",
-                "reference": "7cd70a514bb95123d501daefbd20e4726953c462"
+                "reference": "1dcb5230fa41e195b0033c4e2eade706abfa4fb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeroenDeDauw/FileFetcher/zipball/7cd70a514bb95123d501daefbd20e4726953c462",
-                "reference": "7cd70a514bb95123d501daefbd20e4726953c462",
+                "url": "https://api.github.com/repos/JeroenDeDauw/FileFetcher/zipball/1dcb5230fa41e195b0033c4e2eade706abfa4fb0",
+                "reference": "1dcb5230fa41e195b0033c4e2eade706abfa4fb0",
                 "shasum": ""
             },
             "require": {
-                "jeroen/simple-cache": "~2.0",
                 "php": ">=7.1",
-                "psr/log": "~1.0"
+                "psr/log": "~1.0",
+                "psr/simple-cache": "~1.0"
             },
             "require-dev": {
+                "jeroen/simple-cache": "~2.0",
                 "ockcyp/covers-validator": "~1.0",
                 "phpmd/phpmd": "~2.6",
-                "phpstan/phpstan": "~0.9.2",
-                "phpunit/phpunit": "~6.1",
+                "phpstan/phpstan": "~0.10.1",
+                "phpunit/phpunit": "~7.2",
                 "squizlabs/php_codesniffer": "~3.2",
+                "symfony/stopwatch": "~4.2",
                 "wmde/psr-log-test-doubles": "~2.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.4.x-dev"
+                    "dev-master": "5.0.x-dev"
                 }
             },
             "autoload": {
@@ -103,7 +105,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0-or-later"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -116,64 +118,22 @@
             "description": "Simple file fetching interface",
             "homepage": "https://github.com/JeroenDeDauw/FileFetcher",
             "keywords": [
+                "Test Doubles",
                 "cache",
                 "curl",
                 "file fetcher",
                 "file_get_contents",
+                "http",
+                "http client",
+                "http request",
+                "interface",
+                "mocks",
+                "request",
+                "spies",
+                "stubs",
                 "wget"
             ],
-            "time": "2018-05-31T16:18:49+00:00"
-        },
-        {
-            "name": "jeroen/simple-cache",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JeroenDeDauw/SimpleCache.git",
-                "reference": "159a72cf2ba7b7506495914d294d9e423700bd54"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JeroenDeDauw/SimpleCache/zipball/159a72cf2ba7b7506495914d294d9e423700bd54",
-                "reference": "159a72cf2ba7b7506495914d294d9e423700bd54",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "replace": {
-                "jeroen-de-dauw/simple-cache": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SimpleCache\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Jeroen De Dauw",
-                    "email": "jeroendedauw@gmail.com",
-                    "homepage": "http://jeroendedauw.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Small library defining a minimalistic caching interface and provides some basic implementations",
-            "homepage": "https://github.com/JeroenDeDauw/SimpleCache",
-            "keywords": [
-                "cache",
-                "simplecache"
-            ],
-            "time": "2014-08-19T00:36:41+00:00"
+            "time": "2019-01-16T12:21:07+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -3823,16 +3783,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.1",
+            "version": "7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c23d78776ad415d5506e0679723cb461d71f488f"
+                "reference": "7c89093bd00f7d5ddf0ab81dee04f801416b4944"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c23d78776ad415d5506e0679723cb461d71f488f",
-                "reference": "c23d78776ad415d5506e0679723cb461d71f488f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7c89093bd00f7d5ddf0ab81dee04f801416b4944",
+                "reference": "7c89093bd00f7d5ddf0ab81dee04f801416b4944",
                 "shasum": ""
             },
             "require": {
@@ -3903,7 +3863,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-12-12T07:20:32+00:00"
+            "time": "2019-01-15T08:19:08+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -5275,7 +5235,8 @@
     "prefer-lowest": false,
     "platform": {
         "php": "^7.2",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-json": "*"
     },
     "platform-dev": []
 }

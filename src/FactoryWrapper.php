@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace App;
 
+use Psr\SimpleCache\CacheInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 
 class FactoryWrapper {
@@ -11,9 +12,11 @@ class FactoryWrapper {
 	private $factory;
 	private $onBuildCallbacks = [];
 	private $stopwatch;
+	private $cache;
 
-	public function __construct( Stopwatch $stopwatch ) {
+	public function __construct( Stopwatch $stopwatch, CacheInterface $cache ) {
 		$this->stopwatch = $stopwatch;
+		$this->cache = $cache;
 	}
 
 	public function buildFactory() {
@@ -22,7 +25,8 @@ class FactoryWrapper {
 		}
 
 		$this->factory = new TopLevelFactory(
-			$this->stopwatch
+			$this->stopwatch,
+			$this->cache
 		);
 
 		$this->runOnBuildCallbacks( $this->factory );

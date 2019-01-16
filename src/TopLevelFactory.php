@@ -7,7 +7,9 @@ namespace App;
 use App\DataAccess\Blog\BlogRepository;
 use App\DataAccess\Blog\WordpressApiBlogRepository;
 use FileFetcher\FileFetcher;
+use FileFetcher\PsrCacheFileFetcher;
 use FileFetcher\SimpleFileFetcher;
+use Psr\SimpleCache\CacheInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 
 /**
@@ -17,8 +19,9 @@ class TopLevelFactory {
 
 	private $container = [];
 
-	public function __construct( Stopwatch $stopwatch ) {
+	public function __construct( Stopwatch $stopwatch, CacheInterface $cache ) {
 		$this->container[Stopwatch::class] = $stopwatch;
+		$this->container[CacheInterface::class] = $cache;
 	}
 
 	/**
@@ -33,18 +36,25 @@ class TopLevelFactory {
 	}
 
 	public function newNewsRepository(): BlogRepository {
-		return new WordpressApiBlogRepository( $this->getFileFetcher() );
+		return new WordpressApiBlogRepository( $this->getStopwatchFileFetcher() );
 	}
 
-	private function getFileFetcher(): FileFetcher {
+	private function getStopwatchFileFetcher(): FileFetcher {
 		return $this->getSharedService(
 			FileFetcher::class,
 			function() {
 				return new StopwatchFileFetcher(
-					new SimpleFileFetcher(),
+					$this->newCachingFileFetcher(),
 					$this->getStopwatch()
 				);
 			}
+		);
+	}
+
+	private function newCachingFileFetcher(): FileFetcher {
+		return new PsrCacheFileFetcher(
+			new SimpleFileFetcher(),
+			$this->getCache()
 		);
 	}
 
@@ -54,6 +64,10 @@ class TopLevelFactory {
 
 	private function getStopwatch(): Stopwatch {
 		return $this->container[Stopwatch::class];
+	}
+
+	private function getCache(): CacheInterface {
+		return $this->container[CacheInterface::class];
 	}
 
 }
