@@ -7,8 +7,9 @@ namespace App;
 use App\DataAccess\Blog\BlogRepository;
 use App\DataAccess\Blog\WordpressApiBlogRepository;
 use FileFetcher\FileFetcher;
-use FileFetcher\PsrCacheFileFetcher;
 use FileFetcher\SimpleFileFetcher;
+use FileFetcher\Stopwatch\Factory as StopwatchFactory;
+use FileFetcher\Cache\Factory as CacheFactory;
 use Psr\SimpleCache\CacheInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 
@@ -43,7 +44,7 @@ class TopLevelFactory {
 		return $this->getSharedService(
 			FileFetcher::class,
 			function() {
-				return new StopwatchFileFetcher(
+				return ( new StopwatchFactory() )->newStopwatchFetcher(
 					$this->newCachingFileFetcher(),
 					$this->getStopwatch()
 				);
@@ -52,9 +53,10 @@ class TopLevelFactory {
 	}
 
 	private function newCachingFileFetcher(): FileFetcher {
-		return new PsrCacheFileFetcher(
+		return ( new CacheFactory() )->newCachingFetcher(
 			new SimpleFileFetcher(),
-			$this->getCache()
+			$this->getCache(),
+			60
 		);
 	}
 
