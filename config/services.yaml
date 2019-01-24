@@ -38,3 +38,8 @@ services:
         class: Aptoma\Twig\Extension\MarkdownExtension
         tags:
             - { name: twig.extension }
+
+    # https://symfony.com/doc/current/event_dispatcher.html
+    App\EventListener\ExceptionListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }
