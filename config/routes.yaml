@@ -5,7 +5,15 @@ index:
 simple:
     path: /{page}
     controller: App\Controller\SimplePageController::page
+    requirements:
+        page: blog|craftsmanship|gaming|open-source|services|smw|wikidata
 
 project:
     path: /projects/{project}
     controller: App\Controller\SimplePageController::project
+
+404:
+    path: /{page}
+    controller: App\Controller\SimplePageController::notFound
+    requirements:
+        page: ".+"

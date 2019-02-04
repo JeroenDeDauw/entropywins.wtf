@@ -8,7 +8,7 @@ namespace App\Controller;
 
 use App\DataAccess\Blog\BlogPost;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpFoundation\Response;
 
 class SimplePageController extends BaseController {
 
@@ -35,23 +35,23 @@ class SimplePageController extends BaseController {
 			return new RedirectResponse( 'open-source' );
 		}
 
-		$templateFile = 'pages/' . $page . '.html.twig';
-
-		if ( !$this->templateExists( $templateFile ) ) {
-			throw new NotFoundHttpException();
-		}
-
-		return $this->render( $templateFile );
-	}
-
-	private function templateExists( string $templateFile ): bool {
-		return file_exists( $this->getParameter( 'kernel.project_dir' ) . '/templates/' . $templateFile );
+		return $this->render( 'pages/' . $page . '.html.twig' );
 	}
 
 	public function project( string $project ) {
 		return $this->render(
 			'pages/projects/' . $project . '.html.twig'
 		);
+	}
+
+	public function notFound(): Response {
+		$response = $this->render(
+			'errors/404.html.twig'
+		);
+
+		$response->setStatusCode( 404 );
+
+		return $response;
 	}
 
 }
