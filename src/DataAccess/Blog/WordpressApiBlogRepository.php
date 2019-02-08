@@ -22,10 +22,7 @@ class WordpressApiBlogRepository implements BlogRepository {
 	 */
 	public function getLatestPosts(): array {
 		try {
-//			$stopwatch->start('blogFetch');
 			$postsArray = $this->getPostsArray();
-//			$stopwatch->stop('blogFetch');
-
 		}
 		catch ( FileFetchingException $ex ) {
 			return [];
