@@ -29,7 +29,7 @@
         <div class="col-md-6">
             <strong>Software Craftsmanship</strong>
             <ul class="list-unstyled">
-                {% for post in posts|slice(0, 10) %}
+                {% for post in craftPosts|slice(0, 10) %}
                     <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
                 {% endfor %}
             </ul>
@@ -38,7 +38,7 @@
         <div class="col-md-6">
             <strong>Clean Code</strong>
             <ul class="list-unstyled">
-                {% for post in posts|slice(0, 10) %}
+                {% for post in cleanPosts|slice(0, 10) %}
                     <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
                 {% endfor %}
             </ul>

@@ -7,8 +7,15 @@ namespace App\DataAccess\Blog;
 interface BlogRepository {
 
 	/**
-	 * @return BlogPost[] The 10 latest blog posts
+	 * @return BlogPost[] Implementations can choose how many posts to return
 	 */
 	public function getLatestPosts(): array;
+
+	/**
+	 * @param string $tag
+	 *
+	 * @return BlogPost[] Implementations can choose how many posts to return
+	 */
+	public function getLatestWithTag( string $tag ): array;
 
 }

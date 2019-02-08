@@ -40,8 +40,11 @@ class SimplePageController extends BaseController {
 		return $this->render(
 			'pages/craftsmanship.html.twig',
 			[
-				'posts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestPosts()
+				'cleanPosts' => $this->postsToTwigFormat(
+					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'clean-code' )
+				),
+				'craftPosts' => $this->postsToTwigFormat(
+					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'software-craftsmanship' )
 				)
 			]
 		);
@@ -52,7 +55,7 @@ class SimplePageController extends BaseController {
 			'pages/smw.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestPosts()
+					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'smw' )
 				)
 			]
 		);
@@ -63,7 +66,7 @@ class SimplePageController extends BaseController {
 			'pages/wikidata.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestPosts()
+					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'wikidata' )
 				)
 			]
 		);
