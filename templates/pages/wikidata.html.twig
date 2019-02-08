@@ -22,11 +22,17 @@ for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [c
             {% endmarkdown %}
             <div class="row">
                 <div class="col-md-6">
-                    <ul>
+                    <ul class="list-unstyled">
+                        {% for post in posts|slice(0, 5) %}
+                            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <ul>
+                    <ul class="list-unstyled">
+                        {% for post in posts|slice(5, 10) %}
+                            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

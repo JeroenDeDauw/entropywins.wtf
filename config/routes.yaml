@@ -2,11 +2,23 @@ index:
     path: /
     controller: App\Controller\SimplePageController::index
 
+craftsmanship:
+    path: /craftsmanship
+    controller: App\Controller\SimplePageController::craftsmanship
+
+smw:
+    path: /smw
+    controller: App\Controller\SimplePageController::smw
+
+wikidata:
+    path: /wikidata
+    controller: App\Controller\SimplePageController::wikidata
+
 simple:
     path: /{page}
     controller: App\Controller\SimplePageController::page
     requirements:
-        page: blog|craftsmanship|gaming|open-source|services|smw|wikidata
+        page: blog|gaming|open-source|services
 
 project:
     path: /projects/{project}

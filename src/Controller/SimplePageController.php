@@ -16,14 +16,53 @@ class SimplePageController extends BaseController {
 		return $this->render(
 			'pages/index.html.twig',
 			[
-				'posts' => array_map(
-					function( BlogPost $post ) {
-						return [
-							'date' => $post->getDate(),
-							'link' => $post->getLink(),
-							'title' => $post->getTitle()
-						];
-					},
+				'posts' => $this->postsToTwigFormat(
+					$this->getFactory()->newNewsRepository()->getLatestPosts()
+				)
+			]
+		);
+	}
+
+	private function postsToTwigFormat( array $posts ): array {
+		return array_map(
+			function( BlogPost $post ) {
+				return [
+					'date' => $post->getDate(),
+					'link' => $post->getLink(),
+					'title' => $post->getTitle()
+				];
+			},
+			$posts
+		);
+	}
+
+	public function craftsmanship() {
+		return $this->render(
+			'pages/craftsmanship.html.twig',
+			[
+				'posts' => $this->postsToTwigFormat(
+					$this->getFactory()->newNewsRepository()->getLatestPosts()
+				)
+			]
+		);
+	}
+
+	public function smw() {
+		return $this->render(
+			'pages/smw.html.twig',
+			[
+				'posts' => $this->postsToTwigFormat(
+					$this->getFactory()->newNewsRepository()->getLatestPosts()
+				)
+			]
+		);
+	}
+
+	public function wikidata() {
+		return $this->render(
+			'pages/wikidata.html.twig',
+			[
+				'posts' => $this->postsToTwigFormat(
 					$this->getFactory()->newNewsRepository()->getLatestPosts()
 				)
 			]

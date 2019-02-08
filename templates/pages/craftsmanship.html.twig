@@ -3,7 +3,7 @@
 {% block html_title %}Software Craftsmanship - Site of Jeroen De Dauw{% endblock %}
 
 {% block body %}
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-lg-12">
             <h1>Software Craftsmanship</h1>
 
@@ -22,23 +22,27 @@
     <div class="row">
         <div class="col-lg-12">
             <h3>Blog posts</h3>
+        </div>
+    </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <strong>Software Craftsmanship</strong>
-                    <ul>
-
-                    </ul>
-                    View <a href="https://www.entropywins.wtf/blog/tag/software-craftsmanship/">all Software Craftsmanship blog posts</a>
-                </div>
-                <div class="col-md-6">
-                    <strong>Clean Code</strong>
-                    <ul>
-
-                    </ul>
-                    View <a href="https://www.entropywins.wtf/blog/tag/clean-code/">all Clean Code blog posts</a>
-                </div>
-            </div>
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <strong>Software Craftsmanship</strong>
+            <ul class="list-unstyled">
+                {% for post in posts|slice(0, 10) %}
+                    <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
+                {% endfor %}
+            </ul>
+            View <a href="https://www.entropywins.wtf/blog/tag/software-craftsmanship/">all Software Craftsmanship blog posts</a>
+        </div>
+        <div class="col-md-6">
+            <strong>Clean Code</strong>
+            <ul class="list-unstyled">
+                {% for post in posts|slice(0, 10) %}
+                    <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
+                {% endfor %}
+            </ul>
+            View <a href="https://www.entropywins.wtf/blog/tag/clean-code/">all Clean Code blog posts</a>
         </div>
     </div>
 
@@ -47,65 +51,65 @@
             <h3>Presentations</h3>
 
             <p>Note that these slides are not designed for standalone usage.</p>
-
-            <div class="row" style="margin-bottom: 15px">
-                <div class="col-md-6">
-                    <strong>Real world implementation of The Clean Architecture</strong>
-                    <ul>
-                        <li>Read <a href="https://github.com/JeroenDeDauw/fun-architecture/blob/master/README.md">the abstract</a></li>
-                        <li>View <a href="{{ app.request.basepath }}/slides/fun-architecture">the slides</a></li>
-                        <li>Read <a href="https://www.entropywins.wtf/blog/2016/11/24/implementing-the-clean-architecture/">the blog post</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <strong>Component design</strong>: how to create well designed components
-                    <ul>
-                        <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/components/README.md">the abstract</a></li>
-                        <li>View <a href="http://bit.ly/component-design">the slides</a></li>
-                        <li>Read <a href="http://www.entropywins.wtf/blog/2014/07/12/component-design/">the blog post</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 10px">
-                <div class="col-md-6">
-                    <strong>The S in STUPID</strong>: why static code is generally harmful and should be rarely used
-                    <ul>
-                        <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/static/README.md">the abstract</a></li>
-                        <li>View <a href="http://bit.ly/static-code">the slides</a></li>
-                        <li>Read <a href="http://www.entropywins.wtf/blog/2013/11/15/presentation-the-s-in-stupid/">the blog post</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <strong>The Liskov Substitution Principle</strong>: how to avoid common inheritance related pitfalls
-                    <ul>
-                        <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/LSP/README.md">the abstract</a></li>
-                        <li>View <a href="http://bit.ly/solid-lsp">the slides</a></li>
-                        <li>Read <a href="https://www.entropywins.wtf/blog/2016/01/24/the-liskov-substitution-principle/">the blog post</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 10px">
-                <div class="col-md-6">
-                    <strong>Clean Functions</strong>: how to create truly clean and well designed functions
-
-                    <ul>
-                        <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/functions/README.md">the abstract</a></li>
-                        <li>View <a href="http://bit.ly/clean-functions">the slides</a></li>
-                        <li>Read <a href="http://www.entropywins.wtf/blog/2013/09/08/clean-functions/">the blog post</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <strong>Writing easy to maintain code</strong>: talk from the 2015 EnthusiastiCon
-                    <ul>
-                        <li>View <a href="http://bit.ly/econ-cleancode">the slides</a></li>
-                        <li>View <a href="https://www.youtube.com/watch?v=vyazVasLpds">the recording</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 
     <div class="row">
+        <div class="col-md-6">
+            <strong>Real world implementation of The Clean Architecture</strong>
+            <ul>
+                <li>Read <a href="https://github.com/JeroenDeDauw/fun-architecture/blob/master/README.md">the abstract</a></li>
+                <li>View <a href="{{ app.request.basepath }}/slides/fun-architecture">the slides</a></li>
+                <li>Read <a href="https://www.entropywins.wtf/blog/2016/11/24/implementing-the-clean-architecture/">the blog post</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <strong>Component design</strong>: how to create well designed components
+            <ul>
+                <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/components/README.md">the abstract</a></li>
+                <li>View <a href="http://bit.ly/component-design">the slides</a></li>
+                <li>Read <a href="http://www.entropywins.wtf/blog/2014/07/12/component-design/">the blog post</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>The S in STUPID</strong>: why static code is generally harmful and should be rarely used
+            <ul>
+                <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/static/README.md">the abstract</a></li>
+                <li>View <a href="http://bit.ly/static-code">the slides</a></li>
+                <li>Read <a href="http://www.entropywins.wtf/blog/2013/11/15/presentation-the-s-in-stupid/">the blog post</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <strong>The Liskov Substitution Principle</strong>: how to avoid common inheritance related pitfalls
+            <ul>
+                <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/LSP/README.md">the abstract</a></li>
+                <li>View <a href="http://bit.ly/solid-lsp">the slides</a></li>
+                <li>Read <a href="https://www.entropywins.wtf/blog/2016/01/24/the-liskov-substitution-principle/">the blog post</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <strong>Clean Functions</strong>: how to create truly clean and well designed functions
+
+            <ul>
+                <li>Read <a href="https://github.com/JeroenDeDauw/slides/blob/master/craftmanship/functions/README.md">the abstract</a></li>
+                <li>View <a href="http://bit.ly/clean-functions">the slides</a></li>
+                <li>Read <a href="http://www.entropywins.wtf/blog/2013/09/08/clean-functions/">the blog post</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <strong>Writing easy to maintain code</strong>: talk from the 2015 EnthusiastiCon
+            <ul>
+                <li>View <a href="http://bit.ly/econ-cleancode">the slides</a></li>
+                <li>View <a href="https://www.youtube.com/watch?v=vyazVasLpds">the recording</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mb-3">
         <div class="col-lg-12">
             {% markdown %}
 ### Recommended reading: Software Craftsmanship
