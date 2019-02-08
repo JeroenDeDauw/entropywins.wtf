@@ -10,15 +10,15 @@ body {
 
 
 
-@import "https://fonts.googleapis.com/css?family=Roboto:100";
-body {
-	font-family: 'Roboto', sans-serif;
-	background: #fdfdfd;
-}
+/*@import "https://fonts.googleapis.com/css?family=Roboto:100";*/
+/*body {*/
+	/*font-family: 'Roboto', sans-serif;*/
+	/*background: #fdfdfd;*/
+/*}*/
 
 p {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.1em;
+	/*font-family: 'Roboto', sans-serif;*/
+	/*font-size: 1.1em;*/
 	font-weight: 300;
 	line-height: 1.7em;
 	color: rgba(0, 0, 0, 1);
