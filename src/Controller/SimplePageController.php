@@ -17,7 +17,7 @@ class SimplePageController extends BaseController {
 			'pages/index.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestPosts()
+					$this->getFactory()->newBlogRepository()->getLatestPosts()
 				)
 			]
 		);
@@ -37,14 +37,16 @@ class SimplePageController extends BaseController {
 	}
 
 	public function craftsmanship() {
+		$blogRepo = $this->getFactory()->newBlogRepository();
+
 		return $this->render(
 			'pages/craftsmanship.html.twig',
 			[
 				'cleanPosts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'clean-code' )
+					$blogRepo->getLatestWithTag( 'clean-code' )
 				),
 				'craftPosts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'software-craftsmanship' )
+					$blogRepo->getLatestWithTag( 'software-craftsmanship' )
 				)
 			]
 		);
@@ -55,7 +57,7 @@ class SimplePageController extends BaseController {
 			'pages/smw.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'smw' )
+					$this->getFactory()->newBlogRepository()->getLatestWithTag( 'smw' )
 				)
 			]
 		);
@@ -66,7 +68,7 @@ class SimplePageController extends BaseController {
 			'pages/wikidata.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$this->getFactory()->newNewsRepository()->getLatestWithTag( 'wikidata' )
+					$this->getFactory()->newBlogRepository()->getLatestWithTag( 'wikidata' )
 				)
 			]
 		);

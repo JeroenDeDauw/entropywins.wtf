@@ -36,7 +36,7 @@ class TopLevelFactory {
 		return $this->container[$serviceName];
 	}
 
-	public function newNewsRepository(): BlogRepository {
+	public function newBlogRepository(): BlogRepository {
 		return new WordpressApiBlogRepository( $this->getStopwatchFileFetcher() );
 	}
 
