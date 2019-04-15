@@ -14,11 +14,31 @@ wikidata:
     path: /wikidata
     controller: App\Controller\SimplePageController::wikidata
 
-simple:
-    path: /{page}
+blog:
+    path: /blog
     controller: App\Controller\SimplePageController::page
+
+gaming:
+    path: /gaming
+    controller: App\Controller\SimplePageController::page
+
+open-source:
+    path: /open-source
+    controller: App\Controller\SimplePageController::page
+
+services:
+    path: /services
+    controller: App\Controller\SimplePageController::page
+
+projects:
+    path: /projects
+    controller: App\Controller\SimplePageController::page
+
+redirects:
+    path: /{page}
+    controller: App\Controller\SimplePageController::redirects
     requirements:
-        page: blog|gaming|open-source|services|projects
+        page: projects
 
 project:
     path: /projects/{project}
@@ -29,3 +49,7 @@ project:
     controller: App\Controller\SimplePageController::notFound
     requirements:
         page: ".+"
+
+sitemap:
+    path: sitemap.xml
+    controller: App\Controller\SimplePageController::sitemap

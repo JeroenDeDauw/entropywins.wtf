@@ -8,6 +8,7 @@ namespace App\Controller;
 
 use App\DataAccess\Blog\BlogPost;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class SimplePageController extends BaseController {
@@ -74,12 +75,16 @@ class SimplePageController extends BaseController {
 		);
 	}
 
-	public function page( string $page ) {
+	public function page( Request $request ): Response {
+		return $this->render(
+			'pages/' . $request->get( '_route' ) . '.html.twig'
+		);
+	}
+
+	public function redirects( string $page ): Response {
 		if ( $page === 'projects' ) {
 			return new RedirectResponse( 'open-source' );
 		}
-
-		return $this->render( 'pages/' . $page . '.html.twig' );
 	}
 
 	public function project( string $project ) {
@@ -96,6 +101,19 @@ class SimplePageController extends BaseController {
 		$response->setStatusCode( 404 );
 
 		return $response;
+	}
+
+	public function sitemap(): Response {
+		return $this->render(
+			'sitemap.xml.twig',
+			[
+				'pages' => [
+					'index' => 'weekly',
+					'index' => 'weekly',
+					'index' => 'weekly',
+				]
+			]
+		);
 	}
 
 }
