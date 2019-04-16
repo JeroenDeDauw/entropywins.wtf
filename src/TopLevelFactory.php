@@ -56,7 +56,7 @@ class TopLevelFactory {
 		return ( new CacheFactory() )->newCachingFetcher(
 			new SimpleFileFetcher(),
 			$this->getCache(),
-			60
+			3600
 		);
 	}
 
