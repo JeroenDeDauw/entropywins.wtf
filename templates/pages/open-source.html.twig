@@ -14,8 +14,8 @@
 
             <ul>
                 <li><strong><a href="https://www.entropywins.wtf/blog/2016/11/24/rewriting-the-wikimedia-deutschland-funrdraising/">WMDE Fundraising</a></strong> - fundraising application for <a href="https://wikimedia.de">Wikimedia Deutschland</a>.</li>
-                <li><strong><a href="{{ app.request.basepath }}/wikidata">Wikidata</a></strong> - the free knowledge base that anyone can edit, powering Wikipedia.</li>
-                <li><strong><a href="{{ app.request.basepath }}/smw">Semantic MediaWiki</a></strong> - An extension to MediaWiki hat lets you store and query data within the wiki's pages.</li>
+                <li><strong><a href="{{ path('wikidata') }}">Wikidata</a></strong> - the free knowledge base that anyone can edit, powering Wikipedia.</li>
+                <li><strong><a href="{{ path('smw') }}">Semantic MediaWiki</a></strong> - An extension to MediaWiki hat lets you store and query data within the wiki's pages.</li>
             </ul>
 
             <br />
@@ -179,7 +179,7 @@
                 </tr>
                 </thead>
                 <tr>
-                    <td rowspan="2"><strong><a href="{{ app.request.basepath }}/smw">Semantic MediaWiki</a></strong></td>
+                    <td rowspan="2"><strong><a href="{{ path('smw') }}">Semantic MediaWiki</a></strong></td>
                     <td colspan="1">Lets you store and query data within the wiki's pages.</td>
                     <td>Very active development</td>
                 </tr>
