@@ -30,10 +30,6 @@ services:
     path: /services
     controller: App\Controller\SimplePageController::page
 
-projects:
-    path: /projects
-    controller: App\Controller\SimplePageController::page
-
 redirects:
     path: /{page}
     controller: App\Controller\SimplePageController::redirects
