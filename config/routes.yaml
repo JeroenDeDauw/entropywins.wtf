@@ -14,10 +14,6 @@ wikidata:
     path: /wikidata
     controller: App\Controller\SimplePageController::wikidata
 
-blog:
-    path: /blog
-    controller: App\Controller\SimplePageController::page
-
 gaming:
     path: /gaming
     controller: App\Controller\SimplePageController::page
