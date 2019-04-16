@@ -11,3 +11,4 @@ public/blog
 public/slides
 public/.htaccess
 composer.phar
+update.sh
