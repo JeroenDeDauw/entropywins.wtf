@@ -1,0 +1,87 @@
+==================================================================
+https://keybase.io/jeroendedauw
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://entropywins.wtf
+  * I am jeroendedauw (https://keybase.io/jeroendedauw) on keybase.
+  * I have a public key with fingerprint AB95 CECD B3C2 6869 E485  CD1C EEAA 431E 2E91 371F
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101f5c7de0161250fbc3dcfb3b6741918ce194e6e9081cf7248b7e8cef14fa242680a",
+      "fingerprint": "ab95cecdb3c26869e485cd1ceeaa431e2e91371f",
+      "host": "keybase.io",
+      "key_id": "eeaa431e2e91371f",
+      "kid": "0101f5c7de0161250fbc3dcfb3b6741918ce194e6e9081cf7248b7e8cef14fa242680a",
+      "uid": "b534b83d83d7c9a8548c0f26623e7900",
+      "username": "jeroendedauw"
+    },
+    "merkle_root": {
+      "ctime": 1555503059,
+      "hash_meta": "db99119050975be07b993a5f83cae4f2f6d69405969bce21a3758088a6193fdd",
+      "seqno": 5190384
+    },
+    "revoke": {
+      "sig_ids": [
+        "733589221c3d4fe1ecc84b0fe0f353052d09724be5e87a719028a424cc03797e0f"
+      ]
+    },
+    "service": {
+      "hostname": "entropywins.wtf",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1555503074,
+  "expire_in": 157680000,
+  "prev": "3fd1cbfb43469f24ae80a0f00dcf8875d6cb3396ab0c14f47ad05ff1910b9b80",
+  "seqno": 44,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMPYAnicrVN9TFZVHH7RJHw1cZW4kGzelJWAnPt974tZiAYZYzKHZRLv7jn3HLi8
+cO/bvRcQGVbqnGEaWilDyTU/CocwcakB0wkqGBWwIj9WmTmRRrMQaZVknctsba0/
+O7vb3Tn3+T2/5z7P75x5YKLPH3HzUNrsBdvlxyK62ytLfLnHZ35fwUBLL2cCFUwI
+j79wkY4dNxgydCbAABawRESyjgErsZwICES8jgjkoSQLrMoqCLOqgCWsAoVFROYE
+BcqYnhJWIBoncJICNCaRIYaZj+2wbZgupdWgKiKMdMgjCpBULCgi0lmEsaYJPIs5
+rLK8zBJaWGA5XgUVBzUHLzAsekY3wXF5/4H/n3WXjNNBkRegwuv0kZGqKaKgIEA4
+SeJ4LKsAeEAH26ZWjCm6ENsWNnWsayVlTGUiU4ztUBEO2pblegYj1/BgrEgX4IGo
+0p/UnIJgMXY1Wq1DVWVZFYhAlUWIgUz3vCYShUcaFghHJF1SBVomqRBhjtV4WVSA
+omgSq/JE16kWB79iWkxApCy8IlAFNi61Qthr7hj51DqHCaxmZJ4XFZXjWOqMQDCL
+EVIECAgGhBepLk6nCjgBYhErsiZTMk7RBE5ACPCyKlMY83Kl18wuNdA4uZfVPQ+w
+6dpWuLzMMJ0FZa4XTNi2XAtZRfRjgeuGnYBnjVse9tBlGAbv8QShYep0WGhFKbYd
+wzKpVRT5L9dkIZHBa8KGjYOGhxBlGhhdXh9cSimpFSyCBAq8IKmEEzRMAwUEADoF
+iiKLuoQgz6uSBgGikQuypgOREDoaAKpQAf/YKNBWrpZPOal5puaW2JipbD+de58v
+wu+LnDTBu0U+/+Tpf9+t21XRfwaXPjrn53nrcrSjTdnLErtSwm+N/pR/9PFZhVkz
+Zs4IGZf/gPEVetWqRRvJUMv6qcNjQy+9WeJrrKkjTTP37bqdtzK74GTtrj0f93xi
+r2t60J2b1vpjTm17Xs9wMCs4dUAtjt4UJiOnYlO+aWipW5u/ZVVDf/NNtvfC0vNa
+Tt6NO4dKY/p278/saB24+EJmVvJgpi+Bz68oXLy57dXh59ja16e3L+EnXpr92hOt
+7+SaJ6bXd0mhqwc7m3fGVN893TbKhWclNc3rOjt4Of2Xjxb2zx2YezE+bdG5q+ft
+xt7u6tKESRMOJ7eOkfmdGb/vK+voGW3ZvbLxlrxjY83sxvebsLv3vRe/i/31RLx/
+flJ0S9wVHOhtDQxcu3XMH7VpfXJO3VjfuSkHItfe9nUeGC6sS4qL+lqLsaunPLK9
+cduZ65fKiu4OfHbtCtz6VUfqmp7fMnve3W1M68/o2bd3zqQbV3ZGBhrch/POPlRV
+fqf8wlA9mfXkwuXZH2ZMA5siNx8cbM44vIM8L43Fb2hLP9xSFS0cmHzyxBdxwyuc
+lP3JTznNG0ZGRk9V+tJjQ7nLB5/OQ86RvryhrFDh6v62L/eE6peMxnY9m+OH3Uu3
+DMwz/XHhD+5E1R9foR5J+jbFGUtPWNbQ/fbi3M0XppX/EPXMyAj5fKuxoviN46n7
+UxOkXrOmOubm9uv3t2cf2XYo9dinfwFgSwjU
+=QHFw
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jeroendedauw
+
+==================================================================
