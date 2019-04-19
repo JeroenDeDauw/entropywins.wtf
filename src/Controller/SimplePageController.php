@@ -108,9 +108,11 @@ class SimplePageController extends BaseController {
 			'sitemap.xml.twig',
 			[
 				'pages' => [
-					'index' => 'weekly',
-					'index' => 'weekly',
-					'index' => 'weekly',
+					'index' => 'daily',
+					'open-source' => 'weekly',
+					'craftsmanship' => 'weekly',
+					'smw' => 'monthly',
+					'wikidata' => 'monthly',
 				]
 			]
 		);

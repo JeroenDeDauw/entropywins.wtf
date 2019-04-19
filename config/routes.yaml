@@ -36,12 +36,12 @@ project:
     path: /projects/{project}
     controller: App\Controller\SimplePageController::project
 
-404:
+sitemap:
+    path: sitemap.xml
+    controller: App\Controller\SimplePageController::sitemap
+
+404: # MUST BE LAST!
     path: /{page}
     controller: App\Controller\SimplePageController::notFound
     requirements:
         page: ".+"
-
-sitemap:
-    path: sitemap.xml
-    controller: App\Controller\SimplePageController::sitemap
