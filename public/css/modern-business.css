@@ -40,6 +40,33 @@ a:focus {
 	margin: 40px 0;
 }
 
+ul ul a {
+	font-size: 0.9em !important;
+	padding-left: 30px !important;
+}
+
+a.article,
+a.article:hover {
+	background: #6d7fcc !important;
+	color: #fff !important;
+}
+
+a img {
+	border: none;
+}
+a, a:link {
+	color: #05ad9c;
+	text-decoration: none;
+}
+a:visited {
+	color: #047d5c;
+	text-decoration: none;
+}
+a:focus, a:hover, a:active {
+	color: #05ad9c;
+	text-decoration: underline;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -80,33 +107,6 @@ a[aria-expanded="true"] {
 	color: #fff;
 }
 
-ul ul a {
-	font-size: 0.9em !important;
-	padding-left: 30px !important;
-}
-
-a.article,
-a.article:hover {
-	background: #6d7fcc !important;
-	color: #fff !important;
-}
-
-a img {
-	border: none;
-}
-a, a:link {
-	color: #05ad9c;
-	text-decoration: none;
-}
-a:visited {
-	color: #047d5c;
-	text-decoration: none;
-}
-a:focus, a:hover, a:active {
-	color: #05ad9c;
-	text-decoration: underline;
-}
-
 #sidebar a {
 	color: #b8b7ad;
 }
@@ -115,6 +115,9 @@ a:focus, a:hover, a:active {
 	color: darkred;
 }
 
+#mobileNavbar {
+	display: none;
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -139,5 +142,9 @@ a:focus, a:hover, a:active {
 	}
 	#content {
 		left: 0;
+		top: 40px;
+	}
+	#mobileNavbar {
+		display: flex;
 	}
 }
