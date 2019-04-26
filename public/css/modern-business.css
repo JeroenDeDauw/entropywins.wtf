@@ -143,8 +143,17 @@ a[aria-expanded="true"] {
 	#content {
 		left: 0;
 		top: 40px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	#mobileNavbar {
 		display: flex;
+	}
+}
+
+@media (max-width: 600px) {
+	#content {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
