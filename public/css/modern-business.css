@@ -129,3 +129,15 @@ a:focus, a:hover, a:active {
 	top: 0;
 	left: 390px;
 }
+
+@media (max-width: 1200px) {
+	#sidebar {
+		margin-left: -390px;
+	}
+	#sidebar.active {
+		margin-left: 0;
+	}
+	#content {
+		left: 0;
+	}
+}

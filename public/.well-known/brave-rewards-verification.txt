@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: entropywins.wtf
-Token: af32d249cb581193767382c31a43b82275f426872e3f7ed65e7d27152734b1d7 
+Token: af32d249cb581193767382c31a43b82275f426872e3f7ed65e7d27152734b1d7
