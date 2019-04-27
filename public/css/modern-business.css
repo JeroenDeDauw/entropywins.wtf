@@ -151,9 +151,18 @@ a[aria-expanded="true"] {
 	}
 }
 
+@media (max-width: 900px) {
+	#duck {
+		display: none;
+	}
+}
+
 @media (max-width: 600px) {
 	#content {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	#the-me {
+		display: none;
 	}
 }
