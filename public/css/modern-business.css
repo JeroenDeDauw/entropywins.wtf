@@ -119,6 +119,10 @@ a[aria-expanded="true"] {
 	display: none;
 }
 
+.portfolio-item {
+	margin-bottom: 30px;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
