@@ -44,6 +44,12 @@ sitemap:
     path: sitemap.xml
     controller: App\Controller\SimplePageController::sitemap
 
+slides:
+    path: /slides/{page}
+    controller: App\Controller\SimplePageController::slides
+    requirements:
+        page: fun-architecture
+
 404: # MUST BE LAST!
     path: /{page}
     controller: App\Controller\SimplePageController::notFound

@@ -87,6 +87,12 @@ class SimplePageController extends BaseController {
 		}
 	}
 
+	public function slides( string $page ): Response {
+		if ( $page === 'fun-architecture' ) {
+			return new RedirectResponse( 'https://jeroendedauw.github.io/fun-architecture/#/' );
+		}
+	}
+
 	public function project( string $project ) {
 		return $this->render(
 			'pages/projects/' . $project . '.html.twig'
