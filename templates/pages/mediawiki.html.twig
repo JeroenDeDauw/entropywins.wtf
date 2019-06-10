@@ -1,0 +1,237 @@
+{% extends 'layout.html.twig' %}
+
+{% block html_title %}MediaWiki - Jeroen De Dauw{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>MediaWiki</h1>
+
+            <p>
+                I have been working with <a href="https://www.mediawiki.org">MediaWiki</a>, the software
+                behind Wikipedia, since 2009. During these 10+ years I have worked for several
+                companies across the globe, including Google and the Wikimedia Foundation. Between 2012 and 2019
+                I worked for Wikimedia Deutschland as software architect, primarily on the
+                <a href="{{ path('wikidata') }}">Wikidata project</a>. I created
+                over a dozen MediaWiki extensions, contributed to many more and am one of the maintainers of
+                <a href="{{ path('smw') }}">Semantic MediaWiki</a>. In 2019 I created
+                <a href="https://professional.wiki">Professional Wiki</a>,
+                a wiki hosting and consulting company
+                that provides customer-focused services that are both holistic and high quality.
+            </p>
+
+            <h3>My MediaWiki extensions</h3>
+
+            <table class="table table-striped table-bordered components">
+                <thead>
+                <tr>
+                    <th class="library" style="width: 200px;">Extension</th>
+                    <th>Description &amp; involvement</th>
+                    <th class="status">Status</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td rowspan="2"><strong><a href="{{ path('smw') }}">Semantic MediaWiki</a></strong></td>
+                    <td colspan="1">Lets you store and query data within the wiki's pages.</td>
+                    <td>Very active development</td>
+                </tr>
+                <tr>
+                    <td>Contributor since 2009, (co-)maintainer since 2011</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/semantic-media-wiki"><img src="https://poser.pugx.org/mediawiki/semantic-media-wiki/version.png" /></a>
+                        <a href="https://travis-ci.org/SemanticMediaWiki/SemanticMediaWiki"><img src="https://travis-ci.org/SemanticMediaWiki/SemanticMediaWiki.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Maps">Maps</a></strong></td>
+                    <td colspan="1">Enables visualization of geographic data with dynamic embedded maps.</td>
+                    <td>Active development</td>
+                </tr>
+                <tr>
+                    <td>Creator, maintainer since 2009</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/maps"><img src="https://poser.pugx.org/mediawiki/maps/version.png" /></a>
+                        <a href="https://travis-ci.org/JeroenDeDauw/Maps"><img src="https://travis-ci.org/JeroenDeDauw/Maps.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:SubPageList">SubPageList</a></strong></td>
+                    <td colspan="1">Enables viewing lists of subpages and counting them.</td>
+                    <td>Maintenance</td>
+                </tr>
+                <tr>
+                    <td>Creator, maintainer since 2010</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/sub-page-list"><img src="https://poser.pugx.org/mediawiki/sub-page-list/version.png" /></a>
+                        <a href="https://travis-ci.org/JeroenDeDauw/SubPageList"><img src="https://travis-ci.org/JeroenDeDauw/SubPageList.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:GitHub">GitHub</a></strong></td>
+                    <td colspan="1">Enables embedding GitHub files, including markdown rendering and syntax highlighting.</td>
+                    <td>Maintenance</td>
+                </tr>
+                <tr>
+                    <td>Creator, maintainer since 2013</td>
+                    <td>
+                        <a href="https://packagist.org/packages/jeroen/mediawiki-github"><img src="https://poser.pugx.org/jeroen/mediawiki-github/version.png" /></a>
+                        <a href="https://travis-ci.org/JeroenDeDauw/GitHub"><img src="https://travis-ci.org/JeroenDeDauw/GitHub.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Semantic_Maps">Semantic Maps</a></strong></td>
+                    <td colspan="1">Adds geographic capabilities to Semantic MediaWiki and Semantic Forms.</td>
+                    <td>Merged into Maps, discontinued</td>
+                </tr>
+                <tr>
+                    <td>Creator, maintainer since 2009</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/semantic-maps"><img src="https://poser.pugx.org/mediawiki/semantic-maps/version.png" /></a>
+                        <a href="https://travis-ci.org/SemanticMediaWiki/SemanticMaps"><img src="https://travis-ci.org/SemanticMediaWiki/SemanticMaps.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://github.com/JeroenDeDauw/ParserHooks">ParserHooks</a></strong></td>
+                    <td colspan="1">OOP interface for creating MediaWiki parser hooks in a declarative fashion.</td>
+                    <td>Maintenance</td>
+                </tr>
+                <tr>
+                    <td>Creator, maintainer since 2013</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/parser-hooks"><img src="https://poser.pugx.org/mediawiki/parser-hooks/version.png" /></a>
+                        <a href="https://travis-ci.org/JeroenDeDauw/ParserHooks"><img src="https://travis-ci.org/JeroenDeDauw/ParserHooks.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://github.com/JeroenDeDauw/Validator">Validator</a></strong></td>
+                    <td colspan="1">MediaWiki integration with the ParamProcessor PHP library.</td>
+                    <td>Maintenance</td>
+                </tr>
+                <tr>
+                    <td>Creator, maintainer since 2009</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/parser-hooks"><img src="https://poser.pugx.org/mediawiki/parser-hooks/version.png" /></a>
+                        <a href="https://travis-ci.org/JeroenDeDauw/Validator"><img src="https://travis-ci.org/JeroenDeDauw/ParserHooks.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Semantic_Watchlist">Semantic Watchlist</a></strong></td>
+                    <td colspan="1">Enables watching changes to semantic properties via a dedicated watchlist.</td>
+                    <td>Minimal maintenance</td>
+                </tr>
+                <tr>
+                    <td>Creator (for WikiWorks), maintainer since 2011</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/semantic-watchlist"><img src="https://poser.pugx.org/mediawiki/semantic-watchlist/version.png" /></a>
+                        <a href="https://travis-ci.org/SemanticMediaWiki/SemanticWatchlist"><img src="https://travis-ci.org/SemanticMediaWiki/SemanticWatchlist.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats">Semantic Result Formats</a></strong></td>
+                    <td colspan="1">Adds a large number of query result visualization formats to Semantic MediaWiki.</td>
+                    <td>Maintenance, occasional contributed features</td>
+                </tr>
+                <tr>
+                    <td>Contributor since 2009, (co-)maintainer since 2011</td>
+                    <td>
+                        <a href="https://packagist.org/packages/mediawiki/semantic-result-formats"><img src="https://poser.pugx.org/mediawiki/semantic-result-formats/version.png" /></a>
+                        <a href="https://travis-ci.org/SemanticMediaWiki/SemanticResultFormats"><img src="https://travis-ci.org/SemanticMediaWiki/SemanticResultFormats.svg?branch=master" /></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Push">Push</a></strong></td>
+                    <td colspan="1">Adds a tab to articles that enables pushing the article content to other wikis.</td>
+                    <td>No maintenance from me, possibly from others</td>
+                </tr>
+                <tr>
+                    <td>Creator (for WikiWorks), maintainer from 2011 to 2014</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Live_Translate">Live Translate</a></strong></td>
+                    <td colspan="1">Live translation of wiki pages via Google Translate or Microsoft Translate.</td>
+                    <td>No maintenance from me, possibly from others</td>
+                </tr>
+                <tr>
+                    <td>Creator (for WikiWorks), maintainer from 2010 to 2013</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Contest">Contest</a></strong></td>
+                    <td colspan="1">Allows participation in, and management of, contest challenges created by administrators.</td>
+                    <td>Inactive / no maintenance</td>
+                </tr>
+                <tr>
+                    <td>Created for the Wikimedia Foundation in 2011</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Survey">Survey</a></strong></td>
+                    <td colspan="1">Allows administrators to define surveys that can be shown to specified groups of users.</td>
+                    <td>No maintenance from me, possibly from others</td>
+                </tr>
+                <tr>
+                    <td>Creator (for WikiWorks), maintainer from 2011 to 2014</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Survey">Spark</a></strong></td>
+                    <td colspan="1">MediaWiki integration with the Spark JS library to embed SPARQL-based visualizations.</td>
+                    <td>Inactive / no maintenance</td>
+                </tr>
+                <tr>
+                    <td>Created in 2011, not maintained</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Nuke">Nuke</a></strong></td>
+                    <td colspan="1">Makes it possible for sysops to mass delete pages.</td>
+                    <td>Maintenance</td>
+                </tr>
+                <tr>
+                    <td>Significant contributions and temporary maintenance in 2012</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Education_Program">Education Program</a></strong></td>
+                    <td colspan="1">Adds various features for running courses around editing wiki pages.</td>
+                    <td>No maintenance from me, possibly from others</td>
+                </tr>
+                <tr>
+                    <td>Created for the Wikimedia Foundation in 2012, maintained till 2013</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><strong><a href="https://www.mediawiki.org/wiki/Extension:Semantic_Image_Input">Semantic Image Input</a></strong></td>
+                    <td colspan="1">Allows for automatic inclusion of images from Wikipedia pages in Semantic Forms.</td>
+                    <td>No maintenance from me, possibly from others</td>
+                </tr>
+                <tr>
+                    <td>Created in 2011, not maintained</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br />
+
+{% endblock %}
+
+

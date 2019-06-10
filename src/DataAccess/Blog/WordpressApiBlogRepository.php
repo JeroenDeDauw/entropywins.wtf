@@ -75,12 +75,13 @@ class WordpressApiBlogRepository implements BlogRepository {
 	}
 
 	public function getLatestWithTag( string $tag ): array {
-		// https://www.entropywins.wtf/blog/wp-json/wp/v2/tags?search=smw
+		// https://www.entropywins.wtf/blog/wp-json/wp/v2/tags?search=mediawiki
 		$tagMap = [
 			'smw' => 237,
 			'wikidata' => 305,
 			'software-craftsmanship' => 365,
 			'clean-code' => 328,
+			'mediawiki' => 156,
 		];
 
 		try {
