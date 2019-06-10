@@ -64,17 +64,6 @@ class SimplePageController extends BaseController {
 		);
 	}
 
-	public function mediawiki() {
-		return $this->render(
-			'pages/mediawiki.html.twig',
-			[
-				'posts' => $this->postsToTwigFormat(
-					$this->getFactory()->newBlogRepository()->getLatestWithTag( 'mediawiki' )
-				)
-			]
-		);
-	}
-
 	public function wikidata() {
 		return $this->render(
 			'pages/wikidata.html.twig',

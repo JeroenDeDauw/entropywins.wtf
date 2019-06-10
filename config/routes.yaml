@@ -12,7 +12,7 @@ smw:
 
 mediawiki:
     path: /mediawiki
-    controller: App\Controller\SimplePageController::mediawiki
+    controller: App\Controller\SimplePageController::page
 
 wikidata:
     path: /wikidata
