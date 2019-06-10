@@ -8,6 +8,7 @@
 .idea/
 
 public/blog
-public/slides
 public/.htaccess
 composer.phar
+
+blog/
