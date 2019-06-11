@@ -102,6 +102,10 @@ a:focus, a:hover, a:active {
 	color: lightblue;
 }
 
+.active-page {
+	color: #05ad9c !important;
+}
+
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
 	color: #fff;
