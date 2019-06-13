@@ -4,11 +4,20 @@ declare( strict_types = 1 );
 
 namespace App\Tests\EdgeToEdge;
 
+use Symfony\Component\HttpFoundation\Response;
+
 class PageNotFoundTest extends EdgeToEdgeTestCase {
 
-	public function testPageNotFound() {
-		$response = $this->request( 'GET', '/en/derp' );
+	/**
+	 * @dataProvider nonExistingPageProvider
+	 */
+	public function testPageNotFound( string $page ) {
+		$response = $this->request( 'GET', $page );
 
+		$this->assert404Response( $response );
+	}
+
+	private function assert404Response( Response $response ) {
 		$this->assertContains(
 			'404',
 			$response->getContent()
@@ -18,6 +27,13 @@ class PageNotFoundTest extends EdgeToEdgeTestCase {
 			404,
 			$response->getStatusCode()
 		);
+	}
+
+	public function nonExistingPageProvider(): iterable {
+		yield [ '/derp' ];
+		yield [ '/en/derp' ];
+		yield [ '/en/derp/derp' ];
+		yield [ '/mediawiki/derp' ];
 	}
 
 }
