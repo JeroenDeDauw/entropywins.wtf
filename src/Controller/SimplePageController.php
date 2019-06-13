@@ -81,12 +81,6 @@ class SimplePageController extends BaseController {
 		);
 	}
 
-	public function redirects( string $page ): Response {
-		if ( $page === 'projects' ) {
-			return new RedirectResponse( 'open-source' );
-		}
-	}
-
 	public function slides( string $page ): Response {
 		if ( $page === 'fun-architecture' ) {
 			return new RedirectResponse( 'https://jeroendedauw.github.io/fun-architecture/#/' );
@@ -97,16 +91,6 @@ class SimplePageController extends BaseController {
 		return $this->render(
 			'pages/projects/' . $project . '.html.twig'
 		);
-	}
-
-	public function notFound(): Response {
-		$response = $this->render(
-			'errors/404.html.twig'
-		);
-
-		$response->setStatusCode( 404 );
-
-		return $response;
 	}
 
 	public function sitemap(): Response {

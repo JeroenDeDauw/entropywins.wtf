@@ -7,7 +7,7 @@ craftsmanship:
     controller: App\Controller\SimplePageController::craftsmanship
 
 smw:
-    path: /smw
+    path: /semantic-mediawiki
     controller: App\Controller\SimplePageController::smw
 
 mediawiki:
@@ -30,12 +30,6 @@ services:
     path: /services
     controller: App\Controller\SimplePageController::page
 
-redirects:
-    path: /{page}
-    controller: App\Controller\SimplePageController::redirects
-    requirements:
-        page: projects
-
 project:
     path: /projects/{project}
     controller: App\Controller\SimplePageController::project
@@ -52,6 +46,6 @@ slides:
 
 404: # MUST BE LAST!
     path: /{page}
-    controller: App\Controller\SimplePageController::notFound
+    controller: App\Controller\NotFoundController::notFound
     requirements:
         page: ".+"
