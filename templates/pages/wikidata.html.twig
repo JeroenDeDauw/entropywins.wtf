@@ -22,7 +22,7 @@ for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [c
             {% endmarkdown %}
             <div class="row">
                 <div class="col-md-6">
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled" style="margin: 0">
                         {% for post in posts|slice(0, 5) %}
                             <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
                         {% endfor %}
@@ -36,22 +36,35 @@ for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [c
                     </ul>
                 </div>
             </div>
-            {% markdown %}
 
-View [all Wikidata blog posts](https://www.entropywins.wtf/blog/tag/wikidata/).
+            <p>View <a href="https://www.entropywins.wtf/blog/tag/wikidata/">all Wikidata blog posts</a></p>
+        </div>
+    </div>
 
-### Presentations:
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Presentations</h2>
 
-**Wikibase, the Software behind Wikidata**
+            <p>
+                Note that the slides are generally not designed for after-talk usage.
+                However, they are useful when watching the recording of a talk.
+            </p>
+        </div>
+    </div>
 
-Introduction to the Wikibase software, including the data model, high level features and architecture.
-Created for [SMWCon Fall 2014, Vienna](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014).
-
-* [Wiki page](https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014/Wikibase,_the_Software_behind_Wikidata)
-* [Slides](http://jeroendedauw.github.io/slides/smwcon/2014fall/wikibase/)
-* [Video](https://www.youtube.com/watch?v=H4GGd3UyA5E&list=PLv4ZNIEr6SqWjHJvegO9uLze1d7yy0jpk&index=8)
-
-            {% endmarkdown %}
+    <div class="row">
+        <div class="col-md-6 portfolio-item">
+            <div class="card h-100">
+                <a href="https://jeroendedauw.github.io/slides/smwcon/2014fall/wikibase/#/"><img class="card-img-top" src="{{ asset('images/slides/wikibase2014.png') }}" alt="Wikibase: The Software behind Wikidata - slide preview"></a>
+                <div class="card-body">
+                    <p style="margin: 0">
+                        <a href="https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014/Wikibase,_the_Software_behind_Wikidata">Abstract</a>
+                        &nbsp;&bull;&nbsp; <a href="https://jeroendedauw.github.io/slides/smwcon/2014fall/wikibase/#/">Slides</a>
+                        &nbsp;&bull;&nbsp; <a href="https://www.youtube.com/watch?v=H4GGd3UyA5E&list=PLv4ZNIEr6SqWjHJvegO9uLze1d7yy0jpk&index=8">Video</a>
+                        &nbsp;&bull;&nbsp; <a href="https://semantic-mediawiki.org/wiki/SMWCon_Fall_2014">SMWCon Fall 2014</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
