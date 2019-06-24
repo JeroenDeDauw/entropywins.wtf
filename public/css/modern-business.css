@@ -127,6 +127,10 @@ a[aria-expanded="true"] {
 	margin-bottom: 30px;
 }
 
+ul.mediawiki-extensions li a:first-child {
+	font-weight: bold;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
