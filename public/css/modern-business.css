@@ -169,6 +169,12 @@ ul.mediawiki-extensions li a:first-child {
 	}
 }
 
+@media (max-width: 576px) {
+	.not-phone {
+		display: none;
+	}
+}
+
 @media (max-width: 600px) {
 	#content {
 		padding-left: 0;
