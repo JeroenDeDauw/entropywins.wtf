@@ -5,41 +5,40 @@
 {% block body %}
     <div class="row">
         <div class="col-lg-12">
-            {% markdown %}
-# Wikidata
+            <h1>Wikidata</h1>
 
-[Wikidata](https://www.wikidata.org/) is a free knowledge base that can be read and edited by humans
-and machines alike. It centralizes storage and management of Wikipedias structured data and provides
-access to it in various open formats. It is powered by the Wikibase software, which is build on top
-of the [MediaWiki platform](https://www.mediawiki.org/).
+            <p>
+                <a href="https://www.wikidata.org/">Wikidata</a> is a free knowledge base that can be read
+                and edited by humans and machines alike. It centralizes storage and management of Wikipedias
+                structured data and provides access to it in various open formats. It is powered by the
+                Wikibase software, which is build on top of the <a href="{{ path('mediawiki') }}">MediaWiki</a> platform
+                and developed by Wikimedia Deutschland.
+            </p>
 
-### Current involvement
+            <p>
+                I was part of the original Wikidata team that started development of the software in 2012 and launched
+                the website a year later. In 2019 I left Wikimedia Deutschland after being Software Architect there for 6
+                years. During these years I raked up over 6000 commits on the Wikibase software. You can find me in the
+                <a href="https://www.openhub.net/p/wikidata/contributors">contributors list on OpenHub</a>.
+            </p>
 
-I am working on the [Wikibase software](https://www.mediawiki.org/wiki/Wikibase) as developer
-for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [contributors list on OpenHub](https://www.openhub.net/p/wikidata/contributors).
+            <h2>My services</h2>
 
-### Blog posts
-            {% endmarkdown %}
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="list-unstyled" style="margin: 0">
-                        {% for post in posts|slice(0, 5) %}
-                            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        {% for post in posts|slice(5, 10) %}
-                            <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
+            <p>
+                My company <a href="https://professional.wiki">Professional Wiki</a> provides
+                <a href="https://professional.wiki/en/hosting#wikibase">fully managed Wikibase hosting</a>.
+                We can also help you with <a href="https://professional.wiki/en/support">Wikibase support</a> and
+                <a href="https://professional.wiki/en/services#development">custom Wikibase development</a>.
+            </p>
 
-            <p>View <a href="https://www.entropywins.wtf/blog/tag/wikidata/">all Wikidata blog posts</a></p>
+            <p>
+                <a href="https://professional.wiki/en/contact">Get in touch</a>
+                if you have any questions.
+            </p>
         </div>
     </div>
+
+    {{ include('parts/wikibase-code.html.twig') }}
 
     <div class="row">
         <div class="col-lg-12">
@@ -67,6 +66,37 @@ for [Wikimedia Deutchland](https://www.wikimedia.de/). You can find me in the [c
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Blog posts</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-unstyled" style="margin: 0">
+                {% for post in posts|slice(0, 5) %}
+                    <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-unstyled">
+                {% for post in posts|slice(5, 10) %}
+                    <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <p>View <a href="https://www.entropywins.wtf/blog/tag/wikidata/">all Wikidata blog posts</a></p>
+        </div>
+    </div>
+
+
 {% endblock %}
 
 
