@@ -14,7 +14,7 @@
         <div class="col-lg-6 portfolio-item">
             <div class="card h-100">
                 <a href="{{ path('mediawiki') }}">
-                    <img class="card-img-top" src="{{ asset('images/os-wp-in-monitor.jpg') }}" alt="MediaWiki">
+                    <img class="card-img-top" src="{{ asset('images/os/wp-in-monitor.jpg') }}" alt="MediaWiki">
                 </a>
                 <div class="card-body">
                     <h4 class="card-title">MediaWiki</h4>
@@ -30,7 +30,7 @@
         <div class="col-lg-6 portfolio-item">
             <div class="card h-100">
                 <a href="https://www.entropywins.wtf/blog/2016/11/24/rewriting-the-wikimedia-deutschland-funrdraising/">
-                    <img class="card-img-top" src="{{ asset('images/os-context-diagram.png') }}" alt="Wikimedia Deutschland fundraising application">
+                    <img class="card-img-top" src="{{ asset('images/os/context-diagram.png') }}" alt="Wikimedia Deutschland fundraising application">
                 </a>
                 <div class="card-body">
                     <h4 class="card-title">Wikimedia Deutschland fundraising</h4>
@@ -209,12 +209,45 @@
 
     <div class="row">
         <div class="col-lg-12">
+            <h2>Supreme Commander maps</h2>
+
+            <p>
+                I maintain several survival maps (custom scenarios written in Lua) for Supreme Commander <a href="https://faforever.com/">Forged Alliance Forever</a>.
+                These maps where created long ago by other people and I have been gradually cleaning up their code and adding features.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <div class="card h-100">
+                <h4 class="card-header"><a href="https://github.com/JeroenDeDauw/FinalRushPro5">Final Rush Pro 5</a></h4>
+                <img class="card-img-bottom" src="{{ asset('images/os/survival-final-rush.png') }}">
+            </div>
+        </div>
+
+        <div class="col-md-4 portfolio-item">
+            <div class="card h-100">
+                <h4 class="card-header"><a href="https://github.com/JeroenDeDauw/Survival5thDimensionCenterEE">5th Dimension EE</a></h4>
+                <img class="card-img-bottom" src="{{ asset('images/os/survival-center.png') }}">
+            </div>
+        </div>
+
+        <div class="col-md-4 portfolio-item">
+            <div class="card h-100">
+                <h4 class="card-header"><a href="https://github.com/JeroenDeDauw/survival_horde_ee">Survival Horde EE</a></h4>
+                <img class="card-img-bottom" src="{{ asset('images/os/survival-horde.png') }}">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
             <h2>Historical projects</h2>
 
             <ul>
                 <li><strong><a href="http://queryr.wmflabs.org">QueryR API</a></strong> - a REST compliant webservice for accessing information stored in <a href="{{ app.request.basepath }}/wikidata">Wikidata</a> written during 2014 and 2015 in PHP</li>
                 <li><strong><a href="https://github.com/JeroenDeDauw/Replicator">ReplicatoR</a></strong> - a CLI application to replicate Wikibase entities (mainly from <a href="{{ app.request.basepath }}/wikidata">Wikidata</a>) written during 2014 and 2015 in PHP</li>
-                <li><strong><a href="https://www.entropywins.wtf/blog/2016/10/29/refactoring-horrible-lua-code/">Final Rush Pro v4</a></strong> - rewrite of a Supreme Commander <a href="https://faforever.com/"> Forged Alliance</a> scripted map done in 2016 in Lua</li>
                 <li><strong><a href="{{ app.request.basepath }}/projects/skynet">Skynet</a></strong> - Travelling Salesman Problem solving application (using GALib) written during 2010 in C#</li>
                 <li><strong><a href="{{ app.request.basepath }}/projects/galib">GALib</a></strong> - Genetic Algorithm library written during 2010 in C#</li>
                 <li><strong><a href="{{ app.request.basepath }}/projects/bn-converter-pro">BN+ Converter Pro</a></strong> - A desktop application providing various text conversion utilities written between 2007 and 2010 in VB.Net</li>
