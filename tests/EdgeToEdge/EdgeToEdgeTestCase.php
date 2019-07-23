@@ -42,4 +42,14 @@ abstract class EdgeToEdgeTestCase extends TestCase {
 		return $environment->getClient()->getResponse();
 	}
 
+	protected final function createClient(): Client {
+		$environment = $this->createEnvironment();
+		$client = $environment->getClient();
+
+		// Hack to prevent the Kernel from being garbage collected while the client still exists
+		$client->env = $environment;
+
+		return $client;
+	}
+
 }
