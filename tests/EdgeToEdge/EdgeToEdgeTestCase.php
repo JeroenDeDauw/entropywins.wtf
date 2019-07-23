@@ -11,20 +11,6 @@ use Symfony\Component\HttpKernel\Client;
 
 abstract class EdgeToEdgeTestCase extends TestCase {
 
-	protected function createEnvironment(): RequestEnvironment {
-		$kernel = new Kernel( 'test', true );
-
-		$kernel->boot();
-
-		/**
-		 * @var Client $client
-		 */
-		$client = $kernel->getContainer()->get( 'test.client' );
-//		$client->insulate();
-
-		return new RequestEnvironment( $kernel, $client );
-	}
-
 	/**
 	 * @see Client::request
 	 */
@@ -35,6 +21,22 @@ abstract class EdgeToEdgeTestCase extends TestCase {
 		$environment->getClient()->request( ...func_get_args() );
 
 		return $environment->getClient()->getResponse();
+	}
+
+	protected function createEnvironment(): RequestEnvironment {
+		$kernel = new Kernel( 'test', true );
+
+		$kernel->boot();
+
+		/**
+		 * @var Client $client
+		 */
+		$client = $kernel->getContainer()->get( 'test.client' );
+
+//		$kernel->getContainer()->set( FileFetcher::class, new NullFileFetcher() );
+//		$client->insulate();
+
+		return new RequestEnvironment( $kernel, $client );
 	}
 
 	protected final function createClient(): Client {

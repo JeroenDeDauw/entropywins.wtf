@@ -29,7 +29,8 @@ services:
     # please note that last definitions always *replace* previous ones
 
     FileFetcher\FileFetcher:
-        factory: ['App\FileFetcherFactory', 'fuckYouSymfony']
+        factory: ['App\FileFetcherFactory', 'newFileFetcher']
+        public: true
 
     Aptoma\Twig\Extension\MarkdownEngineInterface:
         class: Aptoma\Twig\Extension\MarkdownEngine\MichelfMarkdownEngine

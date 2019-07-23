@@ -13,7 +13,7 @@ use Symfony\Component\Stopwatch\Stopwatch;
 
 class FileFetcherFactory {
 
-	public static function fuckYouSymfony( Stopwatch $stopwatch, CacheInterface $cache ): FileFetcher {
+	public static function newFileFetcher( Stopwatch $stopwatch, CacheInterface $cache ): FileFetcher {
 		return ( new StopwatchFactory() )->newStopwatchFetcher(
 			self::newCachingFileFetcher( $cache ),
 			$stopwatch
