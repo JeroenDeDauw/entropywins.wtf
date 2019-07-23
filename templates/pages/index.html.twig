@@ -28,7 +28,7 @@
 
     <div class="row">
         <div class="col-md-6">
-            <p>Highlights</p>
+            <strong>Highlights</strong>
             <ul class="list-unstyled">
                 <li><a href="https://www.entropywins.wtf/blog/2017/09/06/the-fallacy-of-dry/">The Fallacy of DRY</a></li>
                 <li><a href="https://www.entropywins.wtf/blog/2017/01/02/simple-is-not-easy/">Simple is not easy</a></li>
@@ -43,7 +43,7 @@
             </ul>
         </div>
         <div class="col-md-6">
-            <p>Latest posts</p>
+            <strong>Latest posts</strong>
             <ul class="list-unstyled">
                 {% for post in posts|slice(0, 10) %}
                     <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
