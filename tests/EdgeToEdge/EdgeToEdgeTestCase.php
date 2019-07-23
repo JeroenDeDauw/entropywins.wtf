@@ -5,8 +5,6 @@ declare( strict_types = 1 );
 namespace App\Tests\EdgeToEdge;
 
 use App\Kernel;
-use App\TopLevelFactory;
-use FileFetcher\NullFileFetcher;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Client;
@@ -18,16 +16,13 @@ abstract class EdgeToEdgeTestCase extends TestCase {
 
 		$kernel->boot();
 
-		$factory = $kernel->getContainer()->get( TopLevelFactory::class );
-
-		$factory->setFileFetcher( new NullFileFetcher() );
-
 		/**
 		 * @var Client $client
 		 */
 		$client = $kernel->getContainer()->get( 'test.client' );
+//		$client->insulate();
 
-		return new RequestEnvironment( $kernel, $client, $factory );
+		return new RequestEnvironment( $kernel, $client );
 	}
 
 	/**

@@ -5,7 +5,6 @@ declare( strict_types = 1 );
 namespace App\Tests\EdgeToEdge;
 
 use App\Kernel;
-use App\TopLevelFactory;
 use Symfony\Component\HttpKernel\Client;
 
 /**
@@ -17,10 +16,9 @@ class RequestEnvironment {
 	private $client;
 	private $factory;
 
-	public function __construct( Kernel $kernel, Client $client, TopLevelFactory $factory ) {
+	public function __construct( Kernel $kernel, Client $client ) {
 		$this->kernel = $kernel;
 		$this->client = $client;
-		$this->factory = $factory;
 	}
 
 	public function getKernel(): Kernel {
@@ -29,10 +27,6 @@ class RequestEnvironment {
 
 	public function getClient(): Client {
 		return $this->client;
-	}
-
-	public function getFactory(): TopLevelFactory {
-		return $this->factory;
 	}
 
 	public function __destruct() {

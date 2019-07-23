@@ -7,22 +7,20 @@ namespace App\Controller;
 // phpcs:ignoreFile
 
 use App\DataAccess\Blog\BlogPost;
-use App\TopLevelFactory;
-use Psr\SimpleCache\CacheInterface;
+use App\DataAccess\Blog\BlogRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Stopwatch\Stopwatch;
 
 class SimplePageController extends AbstractController {
 
-	public function index( TopLevelFactory $factory ) {
+	public function index( BlogRepository $blogRepo ) {
 		return $this->render(
 			'pages/index.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$factory->newBlogRepository()->getLatestPosts()
+					$blogRepo->getLatestPosts()
 				)
 			]
 		);
@@ -41,9 +39,7 @@ class SimplePageController extends AbstractController {
 		);
 	}
 
-	public function craftsmanship( TopLevelFactory $factory ) {
-		$blogRepo = $factory->newBlogRepository();
-
+	public function craftsmanship( BlogRepository $blogRepo ) {
 		return $this->render(
 			'pages/craftsmanship.html.twig',
 			[
@@ -57,23 +53,23 @@ class SimplePageController extends AbstractController {
 		);
 	}
 
-	public function smw( TopLevelFactory $factory ) {
+	public function smw( BlogRepository $blogRepo ) {
 		return $this->render(
 			'pages/smw.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$factory->newBlogRepository()->getLatestWithTag( 'smw' )
+					$blogRepo->getLatestWithTag( 'smw' )
 				)
 			]
 		);
 	}
 
-	public function wikidata( TopLevelFactory $factory ) {
+	public function wikidata( BlogRepository $blogRepo ) {
 		return $this->render(
 			'pages/wikidata.html.twig',
 			[
 				'posts' => $this->postsToTwigFormat(
-					$factory->newBlogRepository()->getLatestWithTag( 'wikidata' )
+					$blogRepo->getLatestWithTag( 'wikidata' )
 				)
 			]
 		);

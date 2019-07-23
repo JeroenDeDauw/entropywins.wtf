@@ -34,12 +34,6 @@ class Kernel extends BaseKernel {
 		}
 	}
 
-	protected function initializeContainer() {
-		parent::initializeContainer();
-
-//		$this->container->get( 'twig' )->addTokenParser(new MarkdownTokenParser());
-	}
-
 	protected function configureContainer( ContainerBuilder $container, LoaderInterface $loader ) {
 		$container->addResource( new FileResource( $this->getProjectDir() . '/config/bundles.php' ) );
 		// Feel free to remove the "container.autowiring.strict_mode" parameter

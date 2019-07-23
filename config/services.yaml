@@ -28,8 +28,8 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    App\TopLevelFactory:
-        public: true
+    FileFetcher\FileFetcher:
+        factory: ['App\FileFetcherFactory', 'fuckYouSymfony']
 
     Aptoma\Twig\Extension\MarkdownEngineInterface:
         class: Aptoma\Twig\Extension\MarkdownEngine\MichelfMarkdownEngine
