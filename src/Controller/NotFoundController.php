@@ -6,10 +6,11 @@ namespace App\Controller;
 
 // phpcs:ignoreFile
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 
-class NotFoundController extends BaseController {
+class NotFoundController extends AbstractController {
 
 	public function notFound( string $page ): Response {
 		$redirects = [
