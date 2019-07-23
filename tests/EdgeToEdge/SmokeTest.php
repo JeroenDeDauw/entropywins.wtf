@@ -8,27 +8,26 @@ use Symfony\Component\Routing\Route;
 
 class SmokeTest extends EdgeToEdgeTestCase {
 
-	/**
-	 * @dataProvider pagePathProvider
-	 */
-	public function testPagesDoNotError( RequestEnvironment $environment, string $pagePath ) {
-		$environment->getClient()->request( 'GET', $pagePath );
-
-		$this->assertSame(
-			200,
-			$environment->getClient()->getResponse()->getStatusCode()
-		);
-	}
-
-	public function pagePathProvider(): iterable {
+	public function testPagesDoNotError() {
 		$environment = $this->createEnvironment();
 
+		foreach ( $this->getPagePaths( $environment ) as $path ) {
+			$environment->getClient()->request( 'GET', $path );
+
+			$this->assertSame(
+				200,
+				$environment->getClient()->getResponse()->getStatusCode()
+			);
+		}
+	}
+
+	private function getPagePaths( RequestEnvironment $environment ): iterable {
 		/**
 		 * @var $route Route
 		 */
 		foreach ( $environment->getKernel()->getContainer()->get( 'router' )->getRouteCollection() as $route ) {
 			if ( $this->routeHasNoVariables( $route ) ) {
-				yield [ $environment, $route->getPath() ];
+				yield $route->getPath();
 			}
 		}
 	}
