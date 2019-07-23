@@ -6,6 +6,7 @@ namespace App;
 
 use FileFetcher\Cache\Factory as CacheFactory;
 use FileFetcher\FileFetcher;
+use FileFetcher\NullFileFetcher;
 use FileFetcher\SimpleFileFetcher;
 use FileFetcher\Stopwatch\Factory as StopwatchFactory;
 use Psr\SimpleCache\CacheInterface;
@@ -26,6 +27,10 @@ class FileFetcherFactory {
 			$cache,
 			3600 * 24
 		);
+	}
+
+	public static function newNullFetcher(): FileFetcher {
+		return new NullFileFetcher();
 	}
 
 }

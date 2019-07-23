@@ -1,0 +1,6 @@
+services:
+    _defaults:
+        public: true
+
+    FileFetcher\FileFetcher:
+        factory: ['App\FileFetcherFactory', 'newNullFetcher']

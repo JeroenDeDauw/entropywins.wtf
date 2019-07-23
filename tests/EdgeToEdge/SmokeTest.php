@@ -16,7 +16,8 @@ class SmokeTest extends EdgeToEdgeTestCase {
 
 			$this->assertSame(
 				200,
-				$environment->getClient()->getResponse()->getStatusCode()
+				$environment->getClient()->getResponse()->getStatusCode(),
+				'Page "' . $path . '" should not error'
 			);
 		}
 	}
