@@ -28,7 +28,7 @@ open-source:
 
 contact:
     path: /contact
-    controller: App\Controller\SimplePageController::page
+    controller: App\Controller\ContactController::showPage
 
 project:
     path: /projects/{project}
