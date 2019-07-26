@@ -40,7 +40,7 @@ class ContactController extends AbstractController {
 		);
 
 		$message->setFrom( 'server@entropywins.wtf' );
-		$message->setTo( 'jeroendedauw@gmail.com' );
+		$message->setTo( 'jeroendedauw+scf@gmail.com' );
 
 		$message->setContentType( 'text/html' );
 
