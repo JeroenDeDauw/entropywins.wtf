@@ -24,7 +24,7 @@ class FileFetcherFactory {
 		return ( new CacheFactory() )->newCachingFetcher(
 			new SimpleFileFetcher(),
 			$cache,
-			3600 * 24
+			3600 * 24 * 7
 		);
 	}
 
