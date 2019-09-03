@@ -13,21 +13,27 @@ use Symfony\Component\HttpFoundation\Response;
 class ContactController extends AbstractController {
 
 	public function showPage( Request $request, Swift_Mailer $mailer ): Response {
-		if ( $this->isFormSubmission( $request ) ) {
+		if ( $this->isValidSubmission( $request ) ) {
 			$this->sendMails( $request, $mailer );
 		}
 
 		return $this->render(
-			'pages/contact.html.twig'
+			'pages/contact.html.twig',
+			[ 'captchaValid' => $this->captchaIsValid( $request ) ]
 		);
 	}
 
-	private function isFormSubmission( Request $request ): bool {
+	private function isValidSubmission( Request $request ): bool {
 		return $request->isMethod( 'POST' )
 			&& $request->request->has( 'name' )
 			&& $request->request->has( 'email' )
 			&& $request->request->has( 'phone' )
-			&& $request->request->has( 'message' );
+			&& $request->request->has( 'message' )
+			&& $this->captchaIsValid( $request );
+	}
+
+	private function captchaIsValid( Request $request ): bool {
+		return strtolower( trim( $request->request->get( 'awesome', '' ) ) ) === 'i am awesome';
 	}
 
 	private function sendMails( Request $request, Swift_Mailer $mailer ) {

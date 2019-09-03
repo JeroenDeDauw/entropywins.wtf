@@ -33,6 +33,12 @@
                             <textarea rows="8" cols="100" class="form-control" name="message" id="message" required maxlength="100000"></textarea>
                         </div>
                     </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Type "I am awesome" to prove you are not a spambot:</label>
+                            <input type="text" class="form-control" name="awesome" id="awesome" required pattern="I am awesome">
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
                 </form>
             </div>
@@ -40,14 +46,18 @@
     {% endif %}
 
     {% if app.request.method == 'POST' %}
-        <h1>Message send!</h1>
+        {% if captchaValid %}
+            <h1>Message send!</h1>
 
-        <p>
-            You will be redirected to my homepage in a moment.
-            <a href="{{ url('index') }}">Go there right away</a>.
-        </p>
+            <p>
+                You will be redirected to my homepage in a moment.
+                <a href="{{ url('index') }}">Go there right away</a>.
+            </p>
 
-        <meta http-equiv="refresh" content="3;url={{ url('index') }}" />
+            <meta http-equiv="refresh" content="3;url={{ url('index') }}" />
+        {% else %}
+            <p>Invalid captcha. Go back in your browsers history to try again.</p>
+        {% endif %}
     {% endif %}
 
 {% endblock %}
