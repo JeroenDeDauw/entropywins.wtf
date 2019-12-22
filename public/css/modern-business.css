@@ -77,22 +77,6 @@ a:focus, a:hover, a:active {
 	width: 100%;
 }
 
-#sidebar {
-	width: 390px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	z-index: 999;
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	transition: all 0.3s;
-}
-
-#sidebar.active {
-	margin-left: -390px;
-}
-
 #sidebar ul li a {
 	padding: 10px;
 	font-size: 1.1em;
@@ -147,6 +131,49 @@ ul.mediawiki-extensions li a:first-child {
 	width: 100%;
 }
 
+@media (min-width: 1500px) {
+	#sidebar {
+		width: 390px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		z-index: 999;
+		background: rgba(0, 0, 0, 0.8);
+		color: #fff;
+		transition: all 0.3s;
+	}
+
+	#sidebar.active {
+		margin-left: -390px;
+	}
+}
+
+@media (max-width: 1500px) {
+	#sidebar {
+		width: 310px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		z-index: 999;
+		background: rgba(0, 0, 0, 0.8);
+		color: #fff;
+		transition: all 0.3s;
+	}
+
+	#sidebar.active {
+		margin-left: -310px;
+	}
+
+	#content {
+		left: 310px;
+		max-width: calc(100% - 310px);
+		padding-left: 30px;
+		padding-right: 20px;
+	}
+}
+
 @media (max-width: 1200px) {
 	#sidebar {
 		margin-left: -390px;
@@ -159,6 +186,7 @@ ul.mediawiki-extensions li a:first-child {
 		top: 40px;
 		padding-left: 15px;
 		padding-right: 15px;
+		max-width: 100%;
 	}
 	#mobileNavbar {
 		display: flex;
