@@ -31,6 +31,9 @@ services:
     FileFetcher\:
         resource: '../vendor/jeroen/file-fetcher/src/*'
 
+    Symfony\Component\Cache\:
+        resource: '../vendor/symfony/cache/*'
+
     FileFetcher\FileFetcher:
         factory: ['App\FileFetcherFactory', 'newFileFetcher']
         public: true

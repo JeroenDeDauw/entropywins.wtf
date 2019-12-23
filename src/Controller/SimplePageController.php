@@ -85,6 +85,8 @@ class SimplePageController extends AbstractController {
 		if ( $page === 'fun-architecture' ) {
 			return new RedirectResponse( 'https://jeroendedauw.github.io/fun-architecture/#/' );
 		}
+
+		throw new \LogicException();
 	}
 
 	public function project( string $project ) {

@@ -18,7 +18,7 @@ class PageNotFoundTest extends EdgeToEdgeTestCase {
 	}
 
 	private function assert404Response( Response $response ) {
-		$this->assertContains(
+		$this->assertStringContainsString(
 			'404',
 			$response->getContent()
 		);

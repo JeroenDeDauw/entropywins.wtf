@@ -5,11 +5,9 @@ declare( strict_types = 1 );
 namespace App\Tests\EdgeToEdge;
 
 use App\Kernel;
-use FileFetcher\FileFetcher;
-use FileFetcher\NullFileFetcher;
 use PHPUnit\Framework\TestCase;
+use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Client;
 
 abstract class EdgeToEdgeTestCase extends TestCase {
 
@@ -32,7 +30,7 @@ abstract class EdgeToEdgeTestCase extends TestCase {
 //		$kernel->getContainer()->set( FileFetcher::class, new NullFileFetcher() );
 
 		/**
-		 * @var Client $client
+		 * @var KernelBrowser $client
 		 */
 		$client = $kernel->getContainer()->get( 'test.client' );
 
@@ -41,7 +39,7 @@ abstract class EdgeToEdgeTestCase extends TestCase {
 		return new RequestEnvironment( $kernel, $client );
 	}
 
-	protected final function createClient(): Client {
+	protected final function createClient(): KernelBrowser {
 		$environment = $this->createEnvironment();
 		$client = $environment->getClient();
 

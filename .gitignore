@@ -12,3 +12,5 @@ public/.htaccess
 composer.phar
 
 blog/
+
+.phpunit.result.cache

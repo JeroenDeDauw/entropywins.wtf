@@ -24,7 +24,7 @@ class WordpressApiBlogRepositoryTest extends TestCase {
 	 */
 	private $fileFetcher;
 
-	public function setUp() {
+	public function setUp(): void {
 		$this->fileFetcher = new SpyingFileFetcher( $this->newStubFetcher( 'three-posts.json' ) );
 	}
 
