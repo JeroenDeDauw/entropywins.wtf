@@ -72,7 +72,7 @@ a:focus, a:hover, a:active {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper {
+div.wrapper {
 	display: flex;
 	width: 100%;
 }
@@ -121,14 +121,17 @@ ul.mediawiki-extensions li a:first-child {
 ----------------------------------------------------- */
 
 #content {
-	max-width: 1100px;
-	padding: 40px;
-	min-height: 100vh;
 	transition: all 0.3s;
 	position: absolute;
 	top: 0;
 	left: 390px;
-	width: 100%;
+	width: calc(100% - 390px);
+	min-height: 100%;
+}
+
+#MainContent {
+	max-width: 1100px;
+	padding: 40px 40px 140px;
 }
 
 @media (min-width: 1500px) {
@@ -139,7 +142,6 @@ ul.mediawiki-extensions li a:first-child {
 		left: 0;
 		height: 100vh;
 		z-index: 999;
-		background: rgba(0, 0, 0, 0.8);
 		color: #fff;
 		transition: all 0.3s;
 	}
@@ -157,7 +159,6 @@ ul.mediawiki-extensions li a:first-child {
 		left: 0;
 		height: 100vh;
 		z-index: 999;
-		background: rgba(0, 0, 0, 0.8);
 		color: #fff;
 		transition: all 0.3s;
 	}
@@ -166,11 +167,14 @@ ul.mediawiki-extensions li a:first-child {
 		margin-left: -310px;
 	}
 
-	#content {
-		left: 310px;
-		max-width: calc(100% - 310px);
+	#MainContent {
 		padding-left: 30px;
 		padding-right: 20px;
+	}
+
+	#content {
+		width: calc(100% - 310px);
+		left: 310px;
 	}
 }
 
@@ -181,12 +185,14 @@ ul.mediawiki-extensions li a:first-child {
 	#sidebar.active {
 		margin-left: 0;
 	}
-	#content {
-		left: 0;
-		top: 40px;
+	#MainContent {
 		padding-left: 15px;
 		padding-right: 15px;
-		max-width: 100%;
+	}
+	#content {
+		width: 100%;
+		left: 0;
+		top: 40px;
 	}
 	#mobileNavbar {
 		display: flex;
@@ -206,7 +212,7 @@ ul.mediawiki-extensions li a:first-child {
 }
 
 @media (max-width: 600px) {
-	#content {
+	#MainContent {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -214,3 +220,5 @@ ul.mediawiki-extensions li a:first-child {
 		display: none;
 	}
 }
+
+strong { font-weight: bold; }

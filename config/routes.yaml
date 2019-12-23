@@ -26,6 +26,10 @@ open-source:
     path: /open-source
     controller: App\Controller\SimplePageController::page
 
+privacy:
+    path: /privacy-policy
+    controller: App\Controller\SimplePageController::page
+
 contact:
     path: /contact
     controller: App\Controller\ContactController::showPage

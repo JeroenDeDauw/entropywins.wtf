@@ -17,11 +17,32 @@
         <link rel="alternate" type="application/rss+xml" title="Entropy Wins Blog" href="https://www.entropywins.wtf/blog/feed/" />
         <link rel='dns-prefetch' href='//professional.wiki' />
         <meta name="twitter:site" content="@JeroenDeDauw" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154934180-1"></script>
+        <script>
+			var disableStr = 'ga-disable-UA-154934180-1';
+			if (document.cookie.indexOf(disableStr + '=true') > -1) {
+				window[disableStr] = true;
+			}
+			function gaOptout() {
+				document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+				window[disableStr] = true;
+				alert('Google Analytics tracking has been disabled');
+			}
+
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-154934180-1', {'anonymize_ip': true});
+        </script>
+
     </head>
 
     <body>
     <div class="wrapper">
-        <nav id="sidebar">
+        <nav id="sidebar" class="bg-dark">
             <ul class="list-unstyled" style="margin-top: 70px; margin-left: 30px; font-size: larger">
                 <li>
                     <a href="{{ path('index') }}" class="{% if app.request.attributes.get('_route') == 'index' %}active-page{% endif %}">
@@ -96,33 +117,39 @@
         </nav>
 
         <div id="content">
-            <div class="container-fluid">
-                <div class="row mb-4" id="the-me">
-                    <div class="col-md-2" id="duck" style="min-width: 170px">
-                        <img src="{{ asset('images/logo.jpg') }}" alt="Jeroen De Dauw" class="img-fluid" style="width: 140px; min-width: 140px; height: 140px; margin-right: 25px">
-                    </div>
-                    <div class="col-md-9">
-                        <h2 style="margin-top: 25px">
-                            <span class="red">Jeroen De Dauw</span>
-                            <br />Software Craftsman
-                        </h2>
-                    </div>
-                </div>
+            <div id="MainContent">
+                <div class="container-fluid">
+                    {% block the_me %}
+                        <div class="row mb-4" id="the-me">
+                            <div class="col-md-2" id="duck" style="min-width: 170px">
+                                <img src="{{ asset('images/logo.jpg') }}" alt="Jeroen De Dauw" class="img-fluid" style="width: 140px; min-width: 140px; height: 140px; margin-right: 25px">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 style="margin-top: 25px">
+                                    <span class="red">Jeroen De Dauw</span>
+                                    <br />Software Craftsman
+                                </h2>
+                            </div>
+                        </div>
+                    {% endblock %}
 
-                {% block body %}
-                <div class="row">
-                    <div class="col-lg-12">
-                        {% block simple_body %}
-                        {% endblock %}
-                    </div>
+                    {% block body %}
+                        <div class="row">
+                            <div class="col-lg-12">
+                                {% block simple_body %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    {% endblock %}
                 </div>
-                {% endblock %}
-
-                {% block footer_line %}
-                    <div class="line"></div>
-                {% endblock %}
             </div>
 
+            <footer class="footer py-5 bg-dark" style="width: 100%; bottom: 0; position: absolute">
+                <p class="m-0 text-center text-white">
+                    &copy;&nbsp;Jeroen De Dauw 2019
+                    <span style="margin-left: 25px"><a style="color: white;" href="{{ path('privacy') }}">Privacy Policy</a></span>
+                </p>
+            </footer>
         </div>
     </div>
 
