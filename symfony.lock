@@ -11,15 +11,6 @@
     "doctrine/lexer": {
         "version": "1.0.2"
     },
-    "easycorp/easy-log-handler": {
-        "version": "1.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "1.0",
-            "ref": "70062abc2cd58794d2a90274502f81b55cd9951b"
-        }
-    },
     "egulias/email-validator": {
         "version": "2.1.10"
     },
@@ -34,9 +25,6 @@
     },
     "myclabs/deep-copy": {
         "version": "1.8.1"
-    },
-    "nikic/php-parser": {
-        "version": "v4.0.1"
     },
     "phar-io/manifest": {
         "version": "1.0.3"
