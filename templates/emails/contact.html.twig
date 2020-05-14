@@ -6,4 +6,4 @@ Phone: {{ phone }}<br>
 <br>
 <strong>Message</strong><br>
 <br>
-{{ message|e|replace({"\n": '<br>', "\r": '<br>'})|raw }}
+{{ message|e|replace({"\n": '<br>'})|raw }}
