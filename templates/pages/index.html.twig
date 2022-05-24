@@ -7,12 +7,10 @@
     <div class="row">
         <div class="col-md-12">
             <p style="margin-bottom: 0">
-                My name is Jeroen De Dauw. In my professional life I am a Software Craftsman with a passion for effective value delivery.
-                Besides being an entrepreneur and occasional consultant, I am the Technical Director of
-                <a href="https://professional.wiki/">Professional Wiki</a>. You might know me from my
-                <a href="{{ path('craftsmanship') }}">talks and blog posts on software design</a>,
-                my <a href="{{ path('open-source') }}">involvement in the open source world</a>
-                or my <a href="{{ path('wikidata') }}">contributions to Wikidata</a> as Software Architect at Wikimedia.
+                Jeroen is CEO of <a href="https://professional.wiki/">Professional Wiki</a>. His main area of expertise
+                is <a href="{{ path('craftsmanship') }}">software architecture and design</a>. He has been working with <a href="{{ path('mediawiki') }}">MediaWiki</a>,
+                the <a href="{{ path('open-source') }}">open source</a> software behind Wikipedia,
+                since 2009. Jeroen worked as Software Architect at Wikimedia, where he created <a href="{{ path('wikidata') }}">Wikidata.org</a>.
             </p>
         </div>
     </div>
@@ -110,6 +108,9 @@
         </div>
     </div>
 
+    <div class="line"></div>
+
+    {{ include('parts/prowiki.html.twig') }}
 {% endblock %}
 
 
