@@ -24,6 +24,8 @@ stan:
 	docker-compose run --rm php-fpm ./vendor/bin/phpstan analyse --level=1 --no-progress src/ tests/
 
 install:
+	chmod 777 var/log/ -R; \
+	chmod 777 var/cache/ -R; \
 	docker run --rm $(DOCKER_FLAGS) --volume $(BUILD_DIR):/app -w /app --volume ~/.composer:/composer \
 	--user $(current_user):$(current_group) composer install --ignore-platform-reqs $(COMPOSER_FLAGS); \
 	\
